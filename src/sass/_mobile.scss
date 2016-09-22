@@ -1,0 +1,217 @@
+//
+// MOBILE
+//
+
+html.rqf-page{
+  /* Go to single column */
+  @media only screen and (max-width: 588px) {
+    .l-site .nav-container {
+      display:none;
+    }
+    div#header {
+      div#location {
+        padding-bottom:41px;
+        a {
+          width: 150px;
+          height:24px;
+        }
+        h1 {
+          font-size:18px;
+          line-height:21px;
+        }
+      }
+      form {
+        height:30px;
+        padding:12px;
+        input#search {
+          width:155px;
+        }
+      }
+    }
+    ul.breadcrumbs {
+      margin:0 2%;
+    }
+    div#mdcolumn,
+    div#rhcolumn {
+      width: 96%;
+      padding: 12px 2%;
+    }
+    div#rhcolumn {
+      padding-top:0;
+      font-size:15px;
+      // Images (and images in links) at the top of the RHC - centred
+      p > a:only-child > img:only-child,
+      p > img:only-child {
+        display:block;
+        margin:0 auto;
+      }
+    }
+    div#mdcolumn,
+    div.wide div#mdcolumn {
+      div.col-half,
+      div.col-third {
+        width: 100%;
+        margin-left: 0;
+        float:none;
+        clear:both;
+        font-size:15px;
+      }
+    }
+    div#mdcolumn {
+      iframe {
+        float:none;
+      }
+      .boxout,
+      .boxoutAlt {
+        height:auto !important;
+      }
+      table td *:last-child {
+        margin-bottom:0;
+      }
+      #course-apply-now {
+        font-size: 14px;
+        padding:10px;
+      }
+      #course-track {
+        margin-left:100px;
+      }
+      form ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 100%;
+      }
+      // FAQ padding reduced a bit
+      .faq {
+        h3.q {
+          padding-right:36px;
+          padding-left:16px;
+        }
+        .a {
+          padding-right:16px;
+          padding-left:16px;
+        }
+      }
+      // News search box
+      form.newssearcharchive {
+        text-align:center;
+        input.text {
+          width:100%;
+        }
+        input.submit {
+          margin:12px 0 0;
+        }
+      }
+      #show-entry-reqs {
+        color:#008cb8;
+      }
+    }
+    tr.spacer-row {
+      height: 15px;
+    }
+    footer {
+      .col-1-4 {
+        float:none;
+        width:100%;
+      }
+      .content-box {
+        padding-left:0;
+      }
+      .footer-updated {
+        text-align:left;
+      }
+    }
+    .col-mobile {
+      > *:last-child {
+        margin-bottom:0;
+      }
+    }
+    #course-banner {
+      float:none;
+      width:100%;
+      margin-left:0;
+      margin-bottom:12px;
+    }
+    .gallery-image,
+    .wide .gallery-image {
+      width:49%;
+      margin-left:2%;
+      // Newlines are removed by JS
+      &:nth-of-type(3n+1) {
+        margin-left:2%;
+        clear:none;
+      }
+      &:nth-of-type(2n+1) {
+        margin-left:0;
+        clear:left;
+      }
+    }
+    .rightBox {
+      clear:both;
+      float:none;
+      margin:0;
+      width:auto;
+    }
+    .rightBox + h2 {
+      margin-right:0;
+      margin-top:0.83em;
+    }
+
+    div#feedback {
+      width:96%;
+      width:calc(100% - 40px);
+      .fsBody {
+        margin-bottom:0;
+      }
+    }
+    #sitemap {
+      width:96%;
+      width:calc(100% - 40px);
+      .col-third {
+        width:48%;
+        width:calc(50% - 20px);
+        &.first-col {
+          width:98%;
+          width:calc(100% - 20px);
+        }
+      }
+    }
+    div#union-social {
+      float:none;
+      width:96%;
+      width:calc(100% - 40px);
+    }
+    // Make logos go on to two lines
+    div#union {
+      clear:left;
+    }
+    // Library landing page
+    #yorsearchForm {
+      a {
+        margin-left:0;
+        display:block;
+      }
+      .library-search-options {
+        &.catalogue {
+          margin-left:0;
+        }
+        &.everything {}
+      }
+    }
+    #library-search-keywords-label {
+      display:block;
+      margin-bottom:4px;
+    }
+  }
+  // Override Formstack styles
+  @media (max-width: 40em) {
+    label.fsOptionLabel {
+      background:none;
+      border:0;
+      padding:0;
+    }
+    .fsForm textarea, .fsRowBody input[type=email], .fsRowBody input[type=number], .fsRowBody input[type=tel], .fsRowBody input[type=text] {
+      font-size:inherit;
+    }
+  }
+}

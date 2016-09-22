@@ -1,0 +1,190 @@
+//
+// MOBILE SMALL
+//
+
+html.rqf-page {
+  @media only screen and (max-width: 480px) {
+    div#header {
+      background-image:none;
+      // Stop search crashing into logo
+      div#location {
+        padding-bottom:88px;
+        > a {
+          padding:10px 0 0 2%!important;
+        }
+        > h1 {
+          top:81px;
+        }
+      }
+      // students/staff links
+      div#links {
+
+      }
+      // students/staff location
+      div#global + div#location {
+        h1 {
+          top:50px;
+        }
+      }
+      // student/staff form
+      #global + #location + form {
+        top:79px;
+      }
+      form {
+        top:31px;
+        padding:10px 2% 0;
+        width:96%;
+        input#search {
+          width:70%;
+          width:calc(75% - 18px);
+          float:left;
+        }
+        input.submit {
+          width:20%;
+          width:calc(25% - 2px);
+          float:left;
+        }
+      }
+    }
+    header {
+      .l-content {
+        display:flex;
+        flex-direction: column;
+      }
+      .site-menu-wrap {
+        float:none;
+        order:2;
+      }
+      .site-search {
+        width:100%;
+        margin-top:10px;
+      }
+      .search-wrap {
+        width:100%;
+        input[type=text] {
+          width: calc(100% - 38px);
+        }
+      }
+      div[style] {
+        float:none;
+        margin-top:10px !important;
+        order:1;
+      }
+      img {
+        width:132px;
+      }
+    }
+    div#lhcolumn:after {
+      font-size:9px;
+    }
+    // Are we sure we want to remove this? Needs testing
+    // .right,
+    // .left {
+    //   float: none;
+    //   margin-left: 0;
+    //   margin-right: 0;
+    // }
+    .leftBox,
+    .rightBox {
+      float:none;
+      clear:both;
+      margin:0 0 15px 0;
+      width:auto;
+    }
+    div#mdcolumn {
+      // Move floated images into their own row.
+      .icon-box {
+        .right,
+        .left {
+          // !important to override above declaration!
+          width:auto !important;
+        }
+      }
+    }
+    // Library landing page
+    #yorsearchForm {
+      a {
+      }
+      .library-search-options {
+        &.catalogue {
+        }
+        &.everything {}
+      }
+    }
+    #library-search-keywords {
+      width:100%;
+      margin-bottom:8px;
+    }
+    #yorsearchSubmitButton {
+      width:100%;
+    }
+    div#mdcolumn {
+      blockquote.right,
+      blockquote.left {
+        max-width:100%;
+        width:100%;
+        // Videos 100% width
+        iframe {
+          width:100%;
+        }
+      }
+    }
+    #sitemap {
+      .col-third {
+        width:98%;
+        width:calc(100% - 20px);
+      }
+    }
+  }
+  @media only screen and (max-width: 350px) {
+    table a[href^="mailto"] {
+      word-break:break-all;
+    }
+    // input and button on one line e.g. /about/departments/teaching
+    p[align=center] {
+      input[type=text] {
+        width:47%;
+      }
+    }
+    // captioned and floated images
+    div#mdcolumn {
+      // Make floated images smaller.
+      .right,
+      .left,
+      .captionedimage {
+        max-width:30%;
+        // !important to override inline styles
+        width:auto !important;
+        img:not(.icon) {
+          width:100%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 300px) {
+    // Library landing page
+    #yorsearchForm {
+      .library-search-options {
+        display:block;
+        float:none;
+        &.everything {
+          margin-left:0;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 275px) {
+    a[href^="mailto"] {
+      word-break:break-all;
+    }
+    // captioned and floated images
+    div#mdcolumn {
+      // Make floated images into their own row.
+      .right,
+      .left,
+      .captionedimage {
+        max-width:100%;
+      }
+    }
+  }
+}

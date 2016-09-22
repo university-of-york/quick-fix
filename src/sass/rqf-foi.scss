@@ -1,0 +1,151 @@
+/* FESTIVAL OF IDEAS STYLES */
+
+// VARIABLES
+$foi-pink:#b4227e;
+$foi-charcoal:#404040;
+
+html.rqf-page.rqf-page {
+  div#header {
+    @media only screen and (max-width: 480px) {
+      form {
+        top:103px;
+      }
+    }
+    div#location {
+      > h1 {
+        padding-bottom:8px;
+      }
+      a {
+        width:140px;
+        height:120px;
+        padding:15px 15px 0 0 !important;
+        img {
+          width:100% !important;
+          height:100% !important;
+        }
+      }
+      @media only screen and (max-width: 480px) {
+        padding-bottom:67px;
+        > h1 {
+          top: 151px;
+        }
+        a {
+          margin:0 auto;
+          width:126px;
+          height:108px;
+        }
+      }
+    }
+  }
+  div#extra-links#extra-links {
+    border-bottom-color:$foi-pink;
+    p {
+      display:none;
+    }
+  }
+  // BREADCRUMB - remove first three
+  div#breadcrumb {
+    ul li {
+      display:inline-block;
+      overflow:hidden;
+      &:nth-of-type(-n+4) {
+        display:none;
+      }
+      &:nth-of-type(5) {
+        text-indent:-0.7em;
+      }
+    }
+  }
+  // NAV
+  #nav {
+    li {
+      span.parent,
+      span.parent a.parent {
+        background-color:$foi-charcoal;
+      }
+      a:hover {
+        background-color:$foi-pink !important;
+      }
+    }
+  }
+  // LH COLUMN
+  div#lhcolumn {
+    // Because breadcrumb is inline-block
+    margin-top:0 !important;
+    #before {
+      display:none;
+    }
+  }
+  // MD COLUMN ONLY
+  div#mdcolumn {
+    .col-half,
+    .col-third {
+      .boxoutAlt h2,
+      h2 {
+        background-color:$foi-pink;
+      }
+    }
+    ul#event-facts li {
+      padding-left:45px;
+      min-height:32px;
+    }
+    ul {
+      list-style:none;
+      li {
+        background-image:url("https://www.york.ac.uk/media/css/festival-of-ideas/bullet.gif");
+        padding-left:12px;
+        &.when {
+          background-image:url("https://www.york.ac.uk/media/css/festival-of-ideas/clock.png");
+        }
+        &.tickets {
+          background-image:url("https://www.york.ac.uk/media/css/festival-of-ideas/ticket.png");
+          a.book {
+            color:#fff;
+          }
+        }
+        &.where {
+          background-image:url("https://www.york.ac.uk/media/css/festival-of-ideas/pin.png");
+        }
+        &.accessibility {
+          background-image:url("http://www.york.ac.uk/media/news-and-events/festival-of-ideas/2014/images/promo-images/wheelchair.png");
+        }
+      }
+    }
+  }
+  // RH COLUMN ONLY
+  div#rhcolumn {
+  }
+  // MD + RH COLUMN
+  div#mdcolumn,
+  div#rhcolumn {
+    a {
+      color:$foi-pink;
+    }
+    .boxout {
+      p, h3, h4, h5, a:link, a:visited, a:hover, li {
+        color:#1D1D1D;
+      }
+    }
+    .boxoutAlt {
+      background-color:$foi-charcoal;
+      border-color:$foi-charcoal;
+      a {
+        color:#eee;
+      }
+    }
+  }
+  // UPCOMING EVENTS
+  #upcomingevents .event .eventdate .day.day {
+    background:$foi-pink;
+  }
+  // EVENT FACTS
+  @media only screen and (max-width: 480px) {
+    #event-facts {
+      clear:both;
+    }
+  }
+  // FOOTER
+  div#footer {
+    border-top-color:$foi-pink;
+  }
+}

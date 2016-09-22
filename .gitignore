@@ -1,0 +1,7 @@
+upload/
+node_modules/
+.sass-cache
+src/rqf.css
+src/rqf-foi.css
+src/welcome-text.min.js
+.DS_Store

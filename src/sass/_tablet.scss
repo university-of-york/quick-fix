@@ -1,0 +1,384 @@
+//
+// TABLET
+//
+
+html.rqf-page {
+  @media only screen and (max-width: 962px) {
+    body {
+      margin: 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    div#container,
+    div#content-container {
+      width: 100%;
+      border:0;
+    }
+    .l-site {
+      min-width:100%;
+    }
+    .l-content {
+      width:100%;
+    }
+    header {
+      padding-left:2%;
+      padding-right:2%;
+    }
+    div#header {
+      div#location {
+        img {
+          max-width:231px;
+        }
+        a {
+          padding-left:2% !important;
+        }
+        h1 {
+          padding-left:2%;
+        }
+      }
+    }
+    header img {
+      max-width:231px;
+    }
+    div#header form label {
+      margin-top: 4px;
+    }
+    div#extra-links p {
+      margin-left:2%;
+    }
+    div#breadcrumb ul {
+      margin:0 2%;
+    }
+    div#lhcolumn {
+      width: 96%;
+      padding: 0 2%;
+      margin-top: 12px;
+      height: 32px;
+      overflow: hidden;
+      position:relative;
+      cursor:pointer;
+      z-index:9; // Lightbox is at 10
+      float:none;
+      ul#nav {
+        display:none;
+      }
+      div#before {
+        display: none;
+      }
+      &:before {
+        display: block;
+        content: 'Show menu';
+        width: 93%;
+        padding-left: 5%;
+        padding-right: 2%;
+        background: #eee;
+        color: #333;
+        line-height: 32px;
+        height: 32px;
+      }
+      &:after {
+        display: block;
+        content: '+';
+        position:absolute;
+        top:0;
+        left:2%;
+        line-height: 32px;
+        height: 32px;
+        width: 5%;
+        text-align:center;
+        font-weight:bold;
+      }
+      &.is-open {
+        height: auto;
+        ul#nav {
+          display:block;
+        }
+        &:before {
+          content: 'Hide menu';
+        }
+        &:after {
+          content:'-';
+        }
+      }
+    }
+    #nav li {
+      a,
+      li a,
+      li li a,
+      li li li a,
+      span,
+      li span,
+      li li span,
+      li li li span {
+        width: 93%;
+        padding-left: 5%;
+        padding-right: 2%;
+      }
+      /* Some get given inline styles of padding:0 */
+      span[style],
+      li span[style],
+      li li span[style],
+      li li li span[style] {
+        width: 100%;
+      }
+    }
+    div#mdcolumn {
+      width: 68%;
+      padding-top:12px;
+      padding-left: 2%;
+      > *:last-child {
+        margin-bottom:0;
+      }
+    }
+    div.wide#content-container div#mdcolumn {
+      width: 96%;
+      padding-right:2%;
+    }
+    div#homepagebanner {
+      width: 100% !important;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    div#mdcolumn #homepagebanner .imagewithcaption {
+      max-width: 100% !important;
+    }
+    div#mdcolumn div.col-half,
+    div#mdcolumn div.col-third {
+      margin-left: 2%;
+    }
+    div#mdcolumn div.col-half,
+    div.wide div#mdcolumn .col-half {
+      width: 49%;
+    }
+    div#mdcolumn div.col-third,
+    div.wide div#mdcolumn .col-third {
+      width: 32%;
+    }
+    div#mdcolumn div.first-col {
+      margin-left: 0;
+    }
+    div#mdcolumn iframe {
+      max-width: 100%;
+      // Youtube iframes don't cope with height:auto;
+      // height: auto;
+    }
+    div#mdcolumn .boxout,
+    div#mdcolumn .boxoutAlt,
+    div#mdcolumn #tabs .boxout,
+    div#mdcolumn #tabs .boxoutAlt,
+    div.wide div#mdcolumn #tabs .boxout,
+    div.wide div#mdcolumn #tabs .boxoutAlt,
+    div.wide div#mdcolumn .boxout,
+    div.wide div#mdcolumn .boxoutAlt,
+    div.wide div#mdcolumn div.col-half .boxout,
+    div.wide div#mdcolumn div.col-half .boxoutAlt,
+    div.wide div#mdcolumn div.col-third .boxout,
+    div.wide div#mdcolumn div.col-third .boxoutAlt {
+      width: auto;
+    }
+    div#mdcolumn .col-half h2,
+    div#mdcolumn .col-third h2 {
+      clear: both;
+    }
+    div#mdcolumn ul.tabNavigation {
+      padding-bottom: 1px;
+    }
+    div#mdcolumn ul.tabNavigation li {
+      display: inline-block;
+      margin-bottom: -2px;
+    }
+    div#mdcolumn ul.tabNavigation li a {
+      display: block;
+      white-space: nowrap;
+    }
+    div#rhcolumn {
+      width: 25%;
+      margin-left: 0;
+      padding-top:12px;
+      padding-left: 3%;
+      padding-right: 2%;
+    }
+    div#mdcolumn > blockquote.quote {
+      width: 92%;
+      width: calc(100% - 535px);
+      min-width:190px;
+      padding-left: 8%;
+      padding-left: calc(30px);
+      padding-right: 0;
+      margin: 0 0 15px 0;
+    }
+    div#mdcolumn > blockquote.quote .quotation {
+      text-indent:0;
+    }
+    #rhcolumn .boxout,
+    #rhcolumn .boxoutAlt,
+    #rhcolumn .boxoutalt {
+      width: 92%;
+      padding-left: 4%;
+      padding-right: 4%;
+      border-right-width: 1px;
+    }
+    /* Misspelling(?) on http://www.york.ac.uk/archaeology/staff/ */
+
+    #rhcolumn .boxoutalt {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    #latestnews .newsimage {
+      margin-right: 10px;
+      max-width: 40%;
+    }
+    div#footer {
+      p.right,
+      p.left {
+        float:none;
+        text-align:left;
+        width:auto;
+      }
+    }
+    div#feedback {
+      width:46%;
+      width:calc(50% - 40px);
+      padding-bottom:0;
+      .fsBody .fsForm {
+        margin-bottom:0;
+      }
+      .fsPagination {
+        margin-bottom:0;
+      }
+    }
+    div#union-social {
+      float:right;
+      clear:right;
+      width:46%;
+      width:calc(50% - 40px);
+    }
+    #sitemap {
+      width:46%;
+      width:calc(50% - 40px);
+      .col-third {
+        width:98%;
+        width:calc(100% - 20px);
+      }
+    }
+    // Tables
+    // Horrible hack for profile images
+    td[headers="hdr-1630"] {
+      width:65px;
+      img {
+        width:65px;
+      }
+    }
+    // Full width images
+    // Header images
+    // Images that are "heading" images
+    p.unpadded > a:only-child img:only-child,
+    p.unpadded > img:only-child,
+    #homepagebanner img,
+    // 720px wide spans a complete page
+    img[width="720"],
+    // 465px wide spans a mdcolumn next to rhcolumn
+    img[width="465"],
+    // 350px wide spans a complete half-column
+    img[width="350"],
+    // 226px wide spans a complete third-column
+    img[width="226"] {
+      width:100%;
+    }
+    // Update for lightbox on <tablet
+    #jquery-lightbox {
+      position:fixed;
+      top:0 !important;
+      left:0 !important;
+      height:100%;
+    }
+    #lightbox-container-image-box {
+      height:auto !important;
+      max-width:100%;
+    }
+    #lightbox-container-image-data-box {
+      padding-top:10px;
+      max-width:100%;
+      max-width:calc(100% - 20px);
+    }
+    #lightbox-container-image-data {
+      padding:0;
+    }
+    #lightbox-nav a {
+      height:100% !important;
+    }
+  }
+  /* Minimum for 2013 top navigation */
+  @media only screen and (max-width: 810px) {
+    .main-menu li a {
+      font-size: 12px;
+      font-weight: normal;
+      padding: 14px 10px;
+    }
+    header img {
+      width:200px;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .site-menu {
+      display:none;
+    }
+    .main-menu li a {
+      padding: 14px 9px;
+    }
+    /* Make three column layouts go to single col */
+    div#mdcolumn,
+    div#rhcolumn {
+      width:96%;
+      padding-right:2%;
+      padding-left:2%;
+      float:none;
+      clear:both;
+    }
+    // No double gap between them
+    div#rhcolumn {
+      padding-top:0;
+    }
+    // Image plus quote separate lines
+    div#mdcolumn blockquote.quote {
+      width: 92%;
+      width: calc(100% - 30px);
+    }
+    div#mdcolumn img[width="475"] {
+      width:100%;
+    }
+    .gallery-image,
+    .wide .gallery-image {
+      width:32%;
+      margin-left:2%;
+      // Newlines are removed by JS
+      &:nth-of-type(4n+1) {
+        margin-left:2%;
+        clear:none;
+      }
+      &:nth-of-type(3n+1) {
+        margin-left:0;
+        clear:left;
+      }
+    }
+    // Library landing page
+    #yorsearchForm {
+      a {
+        margin-left:90px;
+        margin-top:4px;
+        display:block;
+      }
+      .library-search-options {
+        &.catalogue {
+          margin-top:4px;
+        }
+        &.everything {
+          margin-top:4px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+//
+// TOGGLE BUTTON
+//
+
+.rqf-toggle {
+  position:relative;
+  height:40px;
+    input {
+    position: absolute;
+    opacity: 0;
+    height:0;
+    width:0;
+    border:0;
+    margin: 0;
+    padding: 0;
+    color: transparent;
+    background:transparent;
+  }
+  input + label {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    padding: 2px;
+    width: 60px;
+    height: 30px;
+    background-color: #dddddd;
+    border-radius: 30px;
+    transition: background 0.4s;
+    right:5px;
+    top:0;
+  }
+  input + label:before,
+  input + label:after {
+    display: block;
+    position: absolute;
+    content: "";
+  }
+  input + label:before {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: #fff;
+    border-radius: 30px;
+    transition: background 0.4s;
+  }
+  input + label:after {
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    width: 26px;
+    background-color: #dddddd;
+    border-radius: 28px;
+    transition: margin 0.4s, background 0.4s;
+  }
+  input:checked + label {
+    background-color: #8ce196;
+  }
+  input:checked + label:after {
+    margin-left: 30px;
+    background-color: #8ce196;
+  }
+  p {
+    text-align: center;
+    margin: 5px 80px 0 0;
+    font-size: 10px;
+    color: #dddddd;
+    float: right;
+  }
+  input:checked ~ p {
+    color: #8ce196;
+  }
+  // rqf-page body has no margin so offset toggle
+  html.rqf-page & {
+    top:5px;
+    right:5px;
+    height:45px;
+  }
+}
+// If it fits off the side of the main body, don't push content down
+@media only screen and (min-width: 1252px) {
+  .rqf-toggle {
+    position:absolute;
+    top:5px;
+    right:5px;
+  }
+}
