@@ -37,7 +37,8 @@ module.exports = function(grunt) {
           banner: '/*! = JS built <%= grunt.template.today("yyyy-mm-dd HH:MM:ss") %> = */'
 	    	},
 	      files: {
-	        'upload/rqf.min.js': ['src/rqf.js']
+          'upload/rqf.min.js': ['src/rqf.js'],
+          'upload/welcome-text.min.js': ['src/welcome-text.js']
 	      }
 	    }
 	  },
