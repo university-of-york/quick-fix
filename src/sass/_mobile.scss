@@ -8,6 +8,9 @@ html.rqf-page{
     .l-site .nav-container {
       display:none;
     }
+    td a[href^=http] {
+      word-break: break-all;
+    }
     div#header {
       div#location {
         padding-bottom:41px;

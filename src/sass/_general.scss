@@ -532,7 +532,7 @@ html.rqf-page {
         margin-bottom: 15px;
       }
       > :last-child {
-        margin-bottom:0;
+        margin-bottom:0 !important;
       }
     }
   }
