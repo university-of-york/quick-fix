@@ -1,5 +1,7 @@
 $(function() {
 
+  console.log('Welcome text start');
+
   var $welcomeElement = $(".js-welcome-text");
 
   if ($welcomeElement.length > 0) {

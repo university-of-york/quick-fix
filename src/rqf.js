@@ -68,6 +68,8 @@ $(function() {
       if ($('html').hasClass('wf-active') === false) {
         $('head').append('<script src="//use.typekit.net/dvj8rpp.js"></script><script>try{Typekit.load();}catch(e){}</script>');
       }
+      // Update status (sometimes html width stays wide until meta tag is added)
+      this.status = this.getStatus();
     };
 
     this.checkContent = function() {
@@ -103,11 +105,14 @@ $(function() {
         // Listen for window resize and debounce
         var that = this;
         var resizeFunction = debounce(function() {
-          that.updateContent();
+          // If we've changed from mobile to desktop (or vice versa)
+          if(that.status !== that.getStatus()) {
+            that.updateContent();
+          }
         }, 250);
         $window.resize(resizeFunction);
       } else {
-        $window.unbind('resize');
+        //$window.unbind('resize');
       }
 
     };
@@ -185,8 +190,6 @@ $(function() {
     };
 
     this.reorderContent = function() {
-
-      //console.log('reorderContent');
 
       if (this.status === this.getStatus()) return;
 
@@ -405,7 +408,8 @@ $(function() {
     this.replaceTwitterWidget = function() {
 
       // Must have a TWid, script on page and not already have been initalised
-      if (!this.twitterWidgetId || typeof twttr == 'undefined') return false;
+      if (!this.twitterWidgetId) return false;
+      if (typeof twttr == 'undefined') return false;
       if (twttr.init !== true) return false;
 
       var twitterContainer = $('.twitter-timeline-container');
@@ -478,6 +482,7 @@ $(function() {
     };
 
     this.getStatus = function() {
+
       if (this.isRQF !== true) return 'desktop';
       var windowWidth = $html.width();
       if (windowWidth < 588) return 'mobile';
