@@ -372,36 +372,53 @@ $(function() {
     this.resetTabs = function() {
 
       //Check we're on a page containing tabs
-      if ($mdcolumn.find('#tabs').length > 0)  {
+      var $tabs = $mdcolumn.find('.tabs');
+      if ($tabs.length > 0)  {
 
-        var tabContainers = $('div#tabs > div');
-        $(window).bind('hashchange', function() {
+        $tabs.each(function(i, tabWrapper) {
 
-          //get the value of the hash without the '#' prefix
-          var hashOnly = window.location.hash.substring(1);
+          var $tabWrapper = $(tabWrapper);
+          // tabId is first 12 characters of e.g. tab-wrapper-12345
+          var tabId = $tabWrapper.attr('id').substring(12);
+          var $tabList = $tabWrapper.children('ul');
+          var $tabLinks = $tabList.find('a');
+          var $tabContainers = $tabWrapper.children('div');
+          // Hide headers
+          $tabContainers.children('.tab').hide();
 
-          //check that there are no named anchors that match the hash on the current tab before switching
-          if (!($('#tabs .currentTab a[name="'+hashOnly+'"]').length == 1)) {
-            var firstTab = $('div#tabs ul.tabNavigation a:first').attr('href');
+          $tabList.addClass('tabNavigation');
 
-            //IE7 returns the full path for .attr('href'), so it needs trimming to get just the fragment
-            firstTab = firstTab.substring(firstTab.indexOf('#'));
+          $(window).bind('hashchange', function() {
 
-            var hash = firstTab;
-            //If the hash matches  the ID of a tab, use that. Otherwise use the first tab.
-            if ($('div#tabs > div'+window.location.hash +'-content').length > 0) {
-              hash = window.location.hash;
+            //get the value of the hash
+            var windowHash = window.location.hash;
+
+            //check that there are no named anchors that match
+            //the hash on the current tab before switching
+            if ($tabWrapper.find('.currentTab a[name="'+(windowHash.substring(1))+'"]').length === 0) {
+
+              var firstTab = $tabLinks.first().attr('href');
+
+              //IE7 returns the full path for .attr('href'), so it needs trimming to get just the fragment
+              firstTab = firstTab.substring(firstTab.indexOf('#'));
+
+              var hash = firstTab;
+              //If the hash matches the ID of a tab, use that. Otherwise use the first tab.
+              if ($tabContainers.filter(windowHash).length > 0) {
+                hash = windowHash;
+              }
+
+              $tabContainers.hide().removeClass('currentTab');
+              $tabContainers.filter(hash).show().addClass('currentTab');
+              $tabLinks.removeClass('selected');
+              $tabLinks.filter('[href='+hash+']').addClass('selected');
+
             }
-
-            tabContainers.hide().removeClass('currentTab');
-
-            //'-content' suffix added to match renamed tab IDs
-            tabContainers.filter(hash+'-content').show().addClass('currentTab');
-            $('div#tabs ul.tabNavigation a').removeClass('selected');
-            $('div#tabs a[hash=' + hash + ']').addClass('selected');
-          }
+          });
         });
+
         $(window).trigger("hashchange");
+
       }
     };
 
@@ -515,9 +532,7 @@ $(function() {
       var isLivePage = $('html').hasClass('rqf-page');
 
       // Get out if we're not in an allowed hostname
-      if (isLivePage === true) {
-        this.checkContent();
-      } else {
+      if (isLivePage !== true) {
 
         // List of places where the toggle is allowed
         var allowedHostnames = [
@@ -561,6 +576,7 @@ $(function() {
       // CM 21-01 Should we use sessionStorage?
       // Check to see if there's a cookie set already
       if (isLivePage !== true) {
+
         var cookies = $.map(document.cookie.split(';'), function(c, i) {
           return $.trim(c);
         });
@@ -587,6 +603,11 @@ $(function() {
           bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=d9mx89fgx7vlnnx0cutxyw';
           s.parentNode.insertBefore(bh, s);
         })(document, 'script');
+
+      } else {
+
+        this.checkContent();
+
       }
 
     };
