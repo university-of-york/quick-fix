@@ -542,6 +542,11 @@ html.rqf-page {
     border-color:#f0f2e9;
   }
 
+  .unpadded + .boxout,
+  .unpadded + .boxoutAlt {
+    border-top:0;
+  }
+
   div#mdcolumn,
   div#rhcolumn {
     .boxoutAlt {
