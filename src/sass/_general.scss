@@ -175,6 +175,7 @@ html.rqf-page {
         color:#f9f9f9;
         background-image:none;
         text-shadow:none;
+        font-weight:normal;
       }
       input.radio,
       label[for="restrict"],
@@ -473,9 +474,17 @@ html.rqf-page {
 
   div#mdcolumn input.submit,
   div#rhcolumn input.submit {
-    border:1px solid #a23479;
-    background-color:#a23479;
-    color:#FFF;
+    height:2.2em;
+    background-color: #a23479;
+    border-color:#a23479;
+    color:#f9f9f9;
+    background-image:none;
+    text-shadow:none;
+    font-weight:normal;
+    line-height:1.5;
+    font-size:14px;
+    padding:0.25em 8px;
+    border-radius:3px;
   }
 
   div#mdcolumn ul.tabNavigation {
