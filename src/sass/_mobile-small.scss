@@ -4,34 +4,40 @@
 
 html.rqf-page {
   @media only screen and (max-width: 480px) {
+    header {
+      .site-menu-wrap {
+        margin-top:0;
+      }
+    }
     div#header {
       background-image:none;
       // Stop search crashing into logo
       div#location {
-        padding-bottom:88px;
+        padding-bottom:85px;
         > a {
           padding:10px 0 0 2%!important;
         }
         > h1 {
-          top:81px;
+          top:118px;
         }
       }
       // students/staff links
       div#links {
-
+        bottom:2px;
       }
       // students/staff location
       div#global + div#location {
+        padding-bottom:77px;
         h1 {
-          top:50px;
+          top:41px;
         }
       }
       // student/staff form
       #global + #location + form {
-        top:79px;
+        top:105px;
       }
       form {
-        top:31px;
+        top:68px;
         padding:10px 2% 0;
         width:96%;
         input#search {

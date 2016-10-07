@@ -120,7 +120,7 @@ $(function() {
     this.updateContent = function() {
 
       function updateLogo() {
-        var newLogoImg = isFOI === true ? 'http://yorkfestivalofideas.com/media/news-and-events/york-festival-of-ideas/foi-logo.gif' : 'https://www.york.ac.uk/static/1.3/img/logo.png';
+        var newLogoImg = isFOI === true ? 'http://yorkfestivalofideas.com/media/news-and-events/york-festival-of-ideas/foi-logo.gif' : 'https://www.york.ac.uk/static/dev/img/logo.png';
         // Search IMGs in #location (Vintage) and header (2013)
         $('#location img, header img, #logo img').each(function(i, img) {
           img.removeAttribute('width');

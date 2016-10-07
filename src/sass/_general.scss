@@ -48,10 +48,11 @@ html.rqf-page {
   }
   header {
     border-top:0;
+    padding-bottom:12px;
     // logo (2013)
     a {
-      width:250px;
-      height:40px;
+      width:200px;
+      height:75px;
       display:block;
       img {
         width:100%;
@@ -59,8 +60,14 @@ html.rqf-page {
         display:none; // replaced by rqf.js
       }
     }
-    .site-menu-wrap a {
-      display:inline;
+    > .l-content > div:not(.site-menu-wrap) {
+      margin-top:12px !important;
+    }
+    .site-menu-wrap {
+      margin-top:10px;
+      a {
+        display:inline;
+      }
     }
   }
   div#header{
@@ -78,9 +85,9 @@ html.rqf-page {
       margin:0;
       // logo (Vintage)
       a {
-        padding:20px 20px 15px !important;
-        width:250px;
-        height:40px;
+        padding:15px 20px 10px !important;
+        width:200px;
+        height:75px;
         display:block;
       }
       img {
@@ -116,9 +123,9 @@ html.rqf-page {
     div#logo {
       float:none;
       a {
-        padding:20px 20px 15px !important;
-        width:250px;
-        height:40px;
+        padding:15px 20px 10px !important;
+        width:200px;
+        height:75px;
         display:block;
       }
       img {
@@ -150,7 +157,7 @@ html.rqf-page {
       position:absolute;
       top:0;
       right:0;
-      padding:20px;
+      padding:33px 20px 18px;
       height:50px;
       width:auto;
       label{
