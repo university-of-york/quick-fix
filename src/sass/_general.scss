@@ -386,33 +386,26 @@ html.rqf-page {
         font-size:15px;
       }
     }
-  }
-  div#mdcolumn .col-half h2,
-  div#mdcolumn .col-third h2,
-  div#mdcolumn .col-half .boxoutAlt h2,
-  div#mdcolumn .col-third  .boxoutAlt h2{
-    color:#FFF;
-    background-color:#175f77;
-    font-size: 18px;
-    font-weight: normal;
-    text-shadow: none;
-    padding-left:12px;
-    margin-top:0;
-  }
-  div#mdcolumn .col-half .boxoutAlt h2,
-  div#mdcolumn .col-third  .boxoutAlt h2 {
-    background-color: #175f77;
-  }
-
-  div#mdcolumn a,
-  div#rhcolumn a {
-    color: #008cb8;
-    &:hover {
-      color: #00b3eb;
+    .col-half, .col-third {
+      h2,
+      .boxout h2,
+      .boxoutAlt h2 {
+        color:#FFF;
+        background-color:#175f77;
+        font-size: 18px;
+        font-weight: normal;
+        text-shadow: none;
+        padding-left:12px;
+        padding-bottom:7px !important;
+        margin-top:0;
+      }
     }
-  }
-  div#mdcolumn,
-  div#rhcolumn {
+    a {
+      color: #008cb8;
+      &:hover {
+        color: #00b3eb;
+      }
+    }
     .cta a,
     a.cta,
     .cta a[href^="http://"],
