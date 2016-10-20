@@ -397,7 +397,15 @@ html.rqf-page {
         text-shadow: none;
         padding-left:12px;
         padding-bottom:7px !important;
+      }
+      h2,
+      .boxout h2 {
         margin-top:0;
+      }
+      .boxoutAlt h2 {
+        margin-top:-1px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
       }
     }
     a {
