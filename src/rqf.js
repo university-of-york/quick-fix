@@ -307,7 +307,9 @@ $(function() {
       };
       var $homepagebanner = $('#homepagebanner');
       if ($homepagebanner.length > 0) {
-        var imgHeights = $homepagebanner.find('img').map(function(i, img) {
+        $imgs = $homepagebanner.find('img');
+        if ($imgs.length === 0) return;
+        var imgHeights = $imgs.map(function(i, img) {
           return $(img).height();
         });
         var maxHeight = Math.max.apply(null, imgHeights);
