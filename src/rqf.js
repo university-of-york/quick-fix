@@ -11,6 +11,7 @@ $(function() {
                (window.location.hostname === "hswebstaff.york.ac.uk") ||
                (window.location.hostname === "www.cs.york.ac.uk") ||
                (window.location.hostname === "cms.york.ac.uk") ||
+               (window.location.hostname === "pure.york.ac.uk") ||
                (window.location.hostname === "yorkfestivalofideas.com");
   var isFOI = (window.location.hostname === "yorkfestivalofideas.com") || (window.location.pathname.indexOf("foi-rqf-test") > -1);
   var isStaffStudents = (window.location.pathname.indexOf('/students/') > -1) || (window.location.pathname.indexOf('/staff/') > -1);
@@ -541,7 +542,8 @@ $(function() {
           'localhost',
           '127.0.0.1',
           '192.168.2.1', // ad-hoc wireless
-          'cmsmigrate.york.ac.uk'
+          'cmsmigrate.york.ac.uk',
+          'puretest.york.ac.uk'
         ];
 
         if ($.inArray(document.location.hostname, allowedHostnames) === -1) return false;
