@@ -240,10 +240,12 @@ $(function() {
       $('blockquote.quote p:first-child').removeClass("attribution");
       // Reset Facebook feed
       if ($('.fb-page').length > 0) {
-        this.resetFacebook();
+       this.resetFacebook();
       }
       // Reset Survey Monkey survey
       this.resetSurvey();
+      // Trigger window onload
+      $(window).trigger('load');
     };
 
     this.courseButtons = function() {
@@ -289,9 +291,11 @@ $(function() {
     this.resetFacebook = function() {
       var t = setInterval(function() {
         try {
+          console.log(FB);
           if (!FB) return;
           // Removed 'parse' attr
           $('.fb-page').removeAttr('fb-xfbml-state');
+          $('.fb-page').width('100%');
           FB.XFBML.parse();
           clearInterval(t);
         } catch(e) {}
@@ -782,10 +786,10 @@ $(function() {
       var $originalContent = $container.children();
       if ($originalContent.length === 0) return false;
       // Stop script tags executing twice
-      var childScripts = $container.find('script');
-      childScripts.each(function(i, el) {
-        el.type = 'text/xml';
-      });
+      // var childScripts = $container.find('script');
+      // childScripts.each(function(i, el) {
+      //   el.type = 'text/xml';
+      // });
       // Remove image gallery newlines
       var $newlines = $originalContent.find('.newline-narrow-gallery, .newline-wide-gallery');
       if ($newlines.length > 0) {
