@@ -11,12 +11,19 @@ html.rqf-page{
     td a[href^=http] {
       word-break: break-all;
     }
+    header {
+      // logo (2013)
+      a {
+        width:160px;
+        height:60px;
+      }
+    }
     div#header {
       div#location {
         padding-bottom:41px;
         a {
-          width: 150px;
-          height:24px;
+          width: 160px;
+          height:60px;
         }
         h1 {
           font-size:18px;
@@ -25,10 +32,17 @@ html.rqf-page{
       }
       form {
         height:30px;
-        padding:12px;
+        padding:27px 12px;
         input#search {
           width:155px;
         }
+      }
+    }
+    // Students page
+    div#logo {
+      a {
+        width:160px;
+        height:60px;
       }
     }
     ul.breadcrumbs {

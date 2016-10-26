@@ -121,7 +121,9 @@ $(function() {
     this.updateContent = function() {
 
       function updateLogo() {
-        var newLogoImg = isFOI === true ? 'http://yorkfestivalofideas.com/media/news-and-events/york-festival-of-ideas/foi-logo.gif' : 'https://www.york.ac.uk/static/1.3/img/logo.png';
+        var newLogoImg = isFOI === true ? 'http://yorkfestivalofideas.com/media/news-and-events/york-festival-of-ideas/foi-logo.gif' : 'https://www.york.ac.uk/static/1.4/img/logo.svg';
+        // Modernizr's svg-as-img test
+        if (document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") === true) newLogoImg = 'https://www.york.ac.uk/static/1.4/img/logo.png';
         // Search IMGs in #location (Vintage) and header (2013)
         $('#location img, header img, #logo img').each(function(i, img) {
           img.removeAttribute('width');
@@ -380,6 +382,7 @@ $(function() {
 
       //Check we're on a page containing tabs
       var $tabs = $mdcolumn.find('.tabs');
+
       if ($tabs.length > 0)  {
 
         $tabs.each(function(i, tabWrapper) {
