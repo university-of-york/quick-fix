@@ -788,11 +788,12 @@ $(function() {
 
       var $originalContent = $container.children();
       if ($originalContent.length === 0) return false;
-      // Stop script tags executing twice
-      // var childScripts = $container.find('script');
-      // childScripts.each(function(i, el) {
-      //   el.type = 'text/xml';
-      // });
+      var childScripts = $container.find('script');
+      // Stop script tags which have document.write executing twice
+      childScripts.each(function(i, el) {
+        if ($(el).text().indexOf('document.write') === -1) return;
+        el.type = 'text/xml';
+      });
       // Remove image gallery newlines
       var $newlines = $originalContent.find('.newline-narrow-gallery, .newline-wide-gallery');
       if ($newlines.length > 0) {
