@@ -1,7 +1,11 @@
 //hello
-$(function() {
 
-  // console.log(window.location);
+// Stop conflict with Prototype on Pure
+if (typeof Prototype === 'object') {
+  $.noConflict();
+}
+// Pass jQuery's $ to the RQF code
+jQuery(document).ready(function($) {
 
   var $window = $(window);
   var $html = $('html');
@@ -123,7 +127,7 @@ $(function() {
       function updateLogo() {
         var newLogoImg = isFOI === true ? 'http://yorkfestivalofideas.com/media/news-and-events/york-festival-of-ideas/foi-logo.gif' : 'https://www.york.ac.uk/static/1.4/img/logo.svg';
         // Modernizr's svg-as-img test
-        if (document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") === true) newLogoImg = 'https://www.york.ac.uk/static/1.4/img/logo.png';
+        if (isFOI !== true && document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") === true) newLogoImg = 'https://www.york.ac.uk/static/1.4/img/logo.png';
         // Search IMGs in #location (Vintage) and header (2013)
         $('#location img, header img, #logo img').each(function(i, img) {
           img.removeAttribute('width');
@@ -650,7 +654,7 @@ $(function() {
 
       var tabNav = $content.children('.tabNavigation').find('a').map(function(i, el) {
         var href = el.href.substring(el.href.indexOf('#'));
-        var $tabContent = $content.find(href+'-content');
+        var $tabContent = $content.find(href);
         var tabSections = new rqfContent($tabContent);
         var sectionContent = '';
         $.map(tabSections.contentBlocks, function(a, j) {
@@ -753,7 +757,7 @@ $(function() {
       var elClone = $el.clone();
 
       // Redo any tabs
-      if ($el.is('#tabs')) {
+      if ($el.is('#tabs') || $el.is('.tabs')) {
         elClone = this.makeAccordion(elClone);
       }
 
@@ -913,17 +917,14 @@ $(function() {
       var isHeaderImage = function($em) {
         var nextEl = $em.next();
         if (nextEl.length == 0) return false;
-        if ($em.hasClass('unpadded')
-              && $em.find('img').length > 0
-              && (isHeader(nextEl) || isBoxout(nextEl))) {
+        if ($em.hasClass('unpadded') && $em.find('img').length > 0 && (isHeader(nextEl) || isBoxout(nextEl))) {
           return true;
         }
         return false;
       };
       // Floated images have a class 'left' or 'right' and contain an image
       var isFloatImage = function($em) {
-        if (($em.hasClass('left') || $em.hasClass('right'))
-              && $em.children('img').length > 0) {
+        if (($em.hasClass('left') || $em.hasClass('right')) && $em.children('img').length > 0) {
           return true;
         }
         return false;
