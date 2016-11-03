@@ -3,8 +3,24 @@
 //
 
 html.rqf-page{
+  @media only screen and (min-width: 589px) {
+  // Visibility
+    .is-hidden\@desktop {
+      display:none;
+    }
+    .is-visible\@desktop {
+      display:block;
+    }
+  }
   /* Go to single column */
   @media only screen and (max-width: 588px) {
+    // Visibility
+    .is-hidden\@mobile {
+      display:none;
+    }
+    .is-visible\@mobile {
+      display:block;
+    }
     .l-site .nav-container {
       display:none;
     }
