@@ -738,9 +738,7 @@ function go() {
 
         $tableRows.each(function(i, row) {
           var $row = $(row);
-          console.log($row);
           if ($row.hasClass('is-hidden@mobile')) {
-            console.log('Hide it!');
             return;
           }
           var colCount = 0;
