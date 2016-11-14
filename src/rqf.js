@@ -267,8 +267,13 @@ function go() {
         }
         // Reset Survey Monkey survey
         this.resetSurvey();
-        // Trigger window onload
-        $(window).trigger('load');
+        // do scripts
+        this.runScripts();
+        // Trigger window onload and hashchange (for tabs)
+        $window.trigger('load');
+        if ($('.tabs').length > 0) {
+          $window.trigger('hashchange');
+        }
       };
 
       this.courseButtons = function() {
@@ -293,6 +298,15 @@ function go() {
 
         });
 
+      };
+
+      this.runScripts = function() {
+        if (this.status === 'desktop') return;
+        $('.script-wrapper').each(function(i, scriptWrapper) {
+          var $scriptWrapper = $(scriptWrapper);
+          // Appending a script runs it automatically
+          $('<script>').text($scriptWrapper.text()).appendTo($scriptWrapper);
+        });
       };
 
       this.resetSurvey = function() {
@@ -774,7 +788,7 @@ function go() {
 
       this.processContent = function($el) {
 
-        var elClone = $el.clone();
+        var elClone = $el.clone(true);
 
         // Redo any tabs
         if ($el.is('#tabs') || $el.is('.tabs')) {
@@ -864,8 +878,17 @@ function go() {
             wrapper.append(elClone);
             that.contentBlocks[++contentCount] = wrapper;
           } else {
-            // Append to existing Content Block
-            that.contentBlocks[contentCount].append(elClone);
+            var thisContentBlock = that.contentBlocks[contentCount];
+            if(elClone[0].nodeName === 'SCRIPT') {
+              // Add <script>s to DOM
+              var $script = $('<div>').addClass('script-wrapper')
+                                      .text(elClone[0].innerHTML)
+                                      .css('display', 'none');
+              that.contentBlocks[contentCount].append($script);
+            } else {
+              // Append to existing Content Block
+              that.contentBlocks[contentCount].append(elClone);
+            }
           }
 
         };
