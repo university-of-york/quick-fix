@@ -683,9 +683,13 @@ function go() {
         var that = this;
         var r = $('<div>').addClass('faq-container');
 
+
         var tabNav = $content.children('.tabNavigation').find('a').map(function(i, el) {
           var href = el.href.substring(el.href.indexOf('#'));
           var $tabContent = $content.find(href);
+          if ($tabContent.length === 0) {
+            $tabContent = $content.find(href+'-content');
+          }
           var tabSections = new rqfContent($tabContent);
           var sectionContent = '';
           $.map(tabSections.contentBlocks, function(a, j) {
@@ -880,11 +884,10 @@ function go() {
           } else {
             var thisContentBlock = that.contentBlocks[contentCount];
             if(elClone[0].nodeName === 'SCRIPT') {
-              // Add <script>s to DOM
-              var $script = $('<div>').addClass('script-wrapper')
-                                      .text(elClone[0].innerHTML)
-                                      .css('display', 'none');
-              that.contentBlocks[contentCount].append($script);
+              // Stop script tags which have document.write executing twice
+              if (elClone[0].innerHTML.indexOf('document.write') === -1) {
+                that.contentBlocks[contentCount].append(elClone);
+              }
             } else {
               // Append to existing Content Block
               that.contentBlocks[contentCount].append(elClone);
