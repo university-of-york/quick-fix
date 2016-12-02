@@ -92,12 +92,12 @@ html.rqf-page {
         width:200px;
         height:75px;
         display:block;
-      }
-      img {
-        margin:0;
-        width:100%;
-        height:100%;
-        display:none; // replaced by rqf.js
+        img {
+          margin:0;
+          width:100%;
+          height:100%;
+          display:none; // replaced by rqf.js
+        }
       }
       br {
         display:none;
@@ -516,6 +516,7 @@ html.rqf-page {
     border: 1px solid #d5d7c7;
     border-left-width: 10px;
     margin-bottom: 10px;
+    padding:0;
     h3.q, h3.q a{
       font-family: "museo-sans",Helvetica,Arial,sans-serif;
       color:#008cb8;

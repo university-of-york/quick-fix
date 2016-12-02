@@ -1,0 +1,75 @@
+/*
+ * CONCERTS STYLES
+ */
+$concerts-blue: #2f4798;
+.rqf-page {
+  body.york-concerts-page {
+    div#header {
+      div#location {
+        padding-bottom:0;
+        @media only screen and (max-width: 512px) {
+          padding-bottom:32px;
+        }
+        a {
+          padding-bottom:0 !important;
+          width:100%;
+          max-width:240px;
+          height:65px;
+          @media only screen and (max-width: 962px) {
+            img {
+              max-width:240px;
+            }
+          }
+          @media only screen and (max-width: 512px) {
+            padding-top:10px !important;
+          }
+        }
+      }
+      form {
+        padding-top:25px;
+        // Move form down earlier
+        @media only screen and (max-width: 512px) {
+          top:68px;
+          padding:0 2%;
+          width:96%;
+          input#search {
+            width:70%;
+            width:calc(75% - 18px);
+            float:left;
+          }
+          input.submit {
+            width:20%;
+            width:calc(25% - 2px);
+            float:left;
+          }
+        }
+        @media only screen and (max-width: 480px) {
+          padding-top:0;
+        }
+      }
+    }
+    // div#extra-links {
+    //   border-bottom-color:$concerts-blue;
+    // }
+    // div#footer {
+    //   border-top-color:$concerts-blue;
+    // }
+    // div#mdcolumn,
+    // div#rhcolumn {
+    //   a {
+    //     color:$concerts-blue;
+    //   }
+    //   .col-half, .col-third {
+    //     h2,
+    //     .boxout h2,
+    //     .boxoutAlt h2 {
+    //       background-color:$concerts-blue;
+    //     }
+    //   }
+    //   .boxoutAlt {
+    //     background-color:$concerts-blue;
+    //     border-color:$concerts-blue;
+    //   }
+    // }
+  }
+}

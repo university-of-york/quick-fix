@@ -33,8 +33,13 @@ function go() {
                  (window.location.hostname === "www.cs.york.ac.uk") ||
                  (window.location.hostname === "cms.york.ac.uk") ||
                  (window.location.hostname === "pure.york.ac.uk") ||
-                 (window.location.hostname === "yorkfestivalofideas.com");
+                 (window.location.hostname === "yorkfestivalofideas.com") ||
+                 (window.location.hostname === "yorkconcerts.co.uk");
     var isFOI = (window.location.hostname === "yorkfestivalofideas.com") || (window.location.pathname.indexOf("foi-rqf-test") > -1);
+    var isConcerts = (window.location.hostname === "yorkconcerts.co.uk") || (window.location.pathname.indexOf("/concerts/") === 0) || (!isLive && (window.location.pathname.indexOf("concert") > -1));
+    var hasLogo = $('#location > img').length > 0 ? true : false;
+    // Modernizr's svg-as-img test
+    var hasSVG = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
     var isStaffStudents = (window.location.pathname.indexOf('/students/') > -1) || (window.location.pathname.indexOf('/staff/') > -1);
 
     // Returns a function, that, as long as it continues to be invoked, will not
@@ -141,20 +146,58 @@ function go() {
 
       this.updateContent = function() {
 
+        var $location = $('#location');
+        var $mainHeading = $location.children('h1');
+
         function updateLogo() {
-          var newLogoImg = isFOI === true ? 'http://yorkfestivalofideas.com/media/news-and-events/york-festival-of-ideas/foi-logo.gif' : 'https://www.york.ac.uk/static/1.4/img/logo.svg';
-          // Modernizr's svg-as-img test
-          if (isFOI !== true && document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") === true) newLogoImg = 'https://www.york.ac.uk/static/1.4/img/logo.png';
+          var newLogoImg = 'https://www.york.ac.uk/static/1.4/img/logo.png';
+          if (hasSVG === true) newLogoImg = 'https://www.york.ac.uk/static/1.4/img/logo.svg';
+          if (hasLogo === true) $('#header').addClass('has-logo');
+          if (isFOI === true) {
+            newLogoImg = 'http://yorkfestivalofideas.com/media/news-and-events/york-festival-of-ideas/foi-logo.gif';
+            $('#location a').attr('href', 'http://yorkfestivalofideas.com/');
+          }
+          if (isConcerts === true) {
+            newLogoImg = 'https://www.york.ac.uk/media/css/concerts/concerts-logo.gif';
+            $('#location a').attr('href', 'http://yorkconcerts.co.uk/');
+            // Remove additional logo
+            $('#location > img').remove();
+            $('body').addClass('york-concerts-page');
+          }
           // Search IMGs in #location (Vintage) and header (2013)
-          $('#location img, header img, #logo img').each(function(i, img) {
+          $('#location a img, header img, #logo img').each(function(i, img) {
             img.removeAttribute('width');
             img.removeAttribute('height');
             img.src = newLogoImg;
             img.style.display = 'block';
           });
-          if (isFOI === true) {
-            $('#location a').attr('href', 'http://yorkfestivalofideas.com/');
+          if ($mainHeading.length > 0) {
+            if ($.trim($mainHeading.text()) === '') {
+              // Remove empty headings
+              $mainHeading.remove();
+              // remove bottom padding
+              // $location.css('padding-bottom', 0);
+            } else {
+              // see if text is spilling out
+              checkHeadingHeight();
+              $window.resize(debounce(function () {
+                checkHeadingHeight();
+              }, 250));
+            }
           }
+        }
+
+        function checkHeadingHeight() {
+          // Reset to get default height and padding-bottom
+          $location.css('padding-bottom', '');
+          var locationPadding = parseInt($location.css('padding-bottom'), 10);
+          var headingHeight = $mainHeading.outerHeight();
+          var padDiff = Math.max(locationPadding - headingHeight, 0);
+          $mainHeading.css('position', 'static');
+          var newHeadingHeight = $mainHeading.outerHeight();
+          $mainHeading.css('position', 'absolute');
+          // Update padding according to padDiff and newHeadingHeight
+          $location.css('padding-bottom', padDiff+newHeadingHeight);
         }
 
         function updateBreadcrumb() {

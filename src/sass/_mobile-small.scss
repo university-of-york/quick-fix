@@ -145,6 +145,13 @@ html.rqf-page {
   @media only screen and (max-width: 350px) {
     table a[href^="mailto"] {
       word-break:break-all;
+      // Some emails are wrapped in spans:
+      // e.g. <span>cm1438</span><span>@york.ac.uk</span>
+      // split them on to two lines
+      span {
+        display: block;
+        word-break: normal;
+      }
     }
     // input and button on one line e.g. /about/departments/teaching
     p[align=center] {
