@@ -91,6 +91,18 @@ html.rqf-page{
       }
     }
     div#mdcolumn {
+      // Homepage banner fix
+      #homepagebanner {
+        // Allow space for caption
+        padding-bottom:76px;
+        .imagewithcaption {
+          .caption,
+          p + p {
+            top:100%;
+            bottom:auto;
+          }
+        }
+      }
       iframe {
         float:none;
       }

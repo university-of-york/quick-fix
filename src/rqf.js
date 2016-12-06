@@ -158,7 +158,8 @@ function go() {
             $('#location a').attr('href', 'http://yorkfestivalofideas.com/');
           }
           if (isConcerts === true) {
-            newLogoImg = 'https://www.york.ac.uk/media/css/concerts/concerts-logo.gif';
+            newLogoImg = 'https://www.york.ac.uk/media/concerts/images/logos/concerts-logo.png';
+            if (hasSVG === true) newLogoImg = 'https://www.york.ac.uk/media/concerts/images/logos/concerts-logo.png';
             $('#location a').attr('href', 'http://yorkconcerts.co.uk/');
             // Remove additional logo
             $('#location > img').remove();
@@ -394,12 +395,28 @@ function go() {
         if ($homepagebanner.length > 0) {
           $imgs = $homepagebanner.find('img');
           if ($imgs.length === 0) return;
+          var captionHeights = [];
           var imgHeights = $imgs.map(function(i, img) {
-            return $(img).height();
+            var $img = $(img);
+            var $container = $img.closest('.imagewithcaption');
+            // Get caption (if it's .caption or p+p)
+            var $caption = $img.next('.caption');
+            if ($caption.length === 0) $caption = $container.find('p + p');
+            $container.css('display', 'block');
+            var imgHeight = $img.height();
+            var captionHeight = $caption.outerHeight();
+            captionHeights.push(captionHeight);
+            $container.css('display', 'none');
+            return imgHeight;
           });
-          var maxHeight = Math.max.apply(null, imgHeights);
+          var maxImgHeight = Math.max.apply(null, imgHeights);
+          var maxCaptionHeight = Math.max.apply(null, captionHeights);
           $homepagebanner.cycle(cycleOptions);
-          if (maxHeight > 0) $homepagebanner.height(maxHeight);
+          if (maxImgHeight > 0) $homepagebanner.height(maxImgHeight);
+          var bannerPadding = parseInt($homepagebanner.css('padding-bottom'), 10);
+          if(bannerPadding > 0) {
+            $homepagebanner.css('padding-bottom', maxCaptionHeight);
+          }
           return true;
         }
         return false;
@@ -476,7 +493,11 @@ function go() {
 
             $tabList.addClass('tabNavigation');
 
-            $(window).bind('hashchange', function() {
+            $(window).bind('hashchange', function(e) {
+
+              console.log(e);
+
+              e.preventDefault();
 
               //get the value of the hash
               var windowHash = window.location.hash;
