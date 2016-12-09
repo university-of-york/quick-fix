@@ -239,11 +239,18 @@ function go() {
           }
         }
 
+        function updateSearchTarget() {
+          if ($('#university').length > 0) {
+            $('#university').prop('checked', true);
+          }
+        }
+
         // Update logo
         if (!this.contentUpdated) {
 
           updateLogo();
           updateBreadcrumb();
+          updateSearchTarget();
 
           this.contentUpdated = true;
 
