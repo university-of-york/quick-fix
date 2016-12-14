@@ -40,6 +40,10 @@ html.rqf-page {
       font-size:inherit;
     }
   }
+  // Fix for overflowing tab boxes
+  #course-applying, #course-assessment, #course-careers, #course-content, #course-overview, #course-teaching, #external, #profile, #publications, #research, #tab-1, #tab-2, #tab-3, #tab-4, #tab-5, #tab-6, #tab-7, #tabs>div, #teaching {
+    overflow:hidden;
+  }
   // Fix for spans with inline font sizes
   span[style] {
     font-size:inherit !important;

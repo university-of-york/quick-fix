@@ -361,25 +361,21 @@ function go() {
       };
 
       this.resetSurvey = function() {
-
-        try {
-          if (SMCX) return false;
-          // var surveyJS = $('#smcx-sdk');
-          // var surveyDiv = $('#__smcx__');
-          // // console.log(surveyJS);
-          // if (surveyJS.length > 0) {
-          //   var src = surveyJS.attr('src');
-          //   var newScript = $('<script>').attr({'src':src, 'id': 'smcx-sdk'});
-          //   surveyJS.replaceWith(newScript);
-          //   surveyDiv.remove();
-          // }
-        } catch (e) {}
+        // try {
+        //   if (!SMCX) return false;
+        //   setTimeout(function(e) {
+        //     var surveyDiv = $('.smcx-widget');
+        //     if (surveyDiv.length > 1) {
+        //       surveyDiv.not(surveyDiv[0]).remove();
+        //     }
+        //   }, 1000);
+        // } catch (e) {}
       };
 
       this.resetFacebook = function() {
         var t = setInterval(function() {
           try {
-            console.log(FB);
+            //console.log(FB);
             if (!FB) return;
             // Removed 'parse' attr
             $('.fb-page').removeAttr('fb-xfbml-state');
@@ -501,8 +497,6 @@ function go() {
             $tabList.addClass('tabNavigation');
 
             $(window).bind('hashchange', function(e) {
-
-              console.log(e);
 
               e.preventDefault();
 
@@ -902,10 +896,16 @@ function go() {
         var $originalContent = $container.children();
         if ($originalContent.length === 0) return false;
         var childScripts = $container.find('script');
-        // Stop script tags which have document.write executing twice
         childScripts.each(function(i, el) {
-          if ($(el).text().indexOf('document.write') === -1) return;
-          el.type = 'text/xml';
+          var $el = $(el);
+          // Don't add SurveyMonkey script to mobile version
+          if ($el.attr('id') === 'smcx-sdk') {
+            el.type = 'text/xml';
+          }
+          // Stop script tags which have document.write from executing twice
+          if ($el.text().indexOf('document.write') > -1) {
+            el.type = 'text/xml';
+          }
         });
         // Remove image gallery newlines
         var $newlines = $originalContent.find('.newline-narrow-gallery, .newline-wide-gallery');
