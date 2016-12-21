@@ -298,40 +298,44 @@ html.rqf-page {
   div#lhcolumn {
     font-size:12px;
   }
-  #nav li a,
-  #nav li li a,
-  #nav li li li a,
-  #nav li li li li a {
-    color: #000;
-    border-bottom: 1px solid white;
-    background-image:none;
-  }
+  #nav {
+    li {
+      a,
+      li a,
+      li li a,
+      li li li a {
+        color: #000;
+        border-bottom: 1px solid white;
+        background-image:none;
+      }
 
-  #nav li span.currentbranch0 a,
-  #nav li span.currentbranch1 a,
-  #nav li span.currentbranch2 a,
-  #nav li span.currentbranch3 a,
-  #nav li span.currentbranch4 a {
-    background-image:none;
-  }
+      span.currentbranch0 a,
+      span.currentbranch1 a,
+      span.currentbranch2 a,
+      span.currentbranch3 a,
+      span.currentbranch4 a {
+        background-image:none;
+      }
 
-  #nav li span.parent,
-  #nav li span.parent a.parent {
-    color:#FFF;
-    background-color:#0f3d4c;
-    background-image:none;
-  }
+      span.parent,
+      span.parent a.parent {
+        color:#FFF;
+        background-color:#0f3d4c;
+        background-image:none;
+      }
+    }
 
-  #nav .children {
-    color:#333;
-    background-color:#f0f2e9;
-    background-image:none;
-  }
+    .children {
+      color:#333;
+      background-color:#f0f2e9;
+      background-image:none;
+    }
 
-  #nav li a:hover {
-    color:#FFF !important;
-    background-color:#00b3eb !important;
-    background-image:none;
+    li a:hover {
+      color:#FFF !important;
+      background-color:#00b3eb !important;
+      background-image:none;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -344,44 +348,57 @@ html.rqf-page {
     }
   }
 
-  div#mdcolumn h1 {
-    font-size:38px;
-    line-height: 1.11;
-  }
-  div#mdcolumn h2 {
-    font-size:32px;
-    line-height: 1.25;
-    border-bottom:none;
-  }
-  div#mdcolumn h3 {
-    font-size:24px;
-    line-height: 1.25;
-  }
-  div#mdcolumn h4 {
-    font-size:18px;
-    line-height: 1.25;
-  }
-  div#mdcolumn h5 {
-    font-size:18px;
-    line-height: 1.25;
-    font-style:italic;
+  .leftLabel,
+  .rightLabel {
+    label.desc {
+      padding-top:4px;
+    }
   }
 
-
+  div#mdcolumn {
+    h1 {
+      font-size:38px;
+      line-height: 1.11;
+    }
+    h2 {
+      font-size:32px;
+      line-height: 1.25;
+      border-bottom:none;
+    }
+    h3 {
+      font-size:24px;
+      line-height: 1.25;
+    }
+    h4 {
+      font-size:18px;
+      line-height: 1.25;
+    }
+    h5 {
+      font-size:18px;
+      line-height: 1.25;
+      font-style:italic;
+    }
+    hr {
+      color:#ccc;
+      background-color:#ccc;
+    }
+    div.col-half,
+    div.col-third {
+      h2 a {
+        color:#fff;
+      }
+      .boxout, .boxoutAlt {
+        ul {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
   div#mdcolumn,
   div#rhcolumn {
     h1, h2, h3, h4, h5, h6 {
       color:#333;
     }
-  }
-
-  div#mdcolumn .col-half h2 a,
-  div#mdcolumn .col-third h2 a,
-  {
-    color:#fff;
-  }
-  div#mdcolumn,
-  div#rhcolumn {
     .boxout, .boxoutAlt {
       h2 {
         font-size:24px;
@@ -431,32 +448,14 @@ html.rqf-page {
         background-color:#b53a87;
       }
     }
-  }
-
-  div#mdcolumn hr{
-    color:#ccc;
-    background-color:#ccc;
-  }
-
-  div#mdcolumn ul,
-  div#rhcolumn ul {
-    list-style: disc;
-    margin-left: 0;
-    padding-left:20px;
-  }
-  div#mdcolumn li,
-  div#rhcolumn li {
-    background-image:none;
-    padding-left: 0;
-  }
-  div#mdcolumn {
-    div.col-half,
-    div.col-third {
-      .boxout, .boxoutAlt {
-        ul {
-          margin-left: 30px;
-        }
-      }
+    ul {
+      list-style: disc;
+      margin-left: 0;
+      padding-left:20px;
+    }
+    li {
+      background-image:none;
+      padding-left: 0;
     }
   }
 
@@ -484,6 +483,9 @@ html.rqf-page {
     border:1px solid #AAA;
     max-width:100%;
     max-width:calc(100% - 2px);
+    background-image: none;
+    min-height: 1.5em;
+    padding-left: 4px;
   }
 
   div#mdcolumn input.submit,
@@ -585,10 +587,6 @@ html.rqf-page {
         color: #eee;
       }
     }
-  }
-
-  div#mdcolumn,
-  div#rhcolumn {
     blockquote.quote {
       background: none;
       position:relative;
@@ -828,6 +826,9 @@ html.rqf-page {
       margin-left:calc(20px);
       width:31%;
       width:calc(33% - 20px);
+    }
+    li {
+      background-image:url("/media/css/students/bullet.gif");
     }
   }
   // Stop feedback form falling off edge of page

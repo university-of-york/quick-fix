@@ -61,6 +61,13 @@ $concerts-blue: #2f4798;
       a {
         color:$concerts-blue;
       }
+      .cta a,
+      .cta a[href^="http://"],
+      a.cta,
+      a.cta[href^="https://"] {
+        background:$concerts-blue;
+        color:#fff;
+      }
       .col-half, .col-third {
         h2,
         .boxout h2,

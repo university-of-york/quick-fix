@@ -40,7 +40,7 @@ function go() {
     var hasLogo = $('#location > img').length > 0 ? true : false;
     // Modernizr's svg-as-img test
     var hasSVG = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
-    var isStaffStudents = (window.location.pathname.indexOf('/students/') > -1) || (window.location.pathname.indexOf('/staff/') > -1);
+    var isStaffStudents = (window.location.pathname.indexOf('/students/') > -1) || (window.location.pathname.indexOf('/staff/') > -1) || (isLive === false);
 
     // Returns a function, that, as long as it continues to be invoked, will not
     // be triggered. The function will be called after it stops being called for
