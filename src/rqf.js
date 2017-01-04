@@ -40,7 +40,7 @@ function go() {
     var hasLogo = $('#location > img').length > 0 ? true : false;
     // Modernizr's svg-as-img test
     var hasSVG = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
-    var isStaffStudents = (window.location.pathname.indexOf('/students/') > -1) || (window.location.pathname.indexOf('/staff/') > -1) || (isLive === false);
+    var isStaffStudents = (window.location.pathname.indexOf('/students/') > -1) || (window.location.pathname.indexOf('/staff/') > -1);
 
     // Returns a function, that, as long as it continues to be invoked, will not
     // be triggered. The function will be called after it stops being called for
@@ -491,6 +491,7 @@ function go() {
             var $tabList = $tabWrapper.children('ul');
             var $tabLinks = $tabList.find('a');
             var $tabContainers = $tabWrapper.children('div');
+            var wrapperTop = $tabWrapper.offset().top;
             // Hide headers
             $tabContainers.children('.tab').hide();
 
@@ -516,6 +517,8 @@ function go() {
                 //If the hash matches the ID of a tab, use that. Otherwise use the first tab.
                 if ($tabContainers.filter(windowHash).length > 0) {
                   hash = windowHash;
+                  // scroll to top of tabs if a tab is selected
+                  $(window).scrollTop(wrapperTop);
                 }
 
                 $tabContainers.hide().removeClass('currentTab');

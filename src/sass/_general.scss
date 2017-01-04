@@ -400,6 +400,8 @@ html.rqf-page {
       color:#333;
     }
     .boxout, .boxoutAlt {
+      max-width:100%;
+      max-width:calc(100% - 30px); // 15px padding on each side
       h2 {
         font-size:24px;
       }
