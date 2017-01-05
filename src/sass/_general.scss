@@ -340,11 +340,11 @@ html.rqf-page {
 
   h1, h2, h3, h4, h5, h6 {
     font-family: "chaparral-pro",Georgia,"Times New Roman",Times,serif;
-    font-weight: 600;
+    font-weight: normal;
     font-style: normal;
     * {
       font-family: "chaparral-pro",Georgia,"Times New Roman",Times,serif;
-      font-weight: 600;
+      font-weight: normal;
     }
   }
 
@@ -401,7 +401,6 @@ html.rqf-page {
     }
     .boxout, .boxoutAlt {
       max-width:100%;
-      max-width:calc(100% - 30px); // 15px padding on each side
       h2 {
         font-size:24px;
       }
