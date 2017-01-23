@@ -579,16 +579,16 @@ function go() {
             var videoWidth = $video.width();
             // If iframe is hidden, width is 0! Set it to width attr
             if (videoWidth === 0) videoWidth = videoWidthAttr;
-            if (videoWidthAttr !== videoWidth) {
+            //if (videoWidthAttr !== videoWidth) {
               var aspectRatio = parseFloat($video.attr('data-aspect-ratio'));
               $video.attr({
                 'height': videoWidth/aspectRatio
               });
-            }
+            //}
           });
         };
 
-        $window.resize(debounce(resizeFunction, 250));
+        $window.resize(debounce(resizeFunction, 500));
         resizeFunction();
 
       };
