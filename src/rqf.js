@@ -356,7 +356,8 @@ function go() {
         $('.script-wrapper').each(function(i, scriptWrapper) {
           var $scriptWrapper = $(scriptWrapper);
           // Appending a script runs it automatically
-          $('<script>').text($scriptWrapper.text()).appendTo($scriptWrapper);
+          var s = $('<script>').text($scriptWrapper.text());
+          $scriptWrapper.parent().append(s);
         });
       };
 
@@ -860,7 +861,12 @@ function go() {
 
       this.processContent = function($el) {
 
-        var elClone = $el.clone(true);
+        var elClone = $el.clone(true, true);
+
+        // Replace script content
+        if ($el.is('script') === true) {
+           elClone = $('<div>').addClass('script-wrapper').css('display','none').text($el.text());
+        }
 
         // Redo any tabs
         if ($el.is('#tabs') || $el.is('.tabs')) {
