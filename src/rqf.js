@@ -354,7 +354,7 @@ function go() {
       this.runScripts = function() {
         $('.script-wrapper').each(function(i, scriptWrapper) {
           var $scriptWrapper = $(scriptWrapper);
-          console.log('Script wrapper found', $scriptWrapper);
+          //console.log('Script wrapper found', $scriptWrapper);
           if ($scriptWrapper.text().indexOf('document.write') === -1) {
             // Appending a script runs it automatically
             var s = $('<script>').text($scriptWrapper.text());
