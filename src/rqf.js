@@ -352,12 +352,21 @@ function go() {
       };
 
       this.runScripts = function() {
-        if (this.status === 'desktop') return;
         $('.script-wrapper').each(function(i, scriptWrapper) {
           var $scriptWrapper = $(scriptWrapper);
-          // Appending a script runs it automatically
-          var s = $('<script>').text($scriptWrapper.text());
-          $scriptWrapper.parent().append(s);
+          console.log('Script wrapper found', $scriptWrapper);
+          if ($scriptWrapper.text().indexOf('document.write') === -1) {
+            // Appending a script runs it automatically
+            var s = $('<script>').text($scriptWrapper.text());
+            // Copy attributes too
+            var attrs = $scriptWrapper[0].attributes;
+            $.each(attrs, function(i, v) {
+              s.attr(v.nodeName, v.nodeValue);
+              if (i === attrs.length-1) {
+                $scriptWrapper.replaceWith(s);
+              }
+            });
+          }
         });
       };
 
@@ -712,12 +721,12 @@ function go() {
           });
 
           // Add Bugherd script
-          (function (d, t) {
-            var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
-            bh.type = 'text/javascript';
-            bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=d9mx89fgx7vlnnx0cutxyw';
-            s.parentNode.insertBefore(bh, s);
-          })(document, 'script');
+          // (function (d, t) {
+          //   var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          //   bh.type = 'text/javascript';
+          //   bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=d9mx89fgx7vlnnx0cutxyw';
+          //   s.parentNode.insertBefore(bh, s);
+          // })(document, 'script');
 
         } else {
 
@@ -863,11 +872,6 @@ function go() {
 
         var elClone = $el.clone(true, true);
 
-        // Replace script content
-        if ($el.is('script') === true) {
-           elClone = $('<div>').addClass('script-wrapper').css('display','none').text($el.text());
-        }
-
         // Redo any tabs
         if ($el.is('#tabs') || $el.is('.tabs')) {
           elClone = this.makeAccordion(elClone);
@@ -902,20 +906,26 @@ function go() {
 
       this.getSections = function($container) {
 
-        var $originalContent = $container.children();
-        if ($originalContent.length === 0) return false;
         var childScripts = $container.find('script');
         childScripts.each(function(i, el) {
           var $el = $(el);
-          // Don't add SurveyMonkey script to mobile version
-          if ($el.attr('id') === 'smcx-sdk') {
-            el.type = 'text/xml';
-          }
-          // Stop script tags which have document.write from executing twice
-          if ($el.text().indexOf('document.write') > -1) {
-            el.type = 'text/xml';
-          }
+          // Wrap scripts to stop them re-running when switching
+          var elText = $el.text();
+          var scriptWrapper = $('<div>').text(elText);
+          // Copy all attributes too
+          var attrs = $el[0].attributes;
+          $.each(attrs, function(i, v) {
+            scriptWrapper.attr(v.nodeName, v.nodeValue);
+            if (i === attrs.length-1) {
+              scriptWrapper.addClass('script-wrapper').css('display','none');
+              $el.replaceWith(scriptWrapper);
+            }
+          });
         });
+
+        var $originalContent = $container.children();
+        if ($originalContent.length === 0) return false;
+
         // Remove image gallery newlines
         var $newlines = $originalContent.find('.newline-narrow-gallery, .newline-wide-gallery');
         if ($newlines.length > 0) {
