@@ -159,7 +159,7 @@ function go() {
           }
           if (isConcerts === true) {
             newLogoImg = 'https://www.york.ac.uk/media/concerts/images/logos/concerts-logo.png';
-            if (hasSVG === true) newLogoImg = 'https://www.york.ac.uk/media/concerts/images/logos/concerts-logo.png';
+            if (hasSVG === true) newLogoImg = 'https://www.york.ac.uk/media/concerts/images/logos/concerts-logo.svg';
             $('#location a').attr('href', 'http://yorkconcerts.co.uk/');
             // Remove additional logo
             $('#location > img').remove();
@@ -796,6 +796,7 @@ function go() {
         var $tableBody = $table.children('tbody');
         var $tableContainer = $('<div>').addClass('table-container');
         var tableClasses = $table[0].className;
+        var tableSpans = $table.find('td[colspan], td[rowspan]').length;
 
         // Get header row if needed
         if ($tableHead.length === 0) {
@@ -807,6 +808,9 @@ function go() {
 
         // Not very tabular - just return the same table
         if ($tableHeadings.length < 3) return $table.clone();
+
+        //If there's colspans or rowspan, return the same table
+        if (tableSpans > 0) return $table.clone();
 
         var hasHeaderRow = $tableFirstRow.find('th').length > 0;
         if (hasHeaderRow === true) {

@@ -1,7 +1,7 @@
 /*
  * CONCERTS STYLES
  */
-$concerts-blue: #2f4798;
+$concerts-colour: #be3d45;
 .rqf-page {
   body.york-concerts-page {
     div#header {
@@ -51,33 +51,33 @@ $concerts-blue: #2f4798;
       }
     }
     div#extra-links {
-      border-bottom-color:$concerts-blue;
+      border-bottom-color:$concerts-colour;
     }
     div#footer {
-      border-top-color:$concerts-blue;
+      border-top-color:$concerts-colour;
     }
     div#mdcolumn,
     div#rhcolumn {
       a {
-        color:$concerts-blue;
+        color:$concerts-colour;
       }
       .cta a,
       .cta a[href^="http://"],
       a.cta,
       a.cta[href^="https://"] {
-        background:$concerts-blue;
+        background:$concerts-colour;
         color:#fff;
       }
       .col-half, .col-third {
         h2,
         .boxout h2,
         .boxoutAlt h2 {
-          background-color:$concerts-blue;
+          background-color:$concerts-colour;
         }
       }
       .boxoutAlt {
-        background-color:$concerts-blue;
-        border-color:$concerts-blue;
+        background-color:$concerts-colour;
+        border-color:$concerts-colour;
       }
     }
   }
