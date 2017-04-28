@@ -783,6 +783,8 @@ function go() {
           });
           var $tabAnswer = $('<div>').addClass('a').hide();
           $tabContent.children().not('h3.q').wrapAll($tabAnswer);
+          // Make sure question is first!
+          $tabContent.children('h3.q').prependTo($tabContent);
           r.append($tabContent);
 
         });
