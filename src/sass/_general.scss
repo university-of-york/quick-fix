@@ -198,6 +198,10 @@ html.rqf-page {
       br {
         display: none;
       }
+      // For new style "scope" - remove when scoped search goes live on quick fix
+      .header-search__options {
+        display:none;
+      }
     }
   }
   .site-menu {

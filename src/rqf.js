@@ -158,8 +158,8 @@ function go() {
             $('#location a').attr('href', 'http://yorkfestivalofideas.com/');
           }
           if (isConcerts === true) {
-            newLogoImg = 'https://www.york.ac.uk/media/concerts/images/logos/concerts-logo.png';
-            if (hasSVG === true) newLogoImg = 'https://www.york.ac.uk/media/concerts/images/logos/concerts-logo.svg';
+            newLogoImg = 'https://www.york.ac.uk/media/global/responsiveredesign/img/concerts-logo.png';
+            if (hasSVG === true) newLogoImg = 'https://www.york.ac.uk/media/global/responsiveredesign/img/concerts-logo.svg';
             $('#location a').attr('href', 'http://yorkconcerts.co.uk/');
             // Remove additional logo
             $('#location > img').remove();

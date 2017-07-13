@@ -78,6 +78,10 @@ html.rqf-page{
         display:block;
         margin:0 auto;
       }
+      // Blockquote width
+      blockquote {
+        min-width:calc(100% - 40px);
+      }
     }
     div#mdcolumn,
     div.wide div#mdcolumn {
