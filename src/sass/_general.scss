@@ -398,6 +398,10 @@ html.rqf-page {
         }
       }
     }
+    // Override height:auto on banner images (it messes up JS)
+    #homepagebanner .imagewithcaption > p img {
+      height:inherit;
+    }
   }
   div#mdcolumn,
   div#rhcolumn {
