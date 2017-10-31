@@ -140,6 +140,9 @@ html.rqf-page {
     div#mdcolumn #homepagebanner .imagewithcaption {
       max-width: 100% !important;
     }
+    div#mdcolumn #homepagebanner .imagewithcaption > p img {
+      min-height:0;
+    }
     div#mdcolumn div.col-half,
     div#mdcolumn div.col-third {
       margin-left: 2%;
