@@ -401,7 +401,7 @@ html.rqf-page {
     // Override height:auto on banner images (it messes up JS)
     #homepagebanner .imagewithcaption > p img {
       height:inherit;
-      min-height:200px;
+      //min-height:200px;
     }
   }
   div#mdcolumn,
