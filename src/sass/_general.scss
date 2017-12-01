@@ -21,7 +21,7 @@ html.rqf-page {
   }
   img {
     max-width:100%;
-    height:auto;
+    //height:auto;
   }
   textarea {
     max-width: 100%;
@@ -399,6 +399,7 @@ html.rqf-page {
       }
     }
     // Override height:auto on banner images (it messes up JS)
+    /*
     #homepagebanner .imagewithcaption > p img {
       height:inherit;
       &[height="200"] {
@@ -408,12 +409,13 @@ html.rqf-page {
         min-height:220px;
       }
       &[height="240"] {
-        min-height:220px;
+        min-height:240px;
       }
       &[height="250"] {
         min-height:250px;
       }
     }
+    */
   }
   div#mdcolumn,
   div#rhcolumn {
