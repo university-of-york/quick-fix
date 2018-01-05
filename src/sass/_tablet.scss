@@ -293,6 +293,7 @@ html.rqf-page {
     // 226px wide spans a complete third-column
     img[width="226"] {
       width:100%;
+      height:auto;
     }
     // Update for lightbox on <tablet
     #jquery-lightbox {
