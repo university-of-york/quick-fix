@@ -115,6 +115,13 @@ html.rqf-page.rqf-page {
         }
       }
     }
+    /* prevents bullet point from displaying before tabs */
+    ul.tabNavigation {
+      list-style:none;
+      li {
+        background-image: none;
+      }
+    }
   }
   // RH COLUMN ONLY
   div#rhcolumn {
