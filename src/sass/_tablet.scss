@@ -286,6 +286,8 @@ html.rqf-page {
     #homepagebanner img,
     // 720px wide spans a complete page
     img[width="720"],
+    // 505px wide spans a mdcolumn next to rhcolumn
+    img[width="505"],
     // 465px wide spans a mdcolumn next to rhcolumn
     img[width="465"],
     // 350px wide spans a complete half-column
