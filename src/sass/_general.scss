@@ -276,6 +276,8 @@ html.rqf-page {
       li:last-of-type {
         width:auto;
         margin-right:5px;
+        word-wrap: normal;
+        white-space: inherit;
       }
       // Make third link read '...'
       li:nth-of-type(3) {
