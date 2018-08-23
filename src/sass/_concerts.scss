@@ -1,84 +1,103 @@
 /*
  * CONCERTS STYLES
  */
-$concerts-colour: #be3d45;
-.rqf-page {
-  body.york-concerts-page {
-    div#header {
-      div#location {
-        padding-bottom:0;
-        @media only screen and (max-width: 512px) {
-          padding-bottom:32px;
+ $concerts-primary-colour: #d6001c;
+ $concerts-secondary-colour: #d6152f;
+ $concerts-dark-colour: #950e20;
+ .rqf-page {
+   body.york-concerts-page {
+     div#header {
+       div#location {
+         padding-bottom:0;
+         @media only screen and (max-width: 512px) {
+           padding-bottom:32px;
+         }
+         a {
+           padding-bottom:15px !important;
+           width:100%;
+           max-width:240px;
+           height:69px;
+           @media only screen and (max-width: 962px) {
+             img {
+               max-width:240px;
+             }
+           }
+           @media only screen and (max-width: 512px) {
+             padding-top:10px !important;
+             margin-left: auto;
+             margin-right: auto;
+           }
+         }
+       }
+       form {
+         padding-top:34px;
+         // Move form down earlier
+         @media only screen and (max-width: 512px) {
+           top:89px;
+           padding:0 2%;
+           width:96%;
+           input#search {
+             width:70%;
+             width:calc(75% - 18px);
+             float:left;
+           }
+           input.submit {
+             width:20%;
+             width:calc(25% - 2px);
+             float:left;
+           }
+         }
+         @media only screen and (max-width: 480px) {
+           padding-top:0;
+         }
+         input.submit {
+          background-color:$concerts-primary-colour !important;
+          border-color: $concerts-primary-colour !important;
         }
-        a {
-          padding-bottom:15px !important;
-          width:100%;
-          max-width:240px;
-          height:69px;
-          @media only screen and (max-width: 962px) {
-            img {
-              max-width:240px;
-            }
-          }
-          @media only screen and (max-width: 512px) {
-            padding-top:10px !important;
-            margin-left: auto;
-            margin-right: auto;
-          }
-        }
-      }
-      form {
-        padding-top:34px;
-        // Move form down earlier
-        @media only screen and (max-width: 512px) {
-          top:89px;
-          padding:0 2%;
-          width:96%;
-          input#search {
-            width:70%;
-            width:calc(75% - 18px);
-            float:left;
-          }
-          input.submit {
-            width:20%;
-            width:calc(25% - 2px);
-            float:left;
-          }
-        }
-        @media only screen and (max-width: 480px) {
-          padding-top:0;
-        }
-      }
-    }
-    div#extra-links {
-      border-bottom-color:$concerts-colour;
-    }
-    div#footer {
-      border-top-color:$concerts-colour;
-    }
-    div#mdcolumn,
-    div#rhcolumn {
-      a {
-        color:$concerts-colour;
-      }
-      .cta a,
-      .cta a[href^="http://"],
-      a.cta,
-      a.cta[href^="https://"] {
-        background:$concerts-colour;
-        color:#fff;
-      }
-      .col-half, .col-third {
-        h2,
-        .boxout h2,
-        .boxoutAlt h2 {
-          background-color:$concerts-colour;
-        }
-      }
-      .boxoutAlt {
-        background-color:$concerts-colour;
-        border-color:$concerts-colour;
-      }
-    }
-  }
-}
+       }
+
+     }
+     div#extra-links {
+       border-bottom-color:$concerts-primary-colour;
+     }
+     div#footer {
+       border-top-color:$concerts-primary-colour;
+     }
+     div#mdcolumn,
+     div#rhcolumn {
+       a {
+         color:$concerts-primary-colour;
+       }
+       ul.tabNavigation li a {
+         color: #000;
+       }
+       ul.tabNavigation li a.selected {
+        color:$concerts-primary-colour;
+       }
+       .cta a,
+       .cta a[href^="http://"],
+       a.cta,
+       a.cta[href^="https://"] {
+         background:$concerts-primary-colour;
+         color:#fff;
+       }
+       .col-half, .col-third {
+         h2,
+         .boxout h2,
+         .boxoutAlt h2 {
+           background-color:$concerts-primary-colour;
+         }
+       }
+       .boxoutAlt {
+         background-color:$concerts-primary-colour;
+         border-color:$concerts-primary-colour;
+       }
+     }
+     div#lhcolumn #nav li a:hover {
+      background-color:$concerts-secondary-colour !important;
+     }
+     div#lhcolumn #nav li span.parent a.parent {
+      background-color:$concerts-dark-colour !important;
+     }
+   }
+ }
