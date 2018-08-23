@@ -1,0 +1,15 @@
+// hide asterisk on required fields
+.fsRequiredMarker {
+    color: #333 !important;  
+}
+
+// remove colour from the error highlight
+div.fsValidationError {
+    background-color: inherit !important; // should get #333 from the footer background
+}
+
+// overide validation error colours
+div.fsError {
+    background-color: #f4d4d4 !important;
+    border: 0 !important;
+}
