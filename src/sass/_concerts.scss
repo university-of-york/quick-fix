@@ -96,8 +96,10 @@
      div#lhcolumn #nav li a:hover {
       background-color:$concerts-secondary-colour !important;
      }
+     div#lhcolumn #nav li span.parent,
      div#lhcolumn #nav li span.parent a.parent {
       background-color:$concerts-dark-colour !important;
      }
+     
    }
  }
