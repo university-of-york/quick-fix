@@ -3,8 +3,7 @@
  */
  $concerts-primary-colour: #d6001c;
  $concerts-secondary-colour: #d6152f;
- $concerts-dark-colour: #950e20;
- .rqf-page {
+  .rqf-page {
    body.york-concerts-page {
      div#header {
        div#location {
@@ -98,7 +97,7 @@
      }
      div#lhcolumn #nav li span.parent,
      div#lhcolumn #nav li span.parent a.parent {
-      background-color:$concerts-dark-colour !important;
+      background-color:$concerts-secondary-colour !important;
      }
      
    }
