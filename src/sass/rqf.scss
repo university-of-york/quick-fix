@@ -2,6 +2,12 @@
 // IMPORTS
 //
 
+// Load in vintage styles
+@import "vintage_custom-styles";
+@import "vintage_standard-styles.scss";
+@import "vintage_york-styles";
+
+
 // Toggle button styles
 @import "toggle";
 @import "general";
