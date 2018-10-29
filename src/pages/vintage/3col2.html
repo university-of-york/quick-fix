@@ -78,17 +78,21 @@
 	  	  </div>
 <!-- navigation object : WebCMS Search Form Start --><!-- start Code Only template -->
 <form method="get" action="//www.york.ac.uk/search" class="right">
-	<label for="search" title="Place a cursor in the search field" class="hidden">Search</label>
-	<input type="text" value="" title="Enter your search keywords" id="search" name="q" size="14" maxlength="2048" />
-	<input type="submit" name="btnG" value="Search" title="Search the University of York website" class="submit" />
-<br />
+  <input type="hidden" value="yorkweb" id="site" name="site">
+  <label for="search" title="Place a cursor in the search field" class="hidden">Search</label>
+  <input type="text" value="" title="Enter your search keywords" id="search" name="q" size="14" maxlength="2048">
+  <input type="submit" name="btnG" value="Search" title="Search the University of York website" class="submit">
+<br>
 <!-- end Code Only template -->
 
 <!-- navigation object : WebCMS Search Form Middle --><!-- start Code Only template -->
-	<input type="radio" class="radio" name="site" value="spsw-main" id="restrict" checked="checked" />
-		<label for="restrict">SPSW</label>
-<input type="radio" class="radio" name="site" value="yorkweb" id="university" />
+	<div class="header-search__options">
+		<input type="radio" class="radio" name="scope" value="www.york.ac.uk/chemistry/,www.york.ac.uk/media/chemistry/" id="restrict" data-com.agilebits.onepassword.user-edited="yes">
+		<label for="restrict">Chemistry</label>
+		<input type="radio" class="radio" name="scope" value="" id="university" checked="checked" data-com.agilebits.onepassword.user-edited="yes">
 		<label for="university">University</label>
+	</div>
+
 <!-- end Code Only template -->
 
 <!-- navigation object : WebCMS Search Form End --><!-- start Code Only template -->

@@ -165,15 +165,12 @@ html.rqf-page {
       position:absolute;
       top:0;
       right:0;
-      padding:33px 20px 18px;
-      height:50px;
+      padding:24px 20px 12px;
       width:auto;
       label{
         color:#333;
       }
-      input{
-        color:#333;
-        border:1px solid #b3b3b3;
+      input[type=text]{
         line-height: 1.5;
         height: 1.5em;
         border: 1px solid #b3b3b3;
@@ -192,16 +189,16 @@ html.rqf-page {
         text-shadow:none;
         font-weight:normal;
       }
-      input.radio,
-      label[for="restrict"],
-      label[for="site"],
-      label[for="university"],
-      br {
-        display: none;
-      }
-      // For new style "scope" - remove when scoped search goes live on quick fix
+      // input.radio,
+      // label[for="restrict"],
+      // label[for="site"],
+      // label[for="university"],
+      // br {
+      //   display: none;
+      // }
+      // // For new style "scope" - remove when scoped search goes live on quick fix
       .header-search__options {
-        display:none;
+        text-align:left;
       }
     }
   }
