@@ -136,13 +136,6 @@ $(document).ready(function(){
                     selectedTabContainer.show().addClass('currentTab');
                     $tabLinks.removeClass('selected');
                     $tabLinks.filter('[href='+hash+']').addClass('selected');
-
-
-                    if(typeof(logAnalyticsEvent) === 'undefined' || logAnalyticsEvent !== false) {
-                        // track the tab click to Google Analytics
-                        //pageTracker._trackEvent(category, action, label, value, true);
-                        pageTracker._trackEvent('Tab Clicked', selectedTabContainer.attr('id'), window.location.href, 0, true);
-                    }
                 }
             });
         });
@@ -185,35 +178,11 @@ $(document).ready(function(){
                 selectedTabContainer.show().addClass('currentTab');
                 $('div#tabs ul.tabNavigation a').removeClass('selected');
                 $('div#tabs a[hash=' + hash + ']').addClass('selected');
-
-                if(typeof(logAnalyticsEvent) === 'undefined' || logAnalyticsEvent !== false) {
-                    // track the tab click to Google Analytics
-                    pageTracker._trackEvent('Tab Clicked', selectedTabContainer.attr('id'), window.location.href, 0, true);
-                }
             }
         });
 
         $(window).trigger("hashchange", [false]);
     }
-
-    // Need to add in a little extra work for tab click-tracking on mobiles as tabs are changed in to accordion items
-    // on mobile by the quick-fix js code
-    waitForElementToDisplay('.faq-container', 500, function() {
-        var faqContainer = $('.faq-container');
-        if(faqContainer.length > 0 && faqContainer.find('.currentTab').length > 0) {
-
-            faqContainer.find('h3.q').bind('click', function() {
-
-                var $this = $(this),
-                    clickedId = '';
-
-                clickedId = $this.parents('.faq').attr('id');
-
-                pageTracker._trackEvent('Tab Clicked - Mobile', clickedId, window.location.href, 0, true);
-            });
-        }
-    });
-
 
     //'Apply now' button on course pages
     $('#course-apply-now').click(function (e) {
@@ -224,8 +193,6 @@ $(document).ready(function(){
         $('div#tabs a[hash=#course-applying]').addClass('selected');
         $('html,body').animate({scrollTop:$('#tabs').offset().top}, 700);
         window.location.hash = "course-applying";
-        var courseName = $('#course-title').text();
-        pageTracker._trackEvent('Courses', 'Apply', courseName);
     });
 
     //'Show entry requirements' button on course pages
@@ -237,12 +204,6 @@ $(document).ready(function(){
         $('div#tabs a[hash=#course-applying]').addClass('selected');
         $('html,body').animate({scrollTop:($('#entry-details').offset().top)-30}, 900);
         window.location.hash = "course-applying";
-    });
-
-    //Log click on 'Applying' tab as an event
-    $("a[href='#course-applying'][class='course-tab-link']").click(function() {
-        var courseName = $('#course-title').text();
-        pageTracker._trackEvent('Courses', 'Click on Applying Tab', courseName, 0 , true);
     });
 
     //Frequently asked questions
@@ -435,80 +396,6 @@ $(document).ready(function(){
         }
     });
 
-    //Track external links, email links and file downloads as events in Google Analytics
-
-    var GADebugMode = false;		//set to true when you're testing so that alerts are displayed instead of the gif being sent to google.
-
-    //if in debug mode this alerts the data, if not in debug mode this sends the data to google.
-    sendData = function (category, action, label, value){
-        if(!GADebugMode){
-            try{
-                pageTracker._trackEvent(category, action, label, value, true);
-            }catch(err){}
-        }else{
-            console.log("Category: " + category + ". action: " + action + ". label: " + label);
-        }
-    };
-
-    //track various outbound and download links
-    ga_track = function (target){
-        $(target).each(function(index) {
-            $(this).click(function (event){
-                var href;
-                //var hrefTarget = $(this).prop("target");
-                var hrefTarget = $(this).attr("target");
-                var category;
-                var action;
-                var label;
-
-                href = $(this).attr('href');
-
-                if(href.match(("(.pdf$)|(.xlsx?$)|(.docx?$)"))){      //if the link ends with .pdf, .xls, .xlsx, .doc, .docx then it's a download
-                    category = "Download";
-                    action = href.match(/([^/]+)$/)[1];
-                }else if(href.match(("^https?://"))){   //if the link starts with http:// or https:// then it's an outbound link
-                    category = "Outbound Link";
-                    action = href;
-                }else if(href.substring(0,7) === "mailto:"){    //if the link starts with mailto: then it's a mailto link
-                    category = "Contact";
-                    action = href;
-                }
-
-                if($(this).find("img").length > 0){    //if this is an image link
-                    if($(this).find("img").attr("alt")){
-                        label = $(this).find("img").attr('alt');
-                    }else{
-                        label = "image";
-                    }
-                }else{
-                    label = $(this).text();
-                }
-
-                sendData(category,action,label,0);
-
-                if (event.metaKey || event.ctrlKey || hrefTarget == "_blank"){
-                    var newTab = true;
-                }
-
-                if (!newTab){
-                    event.preventDefault();
-                    setTimeout('location.href = "'+href+'"', 200); //delay is set before redirection so google gets a chance to send tracking gif
-                }
-            });
-        });
-    };
-
-    ga_track("a[href^='mailto']");
-    ga_track("a[href$='.pdf']");
-    ga_track("a[href$='.xls']");
-    ga_track("a[href$='.xlsx']");
-    ga_track("a[href$='.doc']");
-    ga_track("a[href$='.docx']");
-
-    //outbound links that aren't pdf, xls, xlsx, doc, or docx
-    ga_track("a[href^='http://']:not([href$='.pdf'],[href$='.xls'],[href$='.xlsx'],[href$='.jpg'],[href*='york.ac.uk'])");
-    ga_track("a[href^='https://']:not([href$='.pdf'],[href$='.xls'],[href$='.xlsx'],[href$='.jpg'],[href*='york.ac.uk'])");
-
 
     //Strip zero-width non-joiners
     var zwnjStrip = function (el) {
@@ -565,5 +452,4 @@ $(document).ready(function(){
 
         return false;
     }
-
 });

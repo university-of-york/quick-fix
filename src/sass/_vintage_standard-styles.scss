@@ -203,6 +203,9 @@ div#breadcrumb ul li{
   padding:0px;
   word-wrap:normal;
 }
+div#breadcrumb ul li img {
+  vertical-align: initial;
+}
 
 /*--breadcrumb links--*/
 div#breadcrumb a:link{
@@ -223,9 +226,9 @@ div#breadcrumb a:hover{
 /*============================================================
 		3 COLUMN / 2 COLOUMN (WIDE) LAYOUT CONTAINER
 ============================================================*/
-div#content-container{
+div#content-container {
   position:relative;
-  width:100%;
+  //width:100%;
   font-size:80%;
   color:#1D1D1D;
   background-color:#FFFFFF;
@@ -1105,20 +1108,21 @@ div#mdcolumn ul.tabNavigation li a {
   border-top-right-radius: 5px;
   font-size:12px;
   margin-right:3px;
-  padding:7px 5px;
+  padding:8px 5px;
   text-decoration:none;
 }
 
-div#mdcolumn ul.tabNavigation li a.selected, div#mdcolumn ul.tabNavigation li a.selected:hover, div#mdcolumn ul.tabNavigation li a.selected:focus  {
-  background-color: #FFF;
-  border-bottom:1px solid white;
-  color: #008E00;
-  cursor:text;
-
+div#mdcolumn ul.tabNavigation li a.selected,
+div#mdcolumn ul.tabNavigation li a.selected:hover,
+div#mdcolumn ul.tabNavigation li a.selected:focus  {
+  //background-color: #FFF;
+  //border-bottom:1px solid white;
+  //color: #008E00;
+  //cursor:text;
 }
 
 div#mdcolumn ul.tabNavigation li a:hover {
-  background-color: #CCC;
+  //background-color: #CCC;
 }
 
 div#mdcolumn ul.tabNavigation li a:focus {
@@ -2923,13 +2927,18 @@ a.videothumb:hover .playbutton {
 		CALL TO ACTION LINKS
 ============================================================*/
 
-.cta a, .cta a:link, .cta a:visited, a.cta , a.cta:link, a.cta:visited {
-  background: #287549;
-  font-weight: bold;
-  color: #FFF;
-  display: inline-block;
-  line-height: 1em;
-  padding: 10px;
-  border-radius: 5px;
-  text-decoration: none !important;
+.cta a,
+.cta a:link,
+.cta a:visited,
+a.cta ,
+a.cta:link,
+a.cta:visited {
+  //background: #287549;
+  //font-weight: bold;
+  //color: #FFF;
+  //display: inline-block;
+  //line-height: 1em;
+  //padding: 10px;
+  //border-radius: 5px;
+  //text-decoration: none !important;
 }

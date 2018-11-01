@@ -3,9 +3,9 @@
 //
 
 // Load in vintage styles
-@import "vintage_custom-styles";
-@import "vintage_standard-styles.scss";
-@import "vintage_york-styles";
+@import "vintage_custom-styles";          // overrides
+@import "vintage_standard-styles.scss";   // vintage styles
+@import "vintage_york-styles";            // 2013 styles
 
 
 // Toggle button styles
