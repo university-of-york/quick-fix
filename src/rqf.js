@@ -21,6 +21,11 @@ function go() {
     jQuery.noConflict();
   }
 
+  var _LOCATION_TYPE = {
+    host: 'hostname',
+    path: 'pathname'
+  };
+
   // Pass jQuery's $ to the RQF code
   jQuery(document).ready(function($) {
 
@@ -29,7 +34,10 @@ function go() {
     var $mdcolumn = $('#mdcolumn');
     var isFOI = (window.location.hostname === "yorkfestivalofideas.com") || (window.location.pathname.indexOf("foi-rqf-test") > -1);
     var isConcerts = (window.location.hostname === "yorkconcerts.co.uk") || (window.location.pathname.indexOf("/concerts/") === 0);
-    var isStaffStudents = (window.location.pathname.indexOf('/students/') > -1) || (window.location.pathname.indexOf('/staff/') > -1);
+    var isStaffStudents =
+        (window.location.pathname.indexOf('/students/') > -1) ||
+        (window.location.pathname.indexOf('/staff/') > -1) ||
+        (window.location.hostname.indexOf('cmstest') > -1); // NOTE - need to fix this because ALL things in test will be classed as staff/student!
 
     // Returns a function, that, as long as it continues to be invoked, will not
     // be triggered. The function will be called after it stops being called for
@@ -600,6 +608,18 @@ function go() {
         }
       };
 
+      this.loadStaffStudentStyles = function() {
+
+        var head = document.head;
+        var link = document.createElement("link");
+
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.href = "https://www.york.ac.uk/static/rqf/rqf-staff.min.css";
+
+        head.appendChild(link);
+      };
+
       this.init = function() {
 
         // Add subnav behaviour
@@ -623,6 +643,7 @@ function go() {
         // Fix feedback form on staff and students
         if (isStaffStudents === true) {
           this.fixFeedbackForm();
+          //this.loadStaffStudentStyles();
         }
 
         this.checkContent();
