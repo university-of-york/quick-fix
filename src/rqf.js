@@ -26,20 +26,9 @@ function go() {
 
     var $window = $(window);
     var $html = $('html');
-    var $body = $('body');
     var $mdcolumn = $('#mdcolumn');
-    var isLive = (window.location.hostname === "www.york.ac.uk") ||
-                 (window.location.hostname === "hswebstaff.york.ac.uk") ||
-                 (window.location.hostname === "www.cs.york.ac.uk") ||
-                 (window.location.hostname === "cms.york.ac.uk") ||
-                 (window.location.hostname === "pure.york.ac.uk") ||
-                 (window.location.hostname === "yorkfestivalofideas.com") ||
-                 (window.location.hostname === "yorkconcerts.co.uk");
     var isFOI = (window.location.hostname === "yorkfestivalofideas.com") || (window.location.pathname.indexOf("foi-rqf-test") > -1);
-    var isConcerts = (window.location.hostname === "yorkconcerts.co.uk") || (window.location.pathname.indexOf("/concerts/") === 0) || (!isLive && (window.location.pathname.indexOf("concert") > -1));
-    var hasLogo = $('#location > img').length > 0 ? true : false;
-    // Modernizr's svg-as-img test
-    var hasSVG = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
+    var isConcerts = (window.location.hostname === "yorkconcerts.co.uk") || (window.location.pathname.indexOf("/concerts/") === 0);
     var isStaffStudents = (window.location.pathname.indexOf('/students/') > -1) || (window.location.pathname.indexOf('/staff/') > -1);
 
     // Returns a function, that, as long as it continues to be invoked, will not
@@ -66,15 +55,6 @@ function go() {
       this.status = false;
       this.contentUpdated = false;
       this.pageClass = 'rqf-page';
-      this.toggle = $('<div>').addClass('rqf-toggle');
-      this.input = $('<input>').attr({ 'type': 'checkbox', 'id': 'rqf-toggle' }).appendTo(this.toggle);
-      this.label = $('<label>').attr({ 'for': 'rqf-toggle' }).appendTo(this.toggle);
-      this.text = $('<p>').html('Toggle<br>responsive').appendTo(this.toggle);
-
-      this.addToggle = function() {
-        this.toggle.prependTo($body);
-        this.input.bind('change', { that: this }, this.addClass);
-      };
 
       this.addClass = function(e) {
         e.preventDefault();
@@ -84,19 +64,6 @@ function go() {
         // Update input state
         that.input.attr('checked', $html.hasClass(that.pageClass));
         that.checkContent();
-      };
-
-      this.addViewportMeta = function() {
-        // Add meta viewport tag (if needed)
-        if ($('meta[name="viewport"]').length == 0) {
-          $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1">');
-        }
-        // Also add Typekit (if not already loaded)
-        if ($('html').hasClass('wf-active') === false) {
-          $('head').append('<script src="//use.typekit.net/dvj8rpp.js"></script><script>try{Typekit.load();}catch(e){}</script>');
-        }
-        // Update status (sometimes html width stays wide until meta tag is added)
-        this.status = this.getStatus();
       };
 
       this.checkContent = function() {
@@ -110,25 +77,7 @@ function go() {
         this.updateContent();
 
         if (this.isRQF) {
-          // Add meta viewport tag and font declaration
-          if (typeof Typekit === 'undefined') {
-            // Add Typekit script
-            (function (d, t) {
-              var tk = d.createElement(t), s = d.getElementsByTagName(t)[0];
-              tk.type = 'text/javascript';
-              tk.src = '//use.typekit.net/dvj8rpp.js';
-              s.parentNode.insertBefore(tk, s);
-            })(document, 'script');
-            // Load Typekit fonts
-            var p = setInterval(function() {
-              try {
-                if (Typekit) {
-                  clearInterval(p);
-                  Typekit.load();
-                }
-              } catch (err) {}
-            }, 15);
-          }
+
           // Listen for window resize and debounce
           var that = this;
           var resizeFunction = debounce(function() {
@@ -138,10 +87,7 @@ function go() {
             }
           }, 250);
           $window.resize(resizeFunction);
-        } else {
-          //$window.unbind('resize');
         }
-
       };
 
       this.updateContent = function() {
@@ -151,27 +97,47 @@ function go() {
 
         function updateLogo() {
           var newLogoImg = 'https://www.york.ac.uk/static/1.4/img/logo.png';
-          if (hasSVG === true) newLogoImg = 'https://www.york.ac.uk/static/1.4/img/logo.svg';
-          if (hasLogo === true) $('#header').addClass('has-logo');
+          var hasSVG = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
+          var swapImage = !hasSVG;
+          var locationEl = $('#location a');
+
+          var images = {
+            logoFOI: 'http://yorkfestivalofideas.com/media/news-and-events/york-festival-of-ideas/foi-logo.gif',
+            logoConcertsPNG: 'https://www.york.ac.uk/media/global/responsiveredesign/img/concerts-logo.png',
+            logoConcertsSVG: 'https://www.york.ac.uk/media/global/responsiveredesign/img/concerts-logo.svg'
+          };
+
+          var urls = {
+            FOI: 'http://yorkfestivalofideas.com/',
+            concerts: 'http://yorkconcerts.co.uk/'
+          };
+
           if (isFOI === true) {
-            newLogoImg = 'http://yorkfestivalofideas.com/media/news-and-events/york-festival-of-ideas/foi-logo.gif';
-            $('#location a').attr('href', 'http://yorkfestivalofideas.com/');
+            newLogoImg = images.logoFOI;
+            locationEl.attr('href', urls.FOI);
+            swapImage = true;
           }
           if (isConcerts === true) {
-            newLogoImg = 'https://www.york.ac.uk/media/global/responsiveredesign/img/concerts-logo.png';
-            if (hasSVG === true) newLogoImg = 'https://www.york.ac.uk/media/global/responsiveredesign/img/concerts-logo.svg';
-            $('#location a').attr('href', 'http://yorkconcerts.co.uk/');
+            newLogoImg = hasSVG ? images.logoConcertsSVG : images.logoConcertsPNG;
+            locationEl.attr('href', urls.concerts);
             // Remove additional logo
             $('#location > img').remove();
             $('body').addClass('york-concerts-page');
+            swapImage = true;
           }
-          // Search IMGs in #location (Vintage) and header (2013)
-          $('#location a img, header img, #logo img').each(function(i, img) {
-            img.removeAttribute('width');
-            img.removeAttribute('height');
-            img.src = newLogoImg;
-            img.style.display = 'block';
-          });
+
+          // only swap the image if we have to;
+          if(swapImage) {
+              // Search IMGs in #location (Vintage) and header (2013)
+              $('#location a img, header img, #logo img').each(function (i, img) {
+                  img.removeAttribute('width');
+                  img.removeAttribute('height');
+                  img.src = newLogoImg;
+                  img.style.display = 'block';
+              });
+          }
+
+
           if ($mainHeading.length > 0) {
             if ($.trim($mainHeading.text()) === '') {
               // Remove empty headings
@@ -253,7 +219,6 @@ function go() {
           updateSearchTarget();
 
           this.contentUpdated = true;
-
         }
 
         // Trigger content rewrite if needed
@@ -261,7 +226,6 @@ function go() {
 
         // Reset content after update (Twitter, homepage banner etc.)
         this.resetContent();
-
       };
 
       this.reorderContent = function() {
@@ -316,8 +280,7 @@ function go() {
         if ($('.fb-page').length > 0) {
          this.resetFacebook();
         }
-        // Reset Survey Monkey survey
-        this.resetSurvey();
+
         // do scripts
         this.runScripts();
         // Trigger window onload and hashchange (for tabs)
@@ -368,18 +331,6 @@ function go() {
             });
           }
         });
-      };
-
-      this.resetSurvey = function() {
-        // try {
-        //   if (!SMCX) return false;
-        //   setTimeout(function(e) {
-        //     var surveyDiv = $('.smcx-widget');
-        //     if (surveyDiv.length > 1) {
-        //       surveyDiv.not(surveyDiv[0]).remove();
-        //     }
-        //   }, 1000);
-        // } catch (e) {}
       };
 
       this.resetFacebook = function() {
@@ -651,26 +602,6 @@ function go() {
 
       this.init = function() {
 
-        // If HTML has rqf-page on already, it's a live page - skip the toggle
-        var isLivePage = $('html').hasClass('rqf-page');
-
-        // Get out if we're not in an allowed hostname
-        if (isLivePage !== true) {
-
-          // List of places where the toggle is allowed
-          var allowedHostnames = [
-            'localhost',
-            '127.0.0.1',
-            '192.168.2.1', // ad-hoc wireless
-            'cmsmigrate.york.ac.uk',
-            'puretest.york.ac.uk'
-          ];
-
-          if ($.inArray(document.location.hostname, allowedHostnames) === -1) return false;
-          // Add toggle button
-          this.addToggle();
-        }
-
         // Add subnav behaviour
         this.addSubnav();
 
@@ -689,53 +620,13 @@ function go() {
         // Load the reordered sections for mobile
         this.mobileContent = this.getMobileContent();
 
-        // Add the meta viewport tag (must be done after getting mobile content)
-        this.addViewportMeta();
-
         // Fix feedback form on staff and students
         if (isStaffStudents === true) {
           this.fixFeedbackForm();
         }
 
-        // CM 21-01 Should we use sessionStorage?
-        // Check to see if there's a cookie set already
-        if (isLivePage !== true) {
-
-          var cookies = $.map(document.cookie.split(';'), function(c, i) {
-            return $.trim(c);
-          });
-
-          var that = this;
-
-          $.each(cookies, function(i, c) {
-            var thisCookie = c.split('=');
-            if (thisCookie[0] === 'rqf') {
-              if (thisCookie[1] === 'true') {
-                // Dummy event to pass to addClass
-                var e = $.Event('click');
-                e.data = { that: that };
-                that.addClass(e);
-              }
-              return false;
-            }
-          });
-
-          // Add Bugherd script
-          // (function (d, t) {
-          //   var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
-          //   bh.type = 'text/javascript';
-          //   bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=d9mx89fgx7vlnnx0cutxyw';
-          //   s.parentNode.insertBefore(bh, s);
-          // })(document, 'script');
-
-        } else {
-
-          this.checkContent();
-
-        }
-
+        this.checkContent();
       };
-
     };
 
     // Set up RQF Content Object
@@ -1101,15 +992,9 @@ function go() {
       };
 
       this.sections = this.getSections($container);
-
     };
 
     var rqf = new RQF();
     rqf.init();
-
-    // For debugging - comment out before going live
-    if (!isLive) {
-      window.rqf = rqf;
-    }
   });
 }
