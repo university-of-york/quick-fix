@@ -816,9 +816,9 @@ grunt-contrib-watch@1.1.0:
     lodash "^4.17.10"
     tiny-lr "^1.1.1"
 
-grunt-hash@0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/grunt-hash/-/grunt-hash-0.4.1.tgz#fbeecb162661cb3fef9086e6343a655446003cf7"
+grunt-hash@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/grunt-hash/-/grunt-hash-0.5.0.tgz#98781d799f74b29538692f58c61d50648c1bd29e"
 
 grunt-known-options@~1.1.0:
   version "1.1.1"
