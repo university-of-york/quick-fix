@@ -1,0 +1,1318 @@
+/*============================================================
+		STUDENT SITE
+============================================================*/
+
+/*============================================================
+		FONTS
+============================================================*/
+
+html.rqf-staff-page {
+
+  *, body {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+
+  }
+
+  h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-weight: normal !important;
+  }
+
+  h2 {
+    font-size: 160%;
+  }
+
+  h3 {
+    font-size: 130%;
+  }
+
+  div#header, div#content-container {
+
+    font-size: 80%;
+  }
+
+  div#lhcolumn {
+    font-size: 90%;
+  }
+
+  /*============================================================
+          BODY
+  ============================================================*/
+  body {
+    margin: 0;
+    padding: 15px;
+  }
+
+  body {
+    background: #222 url('/media/css/staff/bg.png') repeat-x;
+  }
+
+  /*============================================================
+          CONTAINER
+  ============================================================*/
+  div#container {
+    background-color: transparent;
+    border: none;
+    width: 970px;
+  }
+
+  div#content-container {
+    border-radius: 0 0 5px 5px;
+  }
+
+  /*clearfix on #content-container, otherwise its background colour of white doesn't get applied*/
+  div#content-container:after {
+
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  /*============================================================
+          HEADER
+  ============================================================*/
+  /*header font colour,background colour and background image*/
+  div#header {
+    background-color: transparent;
+    background-image: none;
+    color: #000;
+  }
+
+  div#header h1 {
+    color: #fff;
+    font-size: 140%;
+    margin: 10px 15px;
+  }
+
+  div#header a {
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  div#header #logo {
+    float: left;
+    width: 45%;
+  }
+
+  /*Top level global site links*/
+  #global {
+    padding: 10px 15px 0;
+  }
+
+  #global #staffstudent {
+    display: none;
+  }
+
+  #global #links {
+    float: right;
+  }
+
+  #global a:hover {
+    text-decoration: underline;
+  }
+
+  div#location {
+    float: left;
+    width: 60%;
+    margin-right: 15px;
+    margin-top: 0px;
+  }
+
+  /*--header h1 area title colour--*/
+  div#header div#location h1 {
+    color: #860000;
+    font-size: 180%;
+    margin: 10px 0 10px 15px;
+    text-shadow: 0 -1px 0 black;
+  }
+
+  div#header form {
+    float: right;
+    width: 35%;
+    padding: 0px;
+    /* margin: 14px 9px 0 0; */
+  }
+
+  /*--search label colour--*/
+  div#header form label {
+    color: #000;
+  }
+
+  /*--search box border colour--*/
+  div#header form input {
+    border: 1px solid #092E69;
+    color: #000000;
+    margin-bottom: 15px;
+    padding: 5px;
+
+  }
+
+  /*--search button border colour, text colour, background colour--*/
+  div#header form input.submit {
+
+    background-color: #095E2D;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#095E2D), to(#053e1d));
+    background-image: -webkit-linear-gradient(top, #095E2D, #053e1d);
+    background-image: -moz-linear-gradient(top, #095E2D, #053e1d);
+    background-image: -ms-linear-gradient(top, #095E2D, #053e1d);
+    background-image: -o-linear-gradient(top, #095E2D, #053e1d);
+    background-image: linear-gradient(top, #095E2D, #053e1d);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#095E2D', EndColorStr='#053e1d');
+    border: 1px solid #111;
+    color: #FFF;
+    margin-right: 0;
+    padding: 5px 10px;
+    text-shadow: 0px -1px 0px #053e1d;
+  }
+
+  div#header form input.submit:hover {
+    border-color: #111;
+  }
+
+  div#header form input.submit:active {
+    background-color: #095E2D;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#053e1d), to(#023116));
+    background-image: -webkit-linear-gradient(top, #053e1d, #023116);
+    background-image: -moz-linear-gradient(top, #053e1d, #023116);
+    background-image: -ms-linear-gradient(top, #053e1d, #023116);
+    background-image: -o-linear-gradient(top, #053e1d, #023116);
+    background-image: linear-gradient(top, #053e1d, #023116);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#053e1d', EndColorStr='#023116'); /* IE6�IE9 */
+    color: #eee;
+  }
+
+  /*============================================================
+          EXTRA LINKS
+  ============================================================*/
+  /*--extra-links text colour,background colour--*/
+  div#extra-links {
+    color: #FFF;
+    background-color: #095E2D;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#095E2D), to(#053e1d));
+    background-image: -webkit-linear-gradient(top, #095E2D, #053e1d);
+    background-image: -moz-linear-gradient(top, #095E2D, #053e1d);
+    background-image: -ms-linear-gradient(top, #095E2D, #053e1d);
+    background-image: -o-linear-gradient(top, #095E2D, #053e1d);
+    background-image: linear-gradient(top, #095E2D, #053e1d);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#095E2D', EndColorStr='#053e1d');
+    border-top: 1px solid #095E2D;
+    text-shadow: 0px -1px 0px #051c42;
+  }
+
+  #extra-links h1 {
+    float: left;
+  }
+
+  #topmenu {
+    display: block;
+    float: right;
+    list-style: none;
+    margin: 0 0 0 15px;
+    padding: 0;
+  }
+
+  #topmenu a:link {
+    text-decoration: none;
+  }
+
+  #topmenu a:hover {
+    text-decoration: underline;
+  }
+
+  #topmenu li {
+    float: left;
+    padding: 10px 0;
+    position: relative;
+    z-index: 999;
+  }
+
+  #topmenu li a {
+    padding: 10px;
+  }
+
+  #topmenu ul.submenu {
+    background-color: #2C4B7E;
+    display: none;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 38px;
+    width: 100px;
+    z-index: 999;
+  }
+
+  #topmenu ul.submenu li {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    border-bottom: 1px solid #234172;
+    border-top: 1px solid #3a5a90;
+  }
+
+  #topmenu ul.submenu li a {
+    display: block;
+    width: 80px;
+  }
+
+  #topmenu ul.submenu li a:hover {
+    background-color: #052A66;
+    text-decoration: none;
+  }
+
+  /*============================================================
+          BREADCRUMB
+  ============================================================*/
+  /*--breadcrumb text colour, background colour--*/
+  div#breadcrumb {
+    color: #000;
+    background-color: #eee;
+  }
+
+  div#breadcrumb ul {
+    margin: 0 15px;
+  }
+
+  /*--link colours for breadcrumb--*/
+  /*link*/
+  div#breadcrumb a:link {
+    color: #000;
+  }
+  /*visited*/
+  div#breadcrumb a:visited {
+    color: #000;
+  }
+  /*hover*/
+  div#breadcrumb a:hover {
+    color: #000;
+  }
+
+  /*============================================================
+          LEFT COLUMN BLOCKED NAVIGATION
+  ============================================================*/
+
+  #nav li a, #nav li li a, #nav li li li a, #nav li li li li a {
+    color: #000;
+    border-bottom: 1px solid white;
+    background-image: url("/media/css/staff/arrow_nav.gif");
+  }
+
+  #nav li span.currentbranch0 a, #nav li span.currentbranch1 a, #nav li span.currentbranch2 a, #nav li span.currentbranch3 a, #nav li span.currentbranch4 a {
+    background-image: url("/media/css/staff/arrow_nav_down.gif")
+  }
+
+  #nav li span.parent, #nav li span.parent a.parent {
+    color: #FFF;
+    background-color: #095E2D;
+    background-image: url("/media/global/templateimages/arrow_nav_down_white.gif");
+  }
+
+  #nav .children {
+    color: #000;
+    background-color: #EBE8CF;
+    background-image: url("/media/css/staff/arrow_nav.gif");
+  }
+
+  /* all levels hover*/
+  #nav li a:hover {
+    color: #FFF !important;
+    background-color: #669900 !important;
+    background-image: url("/media/global/templateimages/arrow_white.gif");
+  }
+
+  #nav li span.currentbranch0 a:hover, #nav li span.currentbranch1 a:hover, #nav li span.currentbranch2 a:hover, #nav li span.currentbranch3 a:hover, #nav li span.currentbranch4 a:hover {
+    background-image: url("/media/global/templateimages/arrow_nav_down_white.gif");
+  }
+
+  /*============================================================
+          BOXOUT REGIONS
+  ============================================================*/
+
+  .boxout, .leftBox, .rightBox, .boxoutAlt {
+    border-radius: 5px;
+
+  }
+
+  .boxout, .leftBox, .rightBox {
+    background-color: #eee;
+    border-color: #eee;
+
+  }
+
+  .boxout h1, .boxout h2, .boxout h3, .boxout h4, .boxout h5,
+  .leftBox h1, .leftBox h2, .leftBox h3, .leftBox h4, .leftBox h5,
+  .rightBox h1, .rightBox h2, .rightBox h3, .rightBox h4, .rightBox h5 {
+    text-shadow: 0 1px 0 white;
+  }
+
+  .boxoutAlt {
+    background-color: #095E2D;
+    border-color: #095E2D;
+
+  }
+
+  .boxoutAlt h1, .boxoutAlt h2, .boxoutAlt h3, .boxoutAlt h4, .boxoutAlt h5 {
+    text-shadow: 0 -1px 0 #051C42;
+  }
+
+  div#mdcolumn .boxoutAlt,
+  div#mdcolumn .boxoutAlt p,
+  div#mdcolumn .boxoutAlt h2,
+  div#mdcolumn .boxoutAlt h3,
+  div#mdcolumn .boxoutAlt h4,
+  div#mdcolumn .boxoutAlt h5,
+  div#mdcolumn .boxoutAlt a:link,
+  div#mdcolumn .boxoutAlt a:visited,
+  div#mdcolumn .boxoutAlt a:hover,
+  div#mdcolumn .boxoutAlt li,
+  div#rhcolumn .boxoutAlt,
+  div#rhcolumn .boxoutAlt p,
+  div#rhcolumn .boxoutAlt h2,
+  div#rhcolumn .boxoutAlt h3,
+  div#rhcolumn .boxoutAlt h4,
+  div#rhcolumn .boxoutAlt h5,
+  div#rhcolumn .boxoutAlt a:link,
+  div#rhcolumn .boxoutAlt a:visited,
+  div#rhcolumn .boxoutAlt a:hover,
+  div#rhcolumn .boxoutAlt li {
+    color: #FFF;
+  }
+
+  div#rhcolumn .boxoutAlt li {
+
+    background: transparent url("/media/global/templateimages/bullet_white.gif") no-repeat scroll 0 4px;
+  }
+
+  div#mdcolumn .boxoutAlt li {
+    background: transparent url("/media/global/templateimages/bullet_white.gif") no-repeat scroll 0 4px;
+  }
+
+  /*============================================================
+          MIDDLE COLUMN TEXT FORMATTING
+  ============================================================*/
+
+  a:link {
+    color: #008E00;
+  }
+
+  a:visited {
+    color: #416B53;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  div#mdcolumn {
+    line-height: 140%;
+  }
+
+  div#mdcolumn p {
+    line-height: 150%;
+  }
+
+  div#mdcolumn h1 {
+    font-size: 250%;
+  }
+
+  div#mdcolumn h1#userNiceName {
+    float: left;
+    font-size: 170%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #095E2D;
+    line-height: 120%;
+  }
+
+  div#mdcolumn h3, div#rhcolumn h3 {
+    font-size: 150%;
+  }
+
+  div#mdcolumn h4, div#rhcolumn h4 {
+    font-size: 130%;
+    font-style: normal;
+  }
+
+  div#mdcolumn h5, div#rhcolumn h5 {
+    font-size: 120%;
+    font-style: italic;
+
+  }
+
+  /*headings in columns*/
+  div#mdcolumn h2, div#mdcolumn .col-half h2, div#mdcolumn .col-third h2, div#mdcolumn .col-half .boxoutAlt h2 {
+    background-color: transparent;
+    border-bottom: 3px solid #D7E8C6;
+    color: #095E2D;
+    font-size: 170%;
+  }
+
+  div#mdcolumn .col-half .boxoutAlt h2 {
+
+    color: #fff;
+  }
+
+  div#mdcolumn .col-half h2 a:link, div#mdcolumn .col-third h2 a:link,
+  div#mdcolumn .col-half h2 a:visited, div#mdcolumn .col-third h2 a:visited,
+  div#mdcolumn .col-half h2 a:hover, div#mdcolumn .col-third h2 a:hover {
+    color: #095E2D;
+  }
+
+  div#mdcolumn .col-third h2 {
+    font-size: 150%;
+  }
+
+  div#mdcolumn li, div#mdcolumn ol ul li {
+    background: transparent url("/media/css/staff/bullet.gif") no-repeat 0px 4px;
+  }
+
+  /*--HR colour,background colour (BOTH VALUES MUST BE SAME COLOUR)--*/
+  div#mdcolumn hr {
+    color: #e6e5cf;
+    background-color: #e6e5cf;
+  }
+
+  /*--table header border colour, background colour--*/
+  table tr th {
+    background-color: #095E2D;
+    color: #FFFFFF;
+
+  }
+
+  /*--table subheader--*/
+  table tbody tr th {
+    background-color: #669900;
+    color: #FFF;
+  }
+
+  /*Tabbed content*/
+
+  div#mdcolumn ul.tabNavigation li a {
+    padding: 5px;
+  }
+
+  div#mdcolumn ul.tabNavigation li a.selected, div#mdcolumn ul.tabNavigation li a.selected:hover {
+    color: #008E00;
+  }
+
+  /*FAQ*/
+
+  div#mdcolumn h3.q, div#mdcolumn h3.q a, div#mdcolumn .col-half h3.q {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 100%;
+
+  }
+
+  div#mdcolumn h3.q:hover {
+    text-decoration: underline;
+  }
+
+  /*Rotating banner*/
+
+  #homepagebanner a {
+    color: #fff;
+  }
+
+  div#mdcolumn #homepagebanner .imagewithcaption .caption p {
+    padding: 5px 10px;
+  }
+
+  /*============================================================
+          HOMEPAGE COLUMN FORMATTING
+  ============================================================*/
+
+  div#mdcolumn .col-half > h2, div#mdcolumn .col-third > h2 {
+    padding-left: 0;
+  }
+
+  div#mdcolumn .col-half h2, div#mdcolumn .col-half .boxoutAlt h2, div#mdcolumn .col-third h2, div#mdcolumn .col-third .boxoutAlt h2 {
+    font-size: 150%;
+  }
+
+  div#mdcolumn .col-half .boxout h2, div#mdcolumn .col-half .boxoutAlt h2, div#mdcolumn .col-third .boxout h2, div#mdcolumn .col-third .boxoutAlt h2 {
+    background-color: transparent;
+    margin-top: 5px;
+    padding-bottom: 0;
+
+  }
+
+  div#mdcolumn .col-third .boxoutAlt h2 a:link, div#mdcolumn .col-third .boxoutAlt h2 a:hover, div#mdcolumn .col-third .boxoutAlt h2 a:visited {
+    color: #fff;
+  }
+
+  div#mdcolumn .col-half h3, div#mdcolumn .col-half .boxoutAlt h3, div#mdcolumn .col-third h3, div#mdcolumn .col-third .boxoutAlt h3 {
+    font-size: 130%;
+  }
+
+  /*============================================================
+          RIGHT COLUMN TEXT FORMATTING
+  ============================================================*/
+
+  div#rhcolumn {
+    float: left;
+  }
+
+  div#rhcolumn ul {
+    list-style: none outside none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  div#rhcolumn ul li, div#rhcolumn ol ul li {
+    background: transparent url("/media/css/staff/bullet.gif") no-repeat 0px 4px;
+    padding-left: 12px;
+  }
+
+  div#rhcolumn h1, div#rhcolumn h2, div#rhcolumn h3, div#rhcolumn h4 {
+    color: #095E2D;
+  }
+
+  /*============================================================
+          FOOTER
+  ============================================================*/
+  div#footer {
+    border-top: none;
+    color: #FFF;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  div#footer a {
+    color: #FFF;
+  }
+
+  #lastupdated {
+    clear: both;
+    color: #888;
+    font-size: 70%;
+    margin: 10px 20px 0 0;
+    text-align: right;
+  }
+
+  #footer h2 {
+    /* border-bottom:5px solid #eee;  */
+    color: #eee;
+    margin: 0;
+    padding: 0 0 0px;
+    text-shadow: 0 -1px 0 black;
+  }
+
+  div#footer a:hover, div#footer .edit a:hover {
+    color: #C9D8AB;
+    text-decoration: none;
+  }
+
+  /*============================================================
+          FOOTER SITEMAP
+  ============================================================*/
+  #sitemap {
+    float: left;
+    padding: 20px;
+  }
+
+  #sitemap .col-third {
+    float: left;
+    margin-left: 15px;
+    width: 200px;
+  }
+  #sitemap .col-third.first-col {
+    margin-left: 0;
+  }
+
+  #sitemap h3 {
+    margin-bottom: 5px;
+    margin-top: 20px;
+  }
+
+  #sitemap ul {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  #sitemap li {
+    margin-bottom: 3px;
+    background: transparent url("/media/css/staff/bullet.gif") no-repeat 0px 4px;
+    padding-left: 12px;
+  }
+
+  /*============================================================
+          FOOTER YUSU/GSA
+  ============================================================*/
+
+  #union-social {
+    clear: both;
+    float: left;
+    padding: 20px;
+    width: 600px;
+  }
+
+  #social {
+    float: left;
+    width: 215px;
+  }
+
+  #social a:first-child img {
+    margin-bottom: 10px;
+  }
+
+  #union {
+    float: left;
+  }
+
+  #union a:first-child img {
+    margin-right: 15px;
+  }
+
+  /*============================================================
+          FOOTER FEEDBACK
+  ============================================================*/
+  #feedback {
+
+    margin-left: 690px;
+    padding: 20px;
+    text-align: left;
+  }
+
+  #feedback label {
+    /* display:inline-block;
+    margin:15px 0 10px;  */
+    color: #fff;
+  }
+
+  #feedback textarea {
+    height: 150px;
+    /* margin-bottom:15px;  */
+    width: 230px;
+  }
+
+  div#footer form ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+  }
+
+  div#footer form li {
+    background: none;
+    display: block;
+    margin: 0;
+    padding: 6px 5px 9px 0px;
+    width: 62%;
+  }
+
+  #footer form li:after, #footer form li div:after {
+
+    clear: none;
+
+  }
+
+  #footer input.submit {
+    padding: 5px 10px;
+  }
+
+  div#footer #feedback a:link {
+    text-decoration: underline;
+  }
+
+  /*============================================================
+          FOOTER LEGAL
+  ============================================================*/
+  #footer #legal {
+
+    clear: both;
+    font-size: 85%;
+    padding: 20px;
+  }
+
+  #footer #legal p {
+    margin: 0;
+  }
+
+  /*============================================================
+          COMMON STYLES
+  ============================================================*/
+
+  form input.submit, form input[type=submit] {
+
+    background-color: #095E2D;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#095E2D), to(#053e1d));
+    background-image: -webkit-linear-gradient(top, #095E2D, #053e1d);
+    background-image: -moz-linear-gradient(top, #095E2D, #053e1d);
+    background-image: -ms-linear-gradient(top, #095E2D, #053e1d);
+    background-image: -o-linear-gradient(top, #095E2D, #053e1d);
+    background-image: linear-gradient(top, #095E2D, #053e1d);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#095E2D', EndColorStr='#053e1d');
+
+    border: 1px solid #111;
+    color: #FFF;
+
+    text-shadow: 0px -1px 0px #051c42;
+  }
+
+  input.submit:hover, input[type=submit]:hover {
+    border-color: #000;
+  }
+
+  input.submit:active, input[type=submit]:active {
+    background-color: #095E2D;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#053e1d), to(#023116));
+    background-image: -webkit-linear-gradient(top, #053e1d, #023116);
+    background-image: -moz-linear-gradient(top, #053e1d, #023116);
+    background-image: -ms-linear-gradient(top, #053e1d, #023116);
+    background-image: -o-linear-gradient(top, #053e1d, #023116);
+    background-image: linear-gradient(top, #053e1d, #023116);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#053e1d', EndColorStr='#023116');
+    color: #eee;
+  }
+
+  /*============================================================
+          STUDENT HOMEPAGE - LOGOUT
+  ============================================================*/
+
+  a#logout {
+    float: right;
+  }
+
+  /*Hide the logout instructions initially*/
+  #logout-text {
+    display: none;
+  }
+
+  /*============================================================
+          STUDENT HOMEPAGE - NEWS
+  ============================================================*/
+  #newsinfo {
+    float: right;
+    font-size: 60%;
+  }
+
+  #latestnews.newsforyou .newsitem .headline {
+    display: inline;
+    font-weight: normal;
+  }
+
+  div#latestnews.noteaser .newsitem p.newsPosted {
+    margin: 0 0 10px 0;
+  }
+
+  #latestnews.newsforyou .newsitem {
+    margin-bottom: 15px;
+  }
+
+  #latestnews.newsforyou .newsitem span.newsposted {
+    font-size: 85%;
+    color: #777;
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
+  }
+
+  #latestnews.newsforyou .newsitem span.newsposted:before {
+    content: " - ";
+  }
+
+  #latestnews.newsforyou .newsitem a:hover span.newsposted {
+    text-decoration: none;
+  }
+
+  #latestnews.newsforyou a[href$=".pdf"] {
+    background: url("/media/global/icons/icon_pdf.gif") no-repeat left center;
+    padding-left: 20px;
+  }
+
+  #latestnews.newsforyou a {
+    background: url("/media/global/icons/icon_external.gif") no-repeat left center;
+    padding-left: 20px;
+  }
+
+  #latestnews.newsforyou a[href*="yorkextra/articles"] {
+    background: none;
+    padding-left: 0;
+
+  }
+
+  .yex {
+    background-color: #fff;
+  }
+
+  .yex .ui-tooltip-title {
+    display: none;
+
+  }
+
+  .yex .ui-tooltip-content {
+    background-color: #fff;
+  }
+
+  .yex h1:first-of-type {
+    margin-top: 0;
+
+  }
+
+  .yex .ui-tooltip-content > img:first-child, img.yorkextra-banner {
+    display: none;
+  }
+
+  .yex img {
+    max-width: 100%;
+  }
+
+  /*
+  * qTip2 - Pretty powerful tooltips
+  * http://craigsworks.com/projects/qtip2/
+  *
+  * Version: nightly
+  * Copyright 2009-2010 Craig Michael Thompson - http://craigsworks.com
+  *
+  * Dual licensed under MIT or GPLv2 licenses
+  *   http://en.wikipedia.org/wiki/MIT_License
+  *   http://en.wikipedia.org/wiki/GNU_General_Public_License
+  *
+  * Date: Wed Jul 13 07:08:00 PDT 2011
+  */
+
+  /* Core qTip styles */
+  .ui-tooltip, .qtip {
+    position: absolute;
+    left: -28000px;
+    top: -28000px;
+    display: none;
+    line-height: 140%;
+    max-width: 500px;
+    min-width: 50px;
+
+    font-size: 80% !important;
+    /* 	line-height: 12px; */
+
+    z-index: 15000;
+  }
+
+  /* Fluid class for determining actual width in IE */
+  .ui-tooltip-fluid {
+    display: block;
+    visibility: hidden;
+    position: static !important;
+    float: left !important;
+  }
+
+  .ui-tooltip-content {
+    position: relative;
+    padding: 0 12px;
+    overflow: hidden;
+
+    border-width: 2px;
+    border-style: solid;
+
+    text-align: left;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+
+  .ui-tooltip-titlebar {
+    position: relative;
+    min-height: 14px;
+    padding: 5px 35px 5px 10px;
+    overflow: hidden;
+
+    border-width: 2px 2px 0;
+    border-style: solid;
+
+    font-weight: bold;
+  }
+
+  .ui-tooltip-titlebar + .ui-tooltip-content {
+    border-top-width: 0px !important;
+  }
+
+  /*! Default close button class */
+  .ui-tooltip-titlebar .ui-state-default {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -9px;
+
+    cursor: pointer;
+    outline: medium none;
+
+  }
+
+  * html .ui-tooltip-titlebar .ui-state-default {
+    top: 16px;
+  }
+  /* IE fix */
+
+  .ui-tooltip-titlebar .ui-icon,
+  .ui-tooltip-icon .ui-icon {
+    display: block;
+    text-indent: -1000em;
+  }
+
+  .ui-tooltip-icon, .ui-tooltip-icon .ui-icon {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .ui-tooltip-icon .ui-icon {
+    width: 18px;
+    height: 14px;
+
+    text-align: center;
+    text-indent: 0;
+    font: normal bold 10px/13px Tahoma, sans-serif;
+
+    color: inherit;
+    background: transparent none no-repeat -100em -100em;
+  }
+
+  /*! Light tooltip style */
+  .ui-tooltip-light .ui-tooltip-titlebar,
+  .ui-tooltip-light .ui-tooltip-content {
+    border-color: #aaa;
+    color: #111;
+
+  }
+
+  .ui-tooltip-light .ui-tooltip-content {
+    background-color: #fafafa;
+  }
+
+  .ui-tooltip-light .ui-tooltip-titlebar {
+    background-color: #fafafa;
+  }
+
+  /* Tips plugin */
+  .ui-tooltip .ui-tooltip-tip {
+    margin: 0 auto;
+    overflow: hidden;
+
+    background: transparent !important;
+    border: 0px dashed transparent !important;
+    z-index: 10;
+  }
+
+  .ui-tooltip .ui-tooltip-tip,
+  .ui-tooltip .ui-tooltip-tip * {
+    position: absolute;
+
+    line-height: 0.1px !important;
+    font-size: 0.1px !important;
+    color: #123456;
+
+    background: transparent;
+    border: 0px dashed transparent;
+  }
+
+  .ui-tooltip .ui-tooltip-tip canvas {
+    top: 0;
+    left: 0;
+  }
+
+  /*! Add shadows to your tooltips in: FF3+, Chrome 2+, Opera 10.6+, IE6+, Safari 2+ */
+  .ui-tooltip-shadow {
+    -webkit-box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  .ui-tooltip-shadow .ui-tooltip-titlebar,
+  .ui-tooltip-shadow .ui-tooltip-content {
+    filter: progid:DXImageTransform.Microsoft.Shadow(Color='gray', Direction=135, Strength=3);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Color='gray', Direction=135, Strength=3)";
+
+    _margin-bottom: -3px; /* IE6 */
+    .margin-bottom:
+    -3 px; /* IE7 */
+  }
+
+  /*Press releases*/
+  #pressreleases .newsitem p.newsPosted {
+
+    font-size: 85%;
+    color: #7e7e7e;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  div#pressreleases.noteaser .newsitem p.newsPosted {
+    margin-bottom: 15px;
+  }
+
+  #pressreleases .newsitem p {
+    margin-bottom: 20px;
+
+  }
+
+  #pressreleases .newsitem img {
+    padding-right: 15px;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  #mdcolumn #pressreleases hr, #rhcolumn #pressreleases hr {
+    color: transparent;
+    background-color: transparent;
+    clear: both;
+    padding: 0;
+    margin: 5px 0;
+  }
+
+  #pressreleases .newsitem .headline {
+    font-size: 100%;
+    display: block;
+    font-weight: bold;
+  }
+
+  #pressreleases .newsitem .newsimage {
+    float: left;
+  }
+
+  /*============================================================
+          STUDENT HOMEPAGE - TIMETABLE
+  ============================================================*/
+  h2#timetableHeading {
+    float: left;
+  }
+
+  #todaysTimetable {
+    margin-bottom: 20px;
+  }
+
+  div#mdcolumn #todaysTimetable p:first-child {
+    margin-top: 0;
+  }
+
+  div#mdcolumn #todaysTimetable p:last-child {
+    padding-bottom: 0;
+  }
+
+  .prevNext {
+    float: right;
+    margin-right: 12px;
+    position: relative;
+    top: 58px;
+    z-index: 999;
+
+  }
+
+  div#mdcolumn .prevNext a {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: bold;
+    height: 20px;
+    margin-right: 0;
+    padding: 0 6px;
+  }
+
+  div#mdcolumn .prevNext a:link, div#mdcolumn .prevNext a:visited {
+    text-decoration: none;
+    color: #444;
+  }
+
+  div#mdcolumn .prevNext a:hover {
+    border: 1px solid #aaa;
+    background-color: #ccc;
+    color: #000;
+  }
+
+  div#mdcolumn .prevNext a.prev {
+    margin-right: 3px;
+  }
+
+  div#mdcolumn .prevNext a.disabled, div#mdcolumn .prevNext a.disabled:hover {
+    background-color: #eee;
+    border-color: #ddd;
+    color: #999;
+    cursor: default;
+  }
+
+  div#mdcolumn #todaysTimetable h3:first-child {
+    margin-bottom: 3px;
+  }
+
+  div#mdcolumn p#weekOfTerm {
+    color: #444;
+    font-size: 90%;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
+
+  div#mdcolumn #todaysTimetable p {
+    font-size: 95%;
+  }
+
+  /*============================================================
+          STUDENT HOMEPAGE - LIBRARY
+  ============================================================*/
+
+  /*Library search*/
+
+  #library-text {
+    margin: 0 6px 20px 12px;
+    width: 130px;
+  }
+
+  /*Library items list*/
+
+  div#mdcolumn ul#libraryItemsList {
+    font-size: 90%;
+    margin: 0 -12px;
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  div#mdcolumn ul#libraryItemsList li {
+    background: none;
+    margin: 10px 0;
+    padding-left: 0;
+  }
+
+  ul#libraryItemsList span {
+    border-radius: 2px;
+    font-size: 90%;
+    margin-right: 5px;
+    padding: 1px 3px;
+    text-shadow: none;
+  }
+
+  ul#libraryItemsList .overdue {
+    color: #fff;
+    background-color: red;
+  }
+
+  ul#libraryItemsList .today {
+    color: #fff;
+    background-color: black;
+  }
+
+  ul#libraryItemsList .future {
+    color: #000;
+    background-color: #bbb;
+  }
+
+  /*============================================================
+          STAFF HOME - UNIVERSITY MAGAZINE
+  ============================================================*/
+
+  #university-magazine p.right img {
+    height: 140px;
+    width: 100px;
+  }
+
+  /*============================================================
+          EVENTS LISTING
+  ============================================================*/
+
+  #publiclectures .event {
+    padding: 0;
+    padding-top: 5px;
+  }
+
+  mdcolumn#publiclectures .event {
+    border-bottom: 1px solid #EEE;
+  }
+
+  #publiclectures .event .eventdate {
+    background-color: #fff;
+    float: left;
+    margin-bottom: 15px;
+    margin-top: 4px;
+    padding-bottom: 0px;
+    text-align: center;
+    width: 35px;
+  }
+
+  #publiclectures .event .eventdate .day {
+    background-color: #860000;
+    color: #FFF;
+    display: block;
+    font-size: 70%;
+    line-height: 150%;
+    padding: 1px;
+  }
+
+  #publiclectures .event .eventdate .date {
+    border: 1px solid #DDD;
+    border-width: 0 1px;
+    display: block;
+    font-size: 130%;
+    font-weight: bold;
+    line-height: 120%;
+  }
+
+  #publiclectures .event .eventdate .month {
+    border: 1px solid #DDD;
+    border-width: 0 1px 1px 1px;
+    display: block;
+    line-height: 120%;
+    text-transform: uppercase;
+    font-size: 80%;
+    padding: 1px;
+  }
+
+  #publiclectures .event .eventdetails {
+    margin-bottom: 15px;
+    margin-left: 45px;
+    padding-left: 0;
+  }
+  #publiclectures .event .eventtitle {
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+
+  #publiclectures .event .venue {
+    font-size: 85%;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  #publiclectures .ampm {
+    text-transform: lowercase;
+  }
+
+  #publiclectures .event p.speaker {
+    font-size: 85%;
+    margin-bottom: 5px;
+  }
+
+  #publiclectures .event p.eventteaser {
+    font-size: 85%;
+    margin-bottom: 5px;
+  }
+
+  #rhcolumn #publiclectures .event .eventteaser {
+    display: none;
+  }
+
+  #rhcolumn #publiclectures .event .eventtitle {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  /*============================================================
+          CALL TO ACTION LINKS
+  ============================================================*/
+
+  .cta a, .cta a:link, .cta a:visited, a.cta, a.cta:link, a.cta:visited,
+  #mdcolumn .cta a[href^="http://"],
+  #mdcolumn .cta a[href^="https://"],
+  #mdcolumn a.cta[href^="http://"],
+  #mdcolumn a.cta[href^="https://"],
+  #rhcolumn .cta a[href^="http://"],
+  #rhcolumn .cta a[href^="https://"],
+  #rhcolumn a.cta[href^="http://"],
+  #rhcolumn a.cta[href^="https://"] {
+    background: #008E00;
+  }
+
+}

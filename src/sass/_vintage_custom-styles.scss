@@ -1,0 +1,92 @@
+.boxout {
+  padding:0 15px 5px;
+  margin:15px 0px;
+  border-width:1px;
+  border-style:solid;
+  display:block;
+  background-color:#EEE;
+  border-color:#DDD;
+}
+
+.boxoutAlt {
+  padding:0 15px 5px;
+  margin:15px 0px;
+  border-width:1px;
+  border-style:solid;
+  display:block;
+  background-color:#DDD;
+  border-color:#CCC;
+}
+
+
+.leftBox{
+  padding:0 15px 5px;
+  border-width:1px;
+  border-style:solid;
+  display:block;
+  width: 220px;
+  margin-top: 0;
+  margin-right: 10px;
+  background-color:#EEE;
+  border-color:#DDD;
+  float: left;
+}
+
+.rightBox{
+  padding:0 15px 5px;
+  border-width:1px;
+  border-style:solid;
+  display:block;
+  width: 220px;
+  margin-top: 0;
+  margin-left: 10px;
+  background-color:#EEE;
+  border-color:#DDD;
+  float: right;
+}
+
+.nothingbeside {
+  clear:both;
+}
+
+.left{
+  float:left;
+  margin: 15px 15px 15px 0;
+}
+.right{
+  float:right;
+  margin: 15px 0 15px 15px;
+}
+
+.quote {
+  float: right;
+  width: 190px;
+  z-index: 1;
+  background: #555 url(/media/global/templateimages/open_quote_grey.gif) top left no-repeat;
+  padding: 15px 30px 20px 30px;
+  margin: 5px 0 5px 5px;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+
+.unpadded {
+  margin:0;
+  padding:0;
+}
+
+.youtube-video-embed {
+
+}
+
+.cta {
+  //background: #ddd;
+  //border-color: #ccc;
+  //font-weight: bold;
+  //color: #FFF;
+  //display: inline-block;
+  //line-height: 1em;
+  //padding: 10px;
+  //border-radius: 5px;
+  //text-decoration: none !important;
+}

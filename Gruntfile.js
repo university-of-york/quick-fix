@@ -24,7 +24,7 @@ module.exports = function(grunt) {
       main: {
         expand: true,
         cwd: 'src/',
-        src: ['rqf.css', 'rqf-foi.css'],
+        src: ['rqf.css', 'rqf-foi.css', 'rqf-staff.css'],
         banner: '/*! = CSS built <%= grunt.template.today("yyyy-mm-dd HH:MM:ss") %> = */',
         dest: 'upload/',
         ext: '.min.css'

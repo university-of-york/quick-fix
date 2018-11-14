@@ -1,0 +1,250 @@
+/*HIDE SCREEN ONLY ELEMENTS*/
+/* line 3, sass/print.scss */
+#header img, .hidden, .clear, #header form, #extra-links, #lhcolumn, #breadcrumb, #rhcolumn img, #mdcolumn p.top, .donotprint, #footer .right, #course-calls-to-action, #unistats-widget-frame, .understanding-kis {
+  display: none;
+}
+
+/* line 9, sass/print.scss */
+#container {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 80%;
+  line-height: 150%;
+}
+
+/*HEADER*/
+/* line 17, sass/print.scss */
+#header {
+  background-image: none !important;
+  border-bottom: 1px solid #CCC;
+}
+
+/* line 22, sass/print.scss */
+#header h1 {
+  font-size: 110%;
+  margin-top: 0;
+}
+
+/* line 27, sass/print.scss */
+#header:before {
+  content: url("/media/global/templateimages/print_logo.png");
+}
+
+/*MAIN CONTENT*/
+/* line 35, sass/print.scss */
+a:link, a:visited {
+  color: #111;
+}
+
+/* line 39, sass/print.scss */
+.boxout, .boxoutAlt, .leftBox, .rightBox {
+  background-color: #FFF;
+  border: 1px solid #888;
+  margin-bottom: 10px;
+  margin-left: 0;
+  padding: 10px;
+}
+
+/* line 49, sass/print.scss */
+ul {
+  list-style-image: url("/media/global/templateimages/bullet_print.gif");
+  margin-left: 15px;
+  padding: 0;
+}
+
+/* line 55, sass/print.scss */
+.boxout h2, .boxoutAlt h2 {
+  margin-top: 0;
+  padding-bottom: 0;
+  border: none;
+}
+
+/* line 62, sass/print.scss */
+h2, h3, h4, h5, h6 {
+  clear: both;
+}
+
+/* line 67, sass/print.scss */
+h1 {
+  font-size: 130%;
+}
+
+/* line 71, sass/print.scss */
+h2 {
+  border-bottom: 1px solid #BBB;
+  font-size: 120%;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+/* line 78, sass/print.scss */
+h3 {
+  font-size: 110%;
+}
+
+/* line 82, sass/print.scss */
+h4 {
+  font-size: 110%;
+}
+
+/* line 86, sass/print.scss */
+h5 {
+  font-size: 100%;
+}
+
+/* line 90, sass/print.scss */
+h6 {
+  font-size: 100%;
+}
+
+/* line 94, sass/print.scss */
+p.newsTeaserText {
+  font-size: 115%;
+  font-weight: bold;
+}
+
+/* line 100, sass/print.scss */
+table {
+  width: 100%;
+  font-size: 100%;
+  margin: 15px 0px 10px 0px;
+  padding: 0px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* line 109, sass/print.scss */
+table tr th {
+  font-weight: bold;
+  padding: 10px;
+  vertical-align: top;
+  text-align: left;
+  background-color: #CCC;
+  border: 1px solid #DDD;
+}
+
+/* line 118, sass/print.scss */
+table tbody tr th {
+  background-color: #DDD;
+}
+
+/* line 122, sass/print.scss */
+table tr td {
+  padding: 10px;
+  vertical-align: top;
+  border: 1px solid #DDD;
+}
+
+/* line 129, sass/print.scss */
+table.horizontal-borders tr td, table.horizontal-borders tr th {
+  border: 0;
+}
+
+/* line 132, sass/print.scss */
+table.horizontal-borders tr td {
+  border-bottom: 1px solid #D7D7D7;
+}
+
+/* line 137, sass/print.scss */
+table.no-borders tr td, table.no-borders tr th {
+  border: 0;
+}
+
+/* line 141, sass/print.scss */
+table.zebra tbody tr.even {
+  background-color: #F4F4F4;
+}
+
+/* line 145, sass/print.scss */
+table.vertical-borders tr td {
+  border-width: 0 1px 0 1px;
+}
+
+/* line 149, sass/print.scss */
+table.vertical-borders tr th {
+  border-top: 1px solid #D7D7D7;
+  border-bottom: 0;
+}
+
+/* line 154, sass/print.scss */
+table.vertical-borders {
+  border: 1px solid #D7D7D7;
+}
+
+/* line 160, sass/print.scss */
+blockquote.quote {
+  float: right;
+  width: 190px;
+  padding: 0px 0 15px 35px;
+  margin: 0 0 15px 15px;
+  color: #000;
+}
+
+/* line 169, sass/print.scss */
+blockquote.quote img {
+  border: 5px solid #FFF;
+}
+
+/* line 173, sass/print.scss */
+blockquote.quote p {
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+/* line 178, sass/print.scss */
+blockquote.quote p.quotation {
+  padding: 0 35px 20px 0;
+  font-family: Georgia,Utopia,Palatino,'Palatino Linotype',serif;
+  font-size: 1.3em;
+}
+
+/* line 184, sass/print.scss */
+blockquote.quote p.attribution {
+  padding-right: 25px;
+}
+
+/* line 189, sass/print.scss */
+.left {
+  float: left;
+  margin: 15px 15px 15px 0;
+}
+
+/* line 194, sass/print.scss */
+.right {
+  float: right;
+  margin: 15px 0 15px 15px;
+}
+
+/* line 201, sass/print.scss */
+ul.tabNavigation {
+  display: none;
+}
+
+/* line 205, sass/print.scss */
+#tabs > div {
+  display: block !important;
+}
+
+/* line 209, sass/print.scss */
+#tabs div h2 {
+  display: block !important;
+}
+
+/*COURSE TEMPLATE*/
+/* line 215, sass/print.scss */
+#course-banner {
+  float: right;
+  margin: 0 0 35px 15px;
+}
+
+/* line 220, sass/print.scss */
+#course-banner .caption {
+  font-style: italic;
+}
+
+/*FOOTER*/
+/* line 226, sass/print.scss */
+#footer {
+  border-width: 1px 0 0 0;
+  clear: both;
+  padding: 15px 0;
+}
