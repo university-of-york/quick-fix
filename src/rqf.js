@@ -57,6 +57,18 @@ function go() {
       };
     }
 
+    function loadStyles(stylesheetUrl) {
+
+        var head = document.head;
+        var link = document.createElement("link");
+
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.href = stylesheetUrl;
+
+        head.appendChild(link);
+    }
+
     // Set up RQF Object
     var RQF = function() {
 
@@ -609,15 +621,7 @@ function go() {
       };
 
       this.loadStaffStudentStyles = function() {
-
-        var head = document.head;
-        var link = document.createElement("link");
-
-        link.type = "text/css";
-        link.rel = "stylesheet";
-        link.href = "https://www.york.ac.uk/static/rqf/rqf-staff.min.css";
-
-        head.appendChild(link);
+        loadStyles("https://www.york.ac.uk/static/rqf/rqf-staff.min.css");
       };
 
       this.init = function() {
@@ -644,6 +648,9 @@ function go() {
         if (isStaffStudents === true) {
           this.fixFeedbackForm();
           //this.loadStaffStudentStyles();
+        }
+        if(isFOI === true) {
+          loadStyles('https://www.york.ac.uk/static/rqf/rqf-foi.css');
         }
 
         this.checkContent();

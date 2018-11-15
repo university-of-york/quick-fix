@@ -38,6 +38,7 @@ module.exports = function(grunt) {
 	    	},
 	      files: {
           'upload/rqf.min.js': ['src/rqf.js'],
+          'upload/yorkutils.js': ['src/yorkutils.js'],
           'upload/welcome-text.min.js': ['src/welcome-text.js']
 	      }
 	    }
