@@ -2,6 +2,9 @@
 // IMPORTS
 //
 
+// Base/Normalise styles
+@import "normalise";
+
 // Load in vintage styles
 @import "vintage_custom-styles";          // overrides
 @import "vintage_standard-styles.scss";   // vintage styles

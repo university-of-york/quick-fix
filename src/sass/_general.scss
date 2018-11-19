@@ -907,8 +907,19 @@ html.rqf-page {
       display:inline-block;
     }
     .library-search-options {
+      display: block;
+      float: left;
+      margin-top: 10px;
+
+      label {
+        display: block;
+        margin: -17px 0 0 18px;
+      }
       &.catalogue {
         margin-left:90px;
+      }
+      &.everything {
+        margin-left: 25px;
       }
     }
   }
