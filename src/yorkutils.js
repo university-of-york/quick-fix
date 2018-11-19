@@ -206,30 +206,6 @@ $(document).ready(function(){
         window.location.hash = "course-applying";
     });
 
-    //Frequently asked questions
-    var qs = $(".q");
-    var as = $(".a");
-
-    as.hide();
-    qs.wrapInner('<a href="#"></a>');
-    qs.click(function(){
-        $(this).next().slideToggle("fast");
-        $(this).toggleClass('expanded');
-        return false;
-    });
-
-    //add a "show all" link before the questions
-    $(".faq:first").before('<p class="showhide"><a href="#" class="show">Show all</a> / <a href="#" class="hide">Hide all</a></p>');
-    $("a.show").click(function(){
-        as.slideDown("fast");
-        qs.addClass('expanded');
-        return false;
-    });
-    $("a.hide").click(function(){
-        as.slideUp("fast");
-        qs.removeClass('expanded');
-        return false;
-    });
 
     //Sortable tables
     if ( $("table.sortable").length > 0){

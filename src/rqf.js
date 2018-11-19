@@ -413,11 +413,13 @@ function go() {
         var faqs = $mdcolumn.find('.faq');
         if (faqs.length > 0)  {
 
+        $(".faq:first").before('<p class="showhide"><a href="#" class="show">Show all</a> / <a href="#" class="hide">Hide all</a></p>');
+
           var qs = $(".q");
           var as = $(".a");
 
           // Click events
-          //as.hide();
+          as.hide();
           qs.unbind('click');
           qs.click(this.clickAccordion);
 
@@ -445,9 +447,7 @@ function go() {
             theseQs.removeClass('expanded');
             return false;
           });
-
         }
-
       };
 
       this.clickAccordion = function(e) {
