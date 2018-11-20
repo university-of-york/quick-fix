@@ -330,13 +330,11 @@ html.rqf-staff-page {
 
   .boxout, .leftBox, .rightBox, .boxoutAlt {
     border-radius: 5px;
-
   }
 
   .boxout, .leftBox, .rightBox {
     background-color: #eee;
     border-color: #eee;
-
   }
 
   .boxout h1, .boxout h2, .boxout h3, .boxout h4, .boxout h5,
@@ -497,7 +495,6 @@ html.rqf-staff-page {
   div#mdcolumn h3.q, div#mdcolumn h3.q a, div#mdcolumn .col-half h3.q {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     font-size: 100%;
-
   }
 
   div#mdcolumn h3.q:hover {
@@ -556,8 +553,8 @@ html.rqf-staff-page {
   }
 
   div#rhcolumn ul li, div#rhcolumn ol ul li {
-    background: transparent url("/media/css/staff/bullet.gif") no-repeat 0px 4px;
-    padding-left: 12px;
+    //background: transparent url("/media/css/staff/bullet.gif") no-repeat 0px 4px;
+    //padding-left: 12px;
   }
 
   div#rhcolumn h1, div#rhcolumn h2, div#rhcolumn h3, div#rhcolumn h4 {
