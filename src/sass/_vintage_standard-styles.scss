@@ -305,7 +305,7 @@ div.no-left-nav div#lhcolumn {
   text-decoration:none;
   background-repeat:no-repeat;
   background-position:6px 9px;
-  padding:5px 15px;
+  padding: 10px 15px;
   background-color:#EEE;
 }
 
@@ -314,13 +314,13 @@ div.no-left-nav div#lhcolumn {
   font-size:1em;
   width:166px;
   w\idth:134px;
-  padding:0px 10px;
+  padding:0px 20px;
 }
 
 /*--indent first list item, inherited by levels thereafter--*/
 #nav li li a{
   w\idth:127px;
-  padding:10px 15px 10px 10px;
+  padding:10px 20px 10px 10px;
   background-color:#DDD;
 
 }
@@ -386,8 +386,8 @@ div.no-left-nav div#lhcolumn {
   border-bottom:1px solid #ccc;
 }
 #nav span.parent {
-  padding-top:5px;
-  padding-bottom:5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom:1px solid #fff;
 }
 
