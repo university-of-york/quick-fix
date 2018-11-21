@@ -671,7 +671,8 @@ div#mdcolumn p.unpadded, div#rhcolumn p.unpadded, .unpadded {
   padding:0;
   //line-height: 0;
 
-  & > img {
+  & > img,
+  & > a > img{
     display: block;
   }
 }
