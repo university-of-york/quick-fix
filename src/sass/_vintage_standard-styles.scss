@@ -186,13 +186,14 @@ div#extra-links p span a:hover{
 /*============================================================
 		BREADCRUMB
 ============================================================*/
-div#breadcrumb{
+div#breadcrumb,
+.breadcrumbs{
   background-color:#DFEDD1;
   color:#013919;
   font-size:85%;
   width:100%;
   border-bottom:1px solid #FFFFFF;
-  padding:5px 0px; /*workaround for FF unknown gap!*/
+  padding:20px 0px; /*workaround for FF unknown gap!*/
 }
 
 /*--unordered list breadcrumb trail--*/
@@ -200,7 +201,11 @@ div#breadcrumb ul{
   margin:0 17px;
   padding:0;
 }
-div#breadcrumb ul li{
+.breadcrumbs{
+  margin:0 17px;
+}
+div#breadcrumb ul li,
+.breadcrumbs li{
   display:inline;
   list-style-type:none;
   line-height:190%;
@@ -208,22 +213,35 @@ div#breadcrumb ul li{
   padding:0px;
   word-wrap:normal;
 }
-div#breadcrumb ul li img {
+div#breadcrumb ul li img,
+.breadcrumbs li img {
   vertical-align: initial;
 }
 
 /*--breadcrumb links--*/
-div#breadcrumb a:link{
+div#breadcrumb a:link,
+.breadcrumbs li a{
   color:#013919;
   text-decoration:none;
 }
 
-div#breadcrumb a:visited{
+.breadcrumbs li a {
+  display: block;
+  background: transparent url('/media/global/2013/images/frame/arrow-right-10w.png') 100% 50% no-repeat;
+  padding-right: 15px;
+  margin-right: 5px;
+  color: #333;
+  text-decoration: underline;
+}
+
+div#breadcrumb a:visited,
+.breadcrumbs li a:visited{
   color:#013919;
   text-decoration:none;
 }
 
-div#breadcrumb a:hover{
+div#breadcrumb a:hover,
+.breadcrumbs li a:hover{
   color:#013919;
   text-decoration:underline;
 }
