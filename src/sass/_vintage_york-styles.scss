@@ -1,90 +1,12 @@
 
-
-/* ========= */
-/* base.css  */
-/* ========= */
-
-/* ------- Hidden elements ---- */
-
-.show-516 {
-  display: none;
-}
-
-/* --------- Basics ------- */
-
-html, body {
-  background: #333233;
-}
-
-header {
-  background: #FFF;
-  border-top: 1px solid #00b3eb;
-  padding-bottom:17px;
-}
-
-
-nav {
-  background: none;
-}
-
-
-.nav-container {
-  border-top: 3px solid #00b3eb;
-}
-
-hr {
-  background: #cccccc;
-  border: 0;
-  height: 1px;
-  padding: 0;
-}
-
 /* ----- Font styles ------- */
-
-body {
-  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
-}
-
-h1 {
-  font-size: 2.063em;
-  font-family:  Georgia, 'Times New Roman', Times, serif;
-  font-size-adjust: 0.44;
-  font-weight: normal;
-  font-style: normal;
-  max-width: none !important;
-  margin: 0 0 15px;
-}
-
-h2,
-h3 {
-  font-family: Georgia, 'Times New Roman', Times, serif; font-size-adjust:0.44; font-weight:normal; font-style:normal;
-}
-
-h2 {
-  /* 	margin-top:30px;  */
-}
-
-h4 {
-  margin: 13px 0 3px 0;
-}
-
-h4 + p {
-  margin-top: 0;
-}
-
-h5 {
-  margin: 10px 0;
-}
-
 a {
   color: #a23479;
   text-decoration: none;
-
 }
 
 p {
   margin: 10px 0;
-  //font-size: 0.813em;  /*13*/
 }
 
 .dark-bg a,
@@ -95,14 +17,15 @@ p {
 
 
 /* ------ Lists -------- */
-
 ul>li,
 ol>li {
-  //font-size: 0.813em;
   line-height: 1.385em;
 }
 
-ul li ul li, ol li ol li, ol li ul li, ul li ol li {
+ul li ul li,
+ol li ol li,
+ol li ul li,
+ul li ol li {
   font-size:1em;
 }
 
@@ -116,104 +39,11 @@ ul li ul li, ol li ol li, ol li ul li, ul li ol li {
 }
 
 
-/* -------- Footer -------*/
 
-footer {
-  border-top: 3px solid #00b3eb;
-  font-size: 1em;
-  /* 	margin-top: 60px; */
-  padding: 5px 15px;
-}
+/*============================================================
+		LAYOUT
+============================================================*/
 
-footer ul {
-  padding: 0;
-  list-style-type: none;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer a {
-  font-size: 1em;
-  text-decoration:none;
-}
-
-footer a:hover {
-  text-decoration:underline;
-}
-
-.footer-social-links p {
-  float: left;
-}
-
-.social-link {
-  display: block;
-  width: 23px;
-  height: 23px;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  background: url('/media/global/2013/images/frame/icn-social-footer.png') 0 0 no-repeat;
-  margin: 3px;
-  float: left;
-  word-wrap:normal;
-}
-
-.social-link.twitter {
-  margin-left:0;
-}
-
-.social-link.fb {
-  background-position: -26px 0;
-}
-
-.social-link.yt {
-  background-position: -78px 0;
-}
-
-.social-link.flickr {
-  background-position: -52px 0;
-}
-
-p.footer-copy {
-  clear: both;
-  line-height: 1.5em;
-}
-
-.footer-social-links p {
-  width: 100%;
-}
-
-.footer-updated {
-  text-align:right;
-}
-
-.footer-updated p, .footer-updated a {
-  color:#777;
-}
-
-/* =========== */
-/* layout.css  */
-/* =========== */
-
-.l-site {
-  min-width:980px;
-  margin: 0 auto;
-}
-
-.l-content {
-  width: 965px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.l-block {
-  display: block;
-  float: left;
-}
 
 /* -------- Standard grid --------*/
 
@@ -226,6 +56,13 @@ p.footer-copy {
   width: 25%;
 }
 
+.l-site{
+  word-wrap:break-word;/*IE fix - wrap long link and chemical text names*/
+  background: #d1d1d1;
+  min-width:980px;
+  margin: 0 auto;
+}
+
 /* ------ General grid styles ------ */
 
 .content-box.grid-container {
@@ -234,7 +71,15 @@ p.footer-copy {
   margin-right: -5px;
 }
 
+.l-content {
+  width: 965px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .l-block {
+  display: block;
+  float: left;
   overflow: hidden;
   background: none;
 }
@@ -249,6 +94,7 @@ p.footer-copy {
 .l-block-inner img {
   display: block;
 }
+
 
 /* ------ Fixed box size grids ------ */
 
@@ -301,28 +147,30 @@ p.footer-copy {
 
 /* ----- Self clearing elements ------*/
 
+.clear-self {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
 .clear-self:before,
 .clear-self:after {
   content: "";
   display: table;
 }
+
 .clear-self:after {
+  visibility: hidden;
+  display: block;
+  content: "";
   clear: both;
-}
-.clear-self {
-  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+  height: 0;
 }
 
 
-/* ============ */
-/* modules.css  */
-/* ============ */
 
-/* ------- !Header ---------------*/
+/*============================================================
+		MODULES
+============================================================*/
 
-header .l-content{
-  padding: 0;
-}
 
 /* ------ !Content Boxes -----*/
 
@@ -381,7 +229,6 @@ a.cta {
 .logo {
   width: 275px;
   height: 41px;
-  //background: url('/media/global/2013/images/frame/york_logo.gif') 0 0 no-repeat;
   margin: 20px 0 0 0;
   float: left;
   clear: none;
@@ -521,7 +368,6 @@ header .search-wrap input[type='submit'] {
   overflow: hidden;
 }
 
-
 .site-menu li:first-child,
 .site-menu li:first-child + li {
   display: none;
@@ -560,17 +406,21 @@ header .search-wrap input[type='submit'] {
 .main-menu {
   display: block !important;
 }
+
 .mobile-nav-btn {
   display: none;
 }
+
 .main-menu li {
   font-weight: bold;
   font-size: 0.875em; /*14*/
   border-right: 1px solid #949394;
 }
+
 .main-menu li:first-child {
   border-left: 1px solid #949394;
 }
+
 .main-menu li a{
   display: block;
   padding: 14px;
@@ -610,6 +460,7 @@ header .search-wrap input[type='submit'] {
 .main-menu li {
   font-size: 0.938em; /*15*/
 }
+
 li.course-finder-link {
   float: right;
   border-left: 1px solid #949394;
@@ -624,7 +475,6 @@ table {
 
 thead th  {
   background: #0f3d4c;
-  /* border-right: 1px solid #0f3d4c; */
 }
 
 th {
@@ -639,7 +489,6 @@ th + th {
 }
 
 td {
-  //font-size: 0.813em;
   padding: 5px;
 }
 
@@ -654,6 +503,7 @@ footer .content-box {
 .skipToContent {
   position: absolute; padding: 3px 10px; left: 0; top: -999px;
 }
+
 .skipToContent:focus { top: 5px; }
 
 /* -------- Media grid -------- */
@@ -690,7 +540,10 @@ footer .content-box {
 }
 
 .slide-caption p {
-  font-family: Georgia, 'Times New Roman', Times, serif; font-size-adjust:0.44; font-weight:normal; font-style:normal;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size-adjust:0.44;
+  font-weight:normal;
+  font-style:normal;
   background: #082a35;
   background: rgba(2,61,81,0.85);
   margin: 0;

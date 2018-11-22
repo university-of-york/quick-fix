@@ -6,13 +6,9 @@ html {
 }
 
 
-*,body{
-  font-family:Verdana, Arial, Helvetica, sans-serif;
-}
-
 body{
   font-size:100%; /*specifies overall font size*/
-  background-color:#F6F6F6;
+  background: #333233;
   margin:5px;
   padding:0;
 }
@@ -48,17 +44,42 @@ div#container{
   margin:0 auto;
 }
 
-.l-site{
-  word-wrap:break-word;/*IE fix - wrap long link and chemical text names*/
-  background: #d1d1d1;
+
+/* ------- Hidden elements ---- */
+.show-516 {
+  display: none;
 }
 
 
+/* --------- Basics ------- */
+nav {
+  background: none;
+}
 
+.nav-container {
+  border-top: 3px solid #00b3eb;
+}
+
+hr {
+  background: #cccccc;
+  border: 0;
+  height: 1px;
+  padding: 0;
+}
 
 /*============================================================
 		HEADER
 ============================================================*/
+
+header {
+  background: #FFF;
+  border-top: 1px solid #00b3eb;
+  padding-bottom:17px;
+}
+
+header .l-content{
+  padding: 0;
+}
 
 /*** INSIDE DIV#HEADER - CONTAINS YORK LOGO + H1 AREA TITLE ***/
 #location a img {
@@ -91,8 +112,6 @@ div#header form label{
 
 /*--search field--*/
 div#header form input{
-  border:1px solid #013919;
-  color:#013919;
   background-image:none;
   width:175px;
   height:auto;
@@ -105,8 +124,6 @@ div#header form input{
 /*--search submit button--*/
 div#header form input.submit{
   background-color:#EEF4F8;
-  border:1px solid #013919;
-  color:#013919;
   width:auto;
   height:auto;
   padding-bottom:0;
@@ -126,7 +143,6 @@ div#header form input.radio{
 		EXTRA LINKS, i.e. home | A-Z | Departments etc
 ============================================================*/
 div#extra-links{
-  background-color:#013919;
   border-top:1px solid #FFFFFF;
   border-bottom:1px solid #FFFFFF;
   color:#FFF;
@@ -140,7 +156,6 @@ div#extra-links p{
 
 /*--background highlight surrounding links--*/
 div#extra-links p span{
-  background-color:#287549;
   padding:5px 9px;
 }
 
@@ -162,7 +177,6 @@ div#extra-links p span a:hover{
 div#breadcrumb,
 .breadcrumbs{
   background-color:#DFEDD1;
-  color:#013919;
   font-size:85%;
   width:100%;
   border-bottom:1px solid #FFFFFF;
@@ -194,7 +208,6 @@ div#breadcrumb ul li img,
 /*--breadcrumb links--*/
 div#breadcrumb a:link,
 .breadcrumbs li a{
-  color:#013919;
   text-decoration:none;
 }
 
@@ -209,13 +222,11 @@ div#breadcrumb a:link,
 
 div#breadcrumb a:visited,
 .breadcrumbs li a:visited{
-  color:#013919;
   text-decoration:none;
 }
 
 div#breadcrumb a:hover,
 .breadcrumbs li a:hover{
-  color:#013919;
   text-decoration:underline;
 }
 
@@ -564,8 +575,6 @@ div#mdcolumn img.img-space{
   margin:5px 8px 5px 5px;
 }
 
-
-
 /*--middle column links--*/
 div#mdcolumn a:link, div#mdcolumn a:visited{
   text-decoration:underline;
@@ -580,15 +589,18 @@ div#mdcolumn a:hover{
 ============================================================*/
 
 div#mdcolumn h1{
-  color:#095E2D;
-  font-size:170%;
+  font-size-adjust: 0.44;
+  max-width: none !important;
   font-weight:normal;
-  line-height:130%;
   margin:0 0 12px 0;
 }
 
+h2,
+h3 {
+  font-size-adjust:0.44;
+}
+
 h2, h3, h4, h5, h6{
-  color:#095E2D;
   font-weight:bold;
   margin:20px 0 12px 0;
 }
@@ -608,8 +620,15 @@ h3, h4{
 }
 h4{
   font-style:italic;
+  margin: 13px 0 3px 0;
 }
-h5, h6, h7{
+h4 + p {
+  margin-top: 0;
+}
+h5 {
+  margin: 10px 0;
+}
+h5, h6 {
   font-size:100%;
 }
 
@@ -871,7 +890,6 @@ div#mdcolumn table.filmstrip a {
 div#mdcolumn table.a-to-z  th {
   font-size:170%;
   font-weight:normal;
-
 }
 
 div#mdcolumn table.a-to-z  th a{
@@ -885,18 +903,15 @@ div#mdcolumn table.a-to-z ul {
   padding-left:20px;
 }
 
-
 table ul>li,
 table ol>li,
 table p {
   font-size:1em;
 }
 
-
 iframe.right, iframe.left {
   margin-bottom:0;
 }
-
 
 
 /*--top links--*/
@@ -1402,6 +1417,83 @@ div#footer .edit a:hover{
   color:#000;
 }
 
+footer {
+  border-top: 3px solid #00b3eb;
+  font-size: 1em;
+  /* 	margin-top: 60px; */
+  padding: 5px 15px;
+}
+
+footer ul {
+  padding: 0;
+  list-style-type: none;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  font-size: 1em;
+  text-decoration:none;
+}
+
+footer a:hover {
+  text-decoration:underline;
+}
+
+.footer-social-links p {
+  float: left;
+}
+
+.social-link {
+  display: block;
+  width: 23px;
+  height: 23px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url('/media/global/2013/images/frame/icn-social-footer.png') 0 0 no-repeat;
+  margin: 3px;
+  float: left;
+  word-wrap:normal;
+}
+
+.social-link.twitter {
+  margin-left:0;
+}
+
+.social-link.fb {
+  background-position: -26px 0;
+}
+
+.social-link.yt {
+  background-position: -78px 0;
+}
+
+.social-link.flickr {
+  background-position: -52px 0;
+}
+
+p.footer-copy {
+  clear: both;
+  line-height: 1.5em;
+}
+
+.footer-social-links p {
+  width: 100%;
+}
+
+.footer-updated {
+  text-align:right;
+}
+
+.footer-updated p, .footer-updated a {
+  color:#777;
+}
+
 
 /*============================================================
 		GENERAL FORMATTING
@@ -1457,16 +1549,6 @@ object img {
   display:none;
 }
 
-
-/* ----- Clear self -------*/
-
-.clear-self:after {
-  visibility: hidden;
-  display: block;
-  content: "";
-  clear: both;
-  height: 0;
-}
 
 /*============================================================
 		ICONS FOR DOWNLOAD AND NON-STANDARD LINK BEHAVIOURS
@@ -2256,8 +2338,6 @@ input.other{
 /* ----- BUTTONS ----- */
 
 div#mdcolumn input.submit, div#rhcolumn input.submit {
-  border:1px solid #095E2D;
-  background-color:#008E00;
   color:#FFF;
 }
 
