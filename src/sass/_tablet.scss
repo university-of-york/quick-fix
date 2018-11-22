@@ -44,13 +44,16 @@ html.rqf-page {
     div#extra-links p {
       margin-left:2%;
     }
+    .breadcrumbs, 
+    div#breadcrumb {
+      padding: 10px 0;
+    }
     div#breadcrumb ul {
       margin:0 2%;
     }
     div#lhcolumn {
       width: 96%;
       padding: 0 2%;
-      margin-top: 12px;
       height: 32px;
       overflow: hidden;
       position:relative;
