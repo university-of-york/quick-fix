@@ -229,10 +229,9 @@ p.footer-copy {
 /* ------ General grid styles ------ */
 
 .content-box.grid-container {
-  padding: 5px;
+  padding: 5px 5px 0;
   margin-left: -5px;
   margin-right: -5px;
-  padding-bottom: 0;
 }
 
 .l-block {
@@ -296,10 +295,8 @@ p.footer-copy {
 }
 
 .fixed-grid .single-block {
-  height: 178px;
-  width: 235px;
-  width: 270px;
   height: 204px;
+  width: 270px;
 }
 
 /* ----- Self clearing elements ------*/
@@ -471,7 +468,7 @@ header .search-wrap input[type='submit'] {
   width:200px !important;
   border: #ccc 1px solid;
   margin: 20px 0 -320px 0;
-  padding: 0px;
+  padding: 0;
   list-style: none;
 }
 
@@ -701,7 +698,6 @@ footer .content-box {
   font-size: 1.15em;
   line-height: 1em;
   padding: 8px;
-  margin-right: 0;
   color: #FFF;
 }
 
@@ -813,8 +809,6 @@ div#mdcolumn  input.submit, div#rhcolumn  input.submit {
   border:1px solid #a23479;
   background-color:#a23479;
   color:#FFF;
-  /* font-weight:bold; */
-  /* margin-bottom:10px;  */
   overflow:visible;
   padding:2px  13px;
 }

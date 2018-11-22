@@ -14,15 +14,15 @@ body{
   font-size:100%; /*specifies overall font size*/
   background-color:#F6F6F6;
   margin:5px;
-  padding:0px;
+  padding:0;
 }
 
 /*** used for clearing a div with no gap ***/
 .clear{
   float:none;
   clear:both;
-  height:0px;
-  line-height:0px;
+  height:0;
+  line-height:0;
   font-size:1px;
 }
 
@@ -35,7 +35,7 @@ body{
 /*** to hide labels but screenreaders can still read ***/
 .hidden{
   position:absolute;
-  left:0px;
+  left:0;
   top:-500px;
   width:1px;
   height:1px;
@@ -44,11 +44,7 @@ body{
 
 /*** OVERALL CONTAINER ***/
 div#container{
-  width:960px;
   text-align:left;
-  word-wrap:break-word;/*IE fix - wrap long link and chemical text names*/
-  background-color:#FFFFFF;
-  border:1px solid #CCC;
   margin:0 auto;
 }
 
@@ -63,36 +59,13 @@ div#container{
 /*============================================================
 		HEADER
 ============================================================*/
-div#header{
-  color:#FFF;
-  background-color:#095E2D;
-  background-image: url("/media/css/news-and-events/watermark.gif");
-  background-repeat:no-repeat;
-  font-size:80%;
-  width:100%;
-}
-
-
 
 /*** INSIDE DIV#HEADER - CONTAINS YORK LOGO + H1 AREA TITLE ***/
-div#location{
-  float:left;
-  width:60%; /*required for ie 5 mac*/
-  margin-right:15px;
-  margin-top:11px;
-}
 #location a img {
   border: none;
 }
 #location a {
   text-decoration:none;
-}
-/*--h1--*/
-div#header div#location h1{
-  color:#FFF;
-  font-size:130%;
-  margin:0 0 10px 25px;
-  font-weight:bold;
 }
 
 /*--small york logo--*/
@@ -107,7 +80,7 @@ div#header form{
   width:35%;
   text-align:right;
   padding:14px 14px 14px 6px;
-  margin:0px;
+  margin:0;
 }
 
 /*--search label--*/
@@ -136,7 +109,7 @@ div#header form input.submit{
   color:#013919;
   width:auto;
   height:auto;
-  padding-bottom:0px;
+  padding-bottom:0;
 }
 
 /*--search radio--*/
@@ -161,7 +134,7 @@ div#extra-links{
 
 /*--paragraph for links--*/
 div#extra-links p{
-  margin:0px 12px;
+  margin:0 12px;
   padding:5px;
 }
 
@@ -193,7 +166,7 @@ div#breadcrumb,
   font-size:85%;
   width:100%;
   border-bottom:1px solid #FFFFFF;
-  padding:20px 0px; /*workaround for FF unknown gap!*/
+  padding:20px 0; /*workaround for FF unknown gap!*/
 }
 
 /*--unordered list breadcrumb trail--*/
@@ -209,8 +182,8 @@ div#breadcrumb ul li,
   display:inline;
   list-style-type:none;
   line-height:190%;
-  margin:0px 5px 0px 0px;
-  padding:0px;
+  margin:0 5px 0 0;
+  padding:0;
   word-wrap:normal;
 }
 div#breadcrumb ul li img,
@@ -251,7 +224,6 @@ div#breadcrumb a:hover,
 ============================================================*/
 div#content-container{
   position:relative;
-  //width:100%;
   font-size:80%;
   color:#1D1D1D;
   background-color:#FFFFFF;
@@ -263,7 +235,6 @@ div#content-container{
 ============================================================*/
 div#lhcolumn{
   overflow:visible;/*ie 6 italic fix*/
-  font-size:85%;
   font-size:0.9em;
   float:left;
   width:195px;
@@ -292,8 +263,8 @@ div.no-left-nav div#lhcolumn {
 
 /*--navigation list--*/
 #nav, #nav ul {
-  padding:0px;
-  margin:0px;
+  padding:0;
+  margin:0;
   list-style:none;
 }
 
@@ -317,68 +288,40 @@ div.no-left-nav div#lhcolumn {
   display:block;
   font-size:1em;
   width:166px;
-  w\idth:134px;
   font-weight:normal;
   text-decoration:none;
-  background-repeat:no-repeat;
-  background-position:6px 9px;
   padding: 10px 15px;
-  background-color:#EEE;
+  background: #EEE no-repeat 6px 9px;
 }
 
 #nav li span{
   display:block;
   font-size:1em;
   width:166px;
-  w\idth:134px;
-  padding:0px 15px;
+  padding:0 15px;
 }
 
 /*--indent first list item, inherited by levels thereafter--*/
 #nav li li a{
-  w\idth:127px;
   padding:10px 20px 10px 10px;
   background-color:#DDD;
 
 }
 #nav li li span{
-  w\idth:127px;
-  padding:0px 20px 0px 10px;
+  padding:0 20px 0 10px;
 }
 
 /*--2nd level link information--*/
 #nav li li li a{
-  w\idth:125px;
   background-color:#CCC;
-
-}
-#nav li li li span{
-  w\idth:125px;
 }
 
 #nav li li li li a{
-  w\idth:123px;
   background-color:#BBB;
-
-}
-#nav li li li li span{
-  w\idth:123px;
 }
 
 #nav li li li li li a{
-  w\idth:121px;
   background-color:#AAA;
-
-}
-#nav li li li li li span{
-  w\idth:121px;
-}
-
-#nav li li li li li li a{
-  w\idth:119px;
-}
-#nav li li li li li li span{
-  w\idth:119px;
 }
 
 #nav li a , #nav li li a, #nav li li li a , #nav li li li li a {
@@ -392,8 +335,7 @@ div.no-left-nav div#lhcolumn {
 }
 
 #nav .children {
-  background-color:#abbbc1;
-  background-image:url("/media/css/news-and-events/arrow_nav.gif");
+  background: #abbbc1 url("/media/css/news-and-events/arrow_nav.gif");
   color:#000;
 }
 
@@ -414,8 +356,7 @@ div.no-left-nav div#lhcolumn {
 
 #nav li span.parent, #nav li span.parent a.parent {
   color:#FFF;
-  background-color:#0f3d4c;
-  background-image:url("/media/global/templateimages/arrow_nav_down_white.gif");
+  background: #0f3d4c url("/media/global/templateimages/arrow_nav_down_white.gif");
 }
 
 #nav li a:hover {
@@ -435,8 +376,7 @@ div.no-left-nav div#lhcolumn {
 
 
 #nav li span {
-  background-repeat: no-repeat;
-  background-position: 6px 9px;
+  background: no-repeat 6px 9px;
   padding-left:15px;
   display: block;
 }
@@ -456,8 +396,7 @@ div.no-left-nav div#lhcolumn {
   padding:0 15px 5px;
   margin:15px 0px;
   border-radius:3px;
-  border-width:1px;
-  border-style:solid;
+  border: 1px solid;
   display:block;
 }
 
@@ -529,9 +468,8 @@ div.no-left-nav div#lhcolumn {
 
 .boxout ul, .boxoutAlt  ul, .rightBox  ul, .leftBox  ul
 {
-
   margin-left:10px;
-  padding:0px;
+  padding:0;
 }
 
 div#mdcolumn  .boxout ul, div#mdcolumn  .boxoutAlt  ul, div#mdcolumn  .rightBox  ul, div#mdcolumn  .leftBox  ul {
@@ -565,7 +503,7 @@ div#mdcolumn blockquote.quote, div#rhcolumn blockquote.quote{
 
 div#rhcolumn blockquote.quote {
   float: none;
-  margin: 0 0 15px 0px;
+  margin: 0 0 15px 0;
   padding:35px 0 15px 30px;
   width: 188px;
 }
@@ -629,14 +567,11 @@ div#mdcolumn img.img-space{
 
 
 /*--middle column links--*/
-
 div#mdcolumn a:link, div#mdcolumn a:visited{
-
   text-decoration:underline;
 }
 
 div#mdcolumn a:hover{
-
   text-decoration:none;
 }
 
@@ -649,13 +584,13 @@ div#mdcolumn h1{
   font-size:170%;
   font-weight:normal;
   line-height:130%;
-  margin:0 0 12px 0px;
+  margin:0 0 12px 0;
 }
 
 h2, h3, h4, h5, h6{
   color:#095E2D;
   font-weight:bold;
-  margin:20px 0 12px 0px;
+  margin:20px 0 12px 0;
 }
 
 h2{
@@ -680,13 +615,11 @@ h5, h6, h7{
 
 div#mdcolumn p {
   margin-bottom:15px;
-  //line-height:1.4em;
 }
 
 div#mdcolumn p.unpadded, div#rhcolumn p.unpadded, .unpadded {
   margin:0;
   padding:0;
-  //line-height: 0;
 
   & > img,
   & > a > img{
@@ -695,8 +628,7 @@ div#mdcolumn p.unpadded, div#rhcolumn p.unpadded, .unpadded {
 }
 
 
-div#mdcolumn
-{
+div#mdcolumn {
   line-height:150%;
 }
 /*--middle column list--*/
@@ -747,16 +679,16 @@ div#mdcolumn ol ul li  {
 /*--definition list--*/
 div#mdcolumn dt{
   font-weight:bold;
-  margin:5px 0px;
+  margin:5px 0;
 }
 div#mdcolumn dd{
   font-style:italic;
-  margin-left:0px;
+  margin-left:0;
 }
 
 /*--used for green background on div boxes--*/
 div#mdcolumn .box{
-  padding:1px 0px 1px 0px;
+  padding:1px 0 1px 0;
   margin-top:20px;
 }
 
@@ -764,8 +696,8 @@ div#mdcolumn .box{
 div#mdcolumn hr{
   background-color:#FFFFFF;
   color:#FFFFFF;
-  padding:0px;
-  margin:8px 0px;
+  padding:0;
+  margin:8px 0;
   border:none;
   height:1px;
 }
@@ -775,8 +707,8 @@ table{
   border-spacing:0;
   border-collapse:collapse;
   font-size:100%;
-  margin:15px 0px 10px 0px;
-  padding:0px;
+  margin:15px 0 10px 0;
+  padding:0;
   width:100%;
 }
 
@@ -866,9 +798,7 @@ div#mdcolumn table.vertical-borders {
 /*Sortable tables*/
 
 table.sortable thead tr .header, table.sortable-zebra thead tr .header  {
-  background-image: url(/media/global/templateimages/sortable_bg_ddd.gif);
-  background-repeat: no-repeat;
-  background-position: center right;
+  background: url(/media/global/templateimages/sortable_bg_ddd.gif) no-repeat center right;
   cursor: pointer;
 }
 
@@ -981,13 +911,11 @@ div#mdcolumn p.author{
   font-size:90%;
   color:#999999;
   text-align:right;
-  margin:10px 0px;
+  margin:10px 0;
   clear: both; /* 'both' may be better here than 'right' - pushes it right below the nav bar though... */
 }
 
 /*--frequently asked question -*/
-
-
 .faq  {
   background-color:#eee;
   border-top:1px solid #fff;
@@ -1011,17 +939,13 @@ h3.q {
 
 #mdcolumn h3.q  a {
   position:relative;
-  /* overflow:hidden;  */
-
 }
 
 #mdcolumn h3.q  a:hover {
   color:#a23479;
-
 }
 
-#mdcolumn h3.q  a:before
-{
+#mdcolumn h3.q  a:before {
   content: "";
   position: absolute;
   width: 13px;
@@ -1057,8 +981,6 @@ h3.q {
   transition:.5s;
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
 }
-
-
 
 
 
@@ -1184,7 +1106,6 @@ div#mdcolumn ul.tabNavigation {
   background-color:#fff;
   border-bottom:1px solid #CCC;
   font-size:90%;
-  // line-height:14px;
   list-style: none;
   margin: 0;
   padding: 11px 0 5px;
@@ -1199,12 +1120,7 @@ div#mdcolumn ul.tabNavigation li {
 div#mdcolumn ul.tabNavigation li a {
   background-color: #e9e9e9;
   border:1px solid #ccc;
-  border-bottom-color:#CCC;
   color:#000;
-  -moz-border-radius-topleft:5px;
-  -moz-border-radius-topright:5px;
-  -webkit-border-top-left-radius:5px;
-  -webkit-border-top-right-radius:5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   font-size:12px;
@@ -1306,9 +1222,6 @@ div#mdcolumn .captionedimage .caption {
   font-weight:bold;
 }
 
-#upcoming-concerts .date {
-  /* font-size:85%;  */
-}
 
 /*============================================================
 		RIGHT COLUMN
@@ -1323,12 +1236,11 @@ div#rhcolumn{
 
 /*--remove margin from any images--*/
 div#rhcolumn img{
-  margin:0px;
-  margin-bottom:15px;
+  margin:0 0 15px;
 }
 
 div#rhcolumn  p img{
-  margin:0px;
+  margin:0;
 }
 
 #rhcolumn iframe {
@@ -1424,14 +1336,12 @@ div#rhcolumn #upcoming-concerts .date {
 		WIDE COLUMN
 ============================================================*/
 /*--wide class - remove DIV#RHCOLUMN--*/
-div.wide#content-container div#rhcolumn
-{
+div.wide#content-container div#rhcolumn {
   display:none;
 }
 
 /*--wide class - amend css details for DIV#MDCOLUMN--*/
-div.wide#content-container div#mdcolumn
-{
+div.wide#content-container div#mdcolumn {
   margin: 0px 0px 0px 0px;
   width: 720px;
 }
@@ -1498,12 +1408,12 @@ div#footer .edit a:hover{
 ============================================================*/
 
 /* ---- Utility classes ------- */
-.left{
+.left {
   float:left;
   margin: 15px 15px 15px 0;
 }
 
-.right{
+.right {
   float:right;
   margin: 15px 0 15px 15px;
 }
@@ -1522,7 +1432,7 @@ fieldset{
 }
 
 .nothingbeside{
-  clear:both; /* set to 'right' only becase lhcolumn is floated so 'both' pushes below nav bar - fixable? */
+  clear:both; /* set to 'right' only because lhcolumn is floated so 'both' pushes below nav bar - fixable? */
   display:block;
 }
 
@@ -1557,8 +1467,6 @@ object img {
   clear: both;
   height: 0;
 }
-* html .clear-self             { zoom: 1; } /* IE6 */
-*:first-child+html .clear-self { zoom: 1; } /* IE7 */
 
 /*============================================================
 		ICONS FOR DOWNLOAD AND NON-STANDARD LINK BEHAVIOURS
@@ -1679,7 +1587,7 @@ div#mdcolumn div.col-third .boxout .vcard,
 div#mdcolumn div.col-third .boxoutAlt .vcard
 {
   padding:0 12px 12px;
-  margin:0px;
+  margin:0;
 }
 
 div#mdcolumn div.col-half .boxout p:first-child,
@@ -1694,8 +1602,7 @@ div#mdcolumn div.col-half .boxoutAlt ul,
 div#mdcolumn div.col-third .boxout ul,
 div#mdcolumn div.col-third .boxoutAlt ul {
   padding:0 12px 12px 0;
-  margin:0px;
-  margin-left:30px;
+  margin:0 0 0 30px;
 }
 
 div#mdcolumn div.col-half .boxout ul ul,
@@ -1837,7 +1744,6 @@ div#mdcolumn #homepagebanner .imagewithcaption .caption p a:link,div#mdcolumn #h
 /* image margin testing*/
 div#mdcolumn img {margin:0; padding:0; }
 div#mdcolumn p {margin-top:0}
-/*div#mdcolumn p {margin-top:0em; padding-top:0;  }*/
 div#mdcolumn p.left {margin-top:0.5em; padding-top:0; }
 div#mdcolumn p.left img {margin-top:0;padding-top:0}
 div#mdcolumn p.right {margin-top:0.5em; padding-top:0; }
@@ -1875,10 +1781,8 @@ div#mdcolumn .icon-box p {
 ============================================================*/
 
 #upcomingevents .event {
-  padding:0;
-  padding-top:5px;
+  padding:5px 0 0;
 }
-
 
 mdcolumn#upcomingevents .event {
   border-bottom:1px solid #EEE;
@@ -2111,9 +2015,7 @@ div#rhcolumn #twitter p, div#mdcolumn #twitter p {
 }
 
 div#rhcolumn #twitter ul, div#mdcolumn #twitter ul {
-  list-style-image:none;
-  list-style-position:outside;
-  list-style-type:none;
+  list-style: none outside none;
   margin-left:0;
   margin-top:0;
   padding-left:0;
@@ -2306,10 +2208,9 @@ input.text, input.search, input.file, textarea, .textarea, select.select, input[
   padding:2px 0;
 }
 input.text, input.search, textarea, .textarea, input[type="text"]{
-  border-top:1px solid #7c7c7c;
-  border-left:1px solid #c3c3c3;
-  border-right:1px solid #c3c3c3;
-  border-bottom:1px solid #ddd;
+  border: 1px solid #c3c3c3;
+  border-top-color: #7c7c7c;
+  border-bottom-color: #ddd;
   background:#fff url(/media/global/templateimages/fieldbg.gif) repeat-x top;
 }
 
@@ -2322,8 +2223,6 @@ input[type="text"]:-moz-placeholder {
 input[type="text"]::-moz-placeholder {
   color:#6d6d6d;
 }
-
-
 select.select{
   padding:1px 0 0 0;
 }
@@ -2643,13 +2542,11 @@ label.error {
 
 
 .gallery-lightbox .gallery-image, .gallery-standard .gallery-image {
-
   display:inline;
   float:left;
   margin-bottom:5px;
   text-align:center;
   width:168px;
-
 }
 
 .wide .gallery-image {
@@ -2839,17 +2736,6 @@ div#mdcolumn #course-title {
 }
 
 div#mdcolumn #course-apply-now {
-  background-color: #92c54c;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#9acc55), to(#80b438));
-  background-image: -webkit-linear-gradient(top, #9acc55, #80b438);
-  background-image: -moz-linear-gradient(top, #9acc55, #80b438);
-  background-image: -ms-linear-gradient(top, #9acc55, #80b438);
-  background-image: -o-linear-gradient(top, #9acc55, #80b438);
-  background-image: linear-gradient(top, #9acc55, #80b438);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#9acc55', EndColorStr='#80b438');
-  border: 1px solid #80b438;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   color: #000;
   float:left;
@@ -2860,7 +2746,6 @@ div#mdcolumn #course-apply-now {
 }
 
 div#mdcolumn #course-apply-now:hover {
-  background-color:#80b438;
   background-image:none;
 }
 
@@ -2969,8 +2854,7 @@ div#mdcolumn ul#multistepNavigation.page2active li.page-2,
 div#mdcolumn ul#multistepNavigation.page3active li.page-3,
 div#mdcolumn ul#multistepNavigation.page4active li.page-4,
 div#mdcolumn ul#multistepNavigation.page5active li.page-5,
-div#mdcolumn ul#multistepNavigation.page6active li.page-6
-{
+div#mdcolumn ul#multistepNavigation.page6active li.page-6 {
   background-color:#300961;
   border: 1px solid #ccc;
 }

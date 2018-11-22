@@ -165,7 +165,7 @@ html.rqf-staff-page {
 
   #sitemap li {
     margin-bottom: 3px;
-    background: transparent url("/media/css/staff/bullet.gif") no-repeat 0px 4px;
+    background: transparent url("/media/css/staff/bullet.gif") no-repeat 0 4px;
     padding-left: 12px;
   }
 
@@ -506,10 +506,6 @@ html.rqf-staff-page {
   .ui-tooltip-shadow .ui-tooltip-content {
     filter: progid:DXImageTransform.Microsoft.Shadow(Color='gray', Direction=135, Strength=3);
     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Color='gray', Direction=135, Strength=3)";
-
-    _margin-bottom: -3px; /* IE6 */
-    .margin-bottom:
-    -3 px; /* IE7 */
   }
 
   /*Press releases*/
