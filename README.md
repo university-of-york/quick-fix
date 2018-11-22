@@ -16,4 +16,5 @@ grunt build
 ```
 
 ### Uploading to the CMS
-In the CMS media library, upload new versions, using the generated files from the local upload directory.
+
+The generated files from the build command all live within the local `/upload` folder. The required assets should be uploaded to the following folder on the 'static' web/FTP account: `/static/rqf`.
