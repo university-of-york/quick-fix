@@ -178,7 +178,6 @@ div#breadcrumb,
 .breadcrumbs{
   background-color:#DFEDD1;
   font-size:85%;
-  width:100%;
   border-bottom:1px solid #FFFFFF;
   padding:20px 0; /*workaround for FF unknown gap!*/
 }
@@ -277,6 +276,7 @@ div.no-left-nav div#lhcolumn {
   padding:0;
   margin:0;
   list-style:none;
+  overflow: hidden;
 }
 
 #nav ul  {
