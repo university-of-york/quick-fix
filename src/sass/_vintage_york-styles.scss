@@ -801,26 +801,8 @@ footer .content-box {
 }
 
 /* -------- Breadcrumb ------- */
+// removed and merged with breadcrumbs in vintage_standard-styles
 
-.breadcrumbs {
-  list-style-type: none;
-  padding: 0;
-  margin: 25px 0 25px 15px;
-}
-.breadcrumbs li {
-  display: block;
-  float: left;
-  font-size: 0.75em;
-  color: #5C5C5C;
-}
-.breadcrumbs li a {
-  display: block;
-  background: transparent url('/media/global/2013/images/frame/arrow-right-10w.png') 100% 50% no-repeat;
-  padding-right: 15px;
-  margin-right: 5px;
-  color: #333;
-  text-decoration: underline;
-}
 
 /* ----- BUTTONS ----- */
 
