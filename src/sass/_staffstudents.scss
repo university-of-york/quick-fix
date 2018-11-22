@@ -1,136 +1,24 @@
 /*============================================================
-		STUDENT SITE
-============================================================*/
-
-/*============================================================
-		FONTS
+		STAFF & STUDENT SITEs/SECTIONS
 ============================================================*/
 
 html.rqf-staff-page {
 
-  *, body {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-
-  }
-
-  h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-weight: normal !important;
-  }
-
-  h2 {
-    font-size: 160%;
-  }
-
-  h3 {
-    font-size: 130%;
-  }
-
-  div#header, div#content-container {
-    font-size: 80%;
-  }
-
-  div#lhcolumn {
-    font-size: 90%;
-  }
-
-  /*============================================================
-          BODY
-  ============================================================*/
-  body {
-    margin: 0;
-    padding: 15px;
-  }
-
-  body {
-    background: #222 url('/media/css/staff/bg.png') repeat-x;
-  }
-
-  /*============================================================
-          CONTAINER
-  ============================================================*/
-  div#container {
-    background-color: transparent;
-    border: none;
-    width: 970px;
-  }
-
-  div#content-container {
-    border-radius: 0 0 5px 5px;
-  }
-
-  /*clearfix on #content-container, otherwise its background colour of white doesn't get applied*/
-  div#content-container:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
-
   /*============================================================
           HEADER
   ============================================================*/
-  /*header font colour,background colour and background image*/
-  div#header {
-    background-color: transparent;
-    background-image: none;
-    color: #000;
-  }
-
-  div#header h1 {
-    color: #fff;
-    font-size: 140%;
-    margin: 10px 15px;
-  }
 
   div#header a {
     color: #FFF;
     text-decoration: none;
   }
 
-  div#header #logo {
-    float: left;
-    width: 45%;
-  }
-
-  /*Top level global site links*/
-  #global {
-    padding: 10px 15px 0;
-  }
-
   #global #staffstudent {
     display: none;
   }
 
-  #global #links {
-    float: right;
-  }
-
   #global a:hover {
     text-decoration: underline;
-  }
-
-  div#location {
-    float: left;
-    width: 60%;
-    margin-right: 15px;
-    margin-top: 0px;
-  }
-
-  /*--header h1 area title colour--*/
-  div#header div#location h1 {
-    color: #860000;
-    font-size: 180%;
-    margin: 10px 0 10px 15px;
-    text-shadow: 0 -1px 0 black;
-  }
-
-  div#header form {
-    float: right;
-    width: 35%;
-    padding: 0px;
-    /* margin: 14px 9px 0 0; */
   }
 
   /*--search label colour--*/
@@ -138,65 +26,15 @@ html.rqf-staff-page {
     color: #000;
   }
 
-  /*--search box border colour--*/
-  div#header form input {
-    border: 1px solid #092E69;
-    color: #000000;
-    margin-bottom: 15px;
-    padding: 5px;
-  }
-
   /*--search button border colour, text colour, background colour--*/
   div#header form input.submit {
-    //background-color: #095E2D;
-    //background-image: -webkit-gradient(linear, left top, left bottom, from(#095E2D), to(#053e1d));
-    //background-image: -webkit-linear-gradient(top, #095E2D, #053e1d);
-    //background-image: -moz-linear-gradient(top, #095E2D, #053e1d);
-    //background-image: -ms-linear-gradient(top, #095E2D, #053e1d);
-    //background-image: -o-linear-gradient(top, #095E2D, #053e1d);
-    //background-image: linear-gradient(top, #095E2D, #053e1d);
-    //filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#095E2D', EndColorStr='#053e1d');
-
-    border: 1px solid #111;
-    color: #FFF;
     margin-right: 0;
     padding: 5px 10px;
-    //text-shadow: 0px -1px 0px #053e1d;
-  }
-
-  div#header form input.submit:hover {
-    border-color: #111;
-  }
-
-  div#header form input.submit:active {
-    //background-color: #095E2D;
-    //background-image: -webkit-gradient(linear, left top, left bottom, from(#053e1d), to(#023116));
-    //background-image: -webkit-linear-gradient(top, #053e1d, #023116);
-    //background-image: -moz-linear-gradient(top, #053e1d, #023116);
-    //background-image: -ms-linear-gradient(top, #053e1d, #023116);
-    //background-image: -o-linear-gradient(top, #053e1d, #023116);
-    //background-image: linear-gradient(top, #053e1d, #023116);
-    //filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#053e1d', EndColorStr='#023116'); /* IE6�IE9 */
-    color: #eee;
   }
 
   /*============================================================
           EXTRA LINKS
   ============================================================*/
-  /*--extra-links text colour,background colour--*/
-  div#extra-links {
-    //color: #FFF;
-    //background-color: #095E2D;
-    //background-image: -webkit-gradient(linear, left top, left bottom, from(#095E2D), to(#053e1d));
-    //background-image: -webkit-linear-gradient(top, #095E2D, #053e1d);
-    //background-image: -moz-linear-gradient(top, #095E2D, #053e1d);
-    //background-image: -ms-linear-gradient(top, #095E2D, #053e1d);
-    //background-image: -o-linear-gradient(top, #095E2D, #053e1d);
-    //background-image: linear-gradient(top, #095E2D, #053e1d);
-    //filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#095E2D', EndColorStr='#053e1d');
-    //border-top: 1px solid #095E2D;
-    //text-shadow: 0px -1px 0px #051c42;
-  }
 
   #extra-links h1 {
     float: left;
@@ -258,307 +96,6 @@ html.rqf-staff-page {
   #topmenu ul.submenu li a:hover {
     background-color: #052A66;
     text-decoration: none;
-  }
-
-  /*============================================================
-          BREADCRUMB
-  ============================================================*/
-  /*--breadcrumb text colour, background colour--*/
-  div#breadcrumb {
-    color: #000;
-    background-color: #eee;
-  }
-
-  div#breadcrumb ul {
-    margin: 0 15px;
-  }
-
-  /*--link colours for breadcrumb--*/
-  /*link*/
-  div#breadcrumb a:link {
-    color: #000;
-  }
-  /*visited*/
-  div#breadcrumb a:visited {
-    color: #000;
-  }
-  /*hover*/
-  div#breadcrumb a:hover {
-    color: #000;
-  }
-
-  /*============================================================
-          LEFT COLUMN BLOCKED NAVIGATION
-  ============================================================*/
-
-  //#nav li a, #nav li li a, #nav li li li a, #nav li li li li a {
-  //  color: #000;
-  //  border-bottom: 1px solid white;
-  //  background-image: url("/media/css/staff/arrow_nav.gif");
-  //}
-  //
-  //#nav li span.currentbranch0 a, #nav li span.currentbranch1 a, #nav li span.currentbranch2 a, #nav li span.currentbranch3 a, #nav li span.currentbranch4 a {
-  //  background-image: url("/media/css/staff/arrow_nav_down.gif")
-  //}
-  //
-  //#nav li span.parent, #nav li span.parent a.parent {
-  //  color: #FFF;
-  //  //background-color: #095E2D;
-  //  //background-image: url("/media/global/templateimages/arrow_nav_down_white.gif");
-  //}
-  //
-  //#nav .children {
-  //  color: #000;
-  //  background-color: #EBE8CF;
-  //  //background-image: url("/media/css/staff/arrow_nav.gif");
-  //}
-  //
-  ///* all levels hover*/
-  //#nav li a:hover {
-  //  color: #FFF !important;
-  //  //background-color: #669900 !important;
-  //  //background-image: url("/media/global/templateimages/arrow_white.gif");
-  //}
-  //
-  //#nav li span.currentbranch0 a:hover, #nav li span.currentbranch1 a:hover, #nav li span.currentbranch2 a:hover, #nav li span.currentbranch3 a:hover, #nav li span.currentbranch4 a:hover {
-  //  background-image: url("/media/global/templateimages/arrow_nav_down_white.gif");
-  //}
-
-  /*============================================================
-          BOXOUT REGIONS
-  ============================================================*/
-
-  .boxout, .leftBox, .rightBox, .boxoutAlt {
-    border-radius: 5px;
-  }
-
-  .boxout, .leftBox, .rightBox {
-    background-color: #eee;
-    border-color: #eee;
-  }
-
-  .boxout h1, .boxout h2, .boxout h3, .boxout h4, .boxout h5,
-  .leftBox h1, .leftBox h2, .leftBox h3, .leftBox h4, .leftBox h5,
-  .rightBox h1, .rightBox h2, .rightBox h3, .rightBox h4, .rightBox h5 {
-    text-shadow: 0 1px 0 white;
-  }
-
-  .boxoutAlt {
-    //background-color: #095E2D;
-    //border-color: #095E2D;
-  }
-
-  .boxoutAlt h1, .boxoutAlt h2, .boxoutAlt h3, .boxoutAlt h4, .boxoutAlt h5 {
-    text-shadow: 0 -1px 0 #051C42;
-  }
-
-  div#mdcolumn .boxoutAlt,
-  div#mdcolumn .boxoutAlt p,
-  div#mdcolumn .boxoutAlt h2,
-  div#mdcolumn .boxoutAlt h3,
-  div#mdcolumn .boxoutAlt h4,
-  div#mdcolumn .boxoutAlt h5,
-  div#mdcolumn .boxoutAlt a:link,
-  div#mdcolumn .boxoutAlt a:visited,
-  div#mdcolumn .boxoutAlt a:hover,
-  div#mdcolumn .boxoutAlt li,
-  div#rhcolumn .boxoutAlt,
-  div#rhcolumn .boxoutAlt p,
-  div#rhcolumn .boxoutAlt h2,
-  div#rhcolumn .boxoutAlt h3,
-  div#rhcolumn .boxoutAlt h4,
-  div#rhcolumn .boxoutAlt h5,
-  div#rhcolumn .boxoutAlt a:link,
-  div#rhcolumn .boxoutAlt a:visited,
-  div#rhcolumn .boxoutAlt a:hover,
-  div#rhcolumn .boxoutAlt li {
-    color: #FFF;
-  }
-
-  div#rhcolumn .boxoutAlt li {
-    background: transparent url("/media/global/templateimages/bullet_white.gif") no-repeat scroll 0 4px;
-  }
-
-  div#mdcolumn .boxoutAlt li {
-    background: transparent url("/media/global/templateimages/bullet_white.gif") no-repeat scroll 0 4px;
-  }
-
-  /*============================================================
-          MIDDLE COLUMN TEXT FORMATTING
-  ============================================================*/
-
-  a:link {
-    //color: #008E00;
-  }
-
-  a:visited {
-    //color: #416B53;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-
-  div#mdcolumn {
-    line-height: 140%;
-  }
-
-  div#mdcolumn p {
-    line-height: 150%;
-  }
-
-  div#mdcolumn h1 {
-    font-size: 250%;
-  }
-
-  div#mdcolumn h1#userNiceName {
-    float: left;
-    font-size: 170%;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    //color: #095E2D;
-    //line-height: 120%;
-  }
-
-  div#mdcolumn h3, div#rhcolumn h3 {
-    font-size: 150%;
-  }
-
-  div#mdcolumn h4, div#rhcolumn h4 {
-    font-size: 130%;
-    font-style: normal;
-  }
-
-  div#mdcolumn h5, div#rhcolumn h5 {
-    font-size: 120%;
-    font-style: italic;
-
-  }
-
-  /*headings in columns*/
-  div#mdcolumn h2, div#mdcolumn .col-half h2, div#mdcolumn .col-third h2, div#mdcolumn .col-half .boxoutAlt h2 {
-    background-color: transparent;
-    //border-bottom: 3px solid #D7E8C6;
-    //color: #095E2D;
-    font-size: 170%;
-  }
-
-  div#mdcolumn .col-half .boxoutAlt h2 {
-    color: #fff;
-  }
-
-  div#mdcolumn .col-half h2 a:link, div#mdcolumn .col-third h2 a:link,
-  div#mdcolumn .col-half h2 a:visited, div#mdcolumn .col-third h2 a:visited,
-  div#mdcolumn .col-half h2 a:hover, div#mdcolumn .col-third h2 a:hover {
-    //color: #095E2D;
-  }
-
-  div#mdcolumn .col-third h2 {
-    font-size: 150%;
-  }
-
-  div#mdcolumn li, div#mdcolumn ol ul li {
-    background: transparent url("/media/css/staff/bullet.gif") no-repeat 0px 4px;
-  }
-
-  /*--HR colour,background colour (BOTH VALUES MUST BE SAME COLOUR)--*/
-  div#mdcolumn hr {
-    color: #e6e5cf;
-    background-color: #e6e5cf;
-  }
-
-  /*--table header border colour, background colour--*/
-  table tr th {
-    //background-color: #095E2D;
-    color: #FFFFFF;
-  }
-
-  /*--table subheader--*/
-  table tbody tr th {
-    //background-color: #669900;
-    //color: #FFF;
-  }
-
-  /*Tabbed content*/
-
-  // div#mdcolumn ul.tabNavigation li a {
-  //   padding: 5px;
-  // }
-
-  div#mdcolumn ul.tabNavigation li a.selected, div#mdcolumn ul.tabNavigation li a.selected:hover {
-    //color: #008E00;
-  }
-
-  /*FAQ*/
-
-  div#mdcolumn h3.q, div#mdcolumn h3.q a, div#mdcolumn .col-half h3.q {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-    font-size: 100%;
-  }
-
-  div#mdcolumn h3.q:hover {
-    text-decoration: underline;
-  }
-
-  /*Rotating banner*/
-
-  #homepagebanner a {
-    color: #fff;
-  }
-
-  div#mdcolumn #homepagebanner .imagewithcaption .caption p {
-    padding: 5px 10px;
-  }
-
-  /*============================================================
-          HOMEPAGE COLUMN FORMATTING
-  ============================================================*/
-
-  div#mdcolumn .col-half > h2, div#mdcolumn .col-third > h2 {
-    padding-left: 0;
-  }
-
-  div#mdcolumn .col-half h2, div#mdcolumn .col-half .boxoutAlt h2, div#mdcolumn .col-third h2, div#mdcolumn .col-third .boxoutAlt h2 {
-    font-size: 150%;
-  }
-
-  div#mdcolumn .col-half .boxout h2, div#mdcolumn .col-half .boxoutAlt h2, div#mdcolumn .col-third .boxout h2, div#mdcolumn .col-third .boxoutAlt h2 {
-    background-color: transparent;
-    margin-top: 5px;
-    padding-bottom: 0;
-
-  }
-
-  div#mdcolumn .col-third .boxoutAlt h2 a:link, div#mdcolumn .col-third .boxoutAlt h2 a:hover, div#mdcolumn .col-third .boxoutAlt h2 a:visited {
-    color: #fff;
-  }
-
-  div#mdcolumn .col-half h3, div#mdcolumn .col-half .boxoutAlt h3, div#mdcolumn .col-third h3, div#mdcolumn .col-third .boxoutAlt h3 {
-    font-size: 130%;
-  }
-
-  /*============================================================
-          RIGHT COLUMN TEXT FORMATTING
-  ============================================================*/
-
-  div#rhcolumn {
-    float: left;
-  }
-
-  div#rhcolumn ul {
-    list-style: none outside none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  div#rhcolumn ul li, div#rhcolumn ol ul li {
-    //background: transparent url("/media/css/staff/bullet.gif") no-repeat 0px 4px;
-    //padding-left: 12px;
-  }
-
-  div#rhcolumn h1, div#rhcolumn h2, div#rhcolumn h3, div#rhcolumn h4 {
-    //color: #095E2D;
   }
 
   /*============================================================
@@ -664,21 +201,17 @@ html.rqf-staff-page {
           FOOTER FEEDBACK
   ============================================================*/
   #feedback {
-
     margin-left: 690px;
     padding: 20px;
     text-align: left;
   }
 
   #feedback label {
-    /* display:inline-block;
-    margin:15px 0 10px;  */
     color: #fff;
   }
 
   #feedback textarea {
     height: 150px;
-    /* margin-bottom:15px;  */
     width: 230px;
   }
 
@@ -723,42 +256,6 @@ html.rqf-staff-page {
   }
 
   /*============================================================
-          COMMON STYLES
-  ============================================================*/
-
-  form input.submit, form input[type=submit] {
-    //background-color: #095E2D;
-    //background-image: -webkit-gradient(linear, left top, left bottom, from(#095E2D), to(#053e1d));
-    //background-image: -webkit-linear-gradient(top, #095E2D, #053e1d);
-    //background-image: -moz-linear-gradient(top, #095E2D, #053e1d);
-    //background-image: -ms-linear-gradient(top, #095E2D, #053e1d);
-    //background-image: -o-linear-gradient(top, #095E2D, #053e1d);
-    //background-image: linear-gradient(top, #095E2D, #053e1d);
-    //filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#095E2D', EndColorStr='#053e1d');
-
-    border: 1px solid #111;
-    color: #FFF;
-
-    text-shadow: 0px -1px 0px #051c42;
-  }
-
-  input.submit:hover, input[type=submit]:hover {
-    border-color: #000;
-  }
-
-  input.submit:active, input[type=submit]:active {
-    //background-color: #095E2D;
-    //background-image: -webkit-gradient(linear, left top, left bottom, from(#053e1d), to(#023116));
-    //background-image: -webkit-linear-gradient(top, #053e1d, #023116);
-    //background-image: -moz-linear-gradient(top, #053e1d, #023116);
-    //background-image: -ms-linear-gradient(top, #053e1d, #023116);
-    //background-image: -o-linear-gradient(top, #053e1d, #023116);
-    //background-image: linear-gradient(top, #053e1d, #023116);
-    //filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#053e1d', EndColorStr='#023116');
-    color: #eee;
-  }
-
-  /*============================================================
           STUDENT HOMEPAGE - LOGOUT
   ============================================================*/
 
@@ -795,8 +292,6 @@ html.rqf-staff-page {
   #latestnews.newsforyou .newsitem span.newsposted {
     font-size: 85%;
     color: #777;
-    /* margin-top: 5px;
-    margin-bottom: 5px; */
   }
 
   #latestnews.newsforyou .newsitem span.newsposted:before {
@@ -1284,21 +779,5 @@ html.rqf-staff-page {
   #rhcolumn #publiclectures .event .eventtitle {
     font-weight: bold;
     margin: 0;
-  }
-
-  /*============================================================
-          CALL TO ACTION LINKS
-  ============================================================*/
-
-  .cta a, .cta a:link, .cta a:visited, a.cta, a.cta:link, a.cta:visited,
-  #mdcolumn .cta a[href^="http://"],
-  #mdcolumn .cta a[href^="https://"],
-  #mdcolumn a.cta[href^="http://"],
-  #mdcolumn a.cta[href^="https://"],
-  #rhcolumn .cta a[href^="http://"],
-  #rhcolumn .cta a[href^="https://"],
-  #rhcolumn a.cta[href^="http://"],
-  #rhcolumn a.cta[href^="https://"] {
-    //background: #008E00;
   }
 }

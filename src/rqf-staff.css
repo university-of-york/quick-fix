@@ -1,60 +1,15 @@
 /*============================================================
-		STUDENT SITE
+		STAFF & STUDENT SITEs/SECTIONS
 ============================================================*/
-/*============================================================
-		FONTS
-============================================================*/
-/* line 9, sass/_staffstudents.scss */
+/* line 5, sass/_staffstudents.scss */
 html.rqf-staff-page {
-  /*============================================================
-          BODY
-  ============================================================*/
-  /*============================================================
-          CONTAINER
-  ============================================================*/
-  /*clearfix on #content-container, otherwise its background colour of white doesn't get applied*/
   /*============================================================
           HEADER
   ============================================================*/
-  /*header font colour,background colour and background image*/
-  /*Top level global site links*/
-  /*--header h1 area title colour--*/
   /*--search label colour--*/
-  /*--search box border colour--*/
   /*--search button border colour, text colour, background colour--*/
   /*============================================================
           EXTRA LINKS
-  ============================================================*/
-  /*--extra-links text colour,background colour--*/
-  /*============================================================
-          BREADCRUMB
-  ============================================================*/
-  /*--breadcrumb text colour, background colour--*/
-  /*--link colours for breadcrumb--*/
-  /*link*/
-  /*visited*/
-  /*hover*/
-  /*============================================================
-          LEFT COLUMN BLOCKED NAVIGATION
-  ============================================================*/
-  /*============================================================
-          BOXOUT REGIONS
-  ============================================================*/
-  /*============================================================
-          MIDDLE COLUMN TEXT FORMATTING
-  ============================================================*/
-  /*headings in columns*/
-  /*--HR colour,background colour (BOTH VALUES MUST BE SAME COLOUR)--*/
-  /*--table header border colour, background colour--*/
-  /*--table subheader--*/
-  /*Tabbed content*/
-  /*FAQ*/
-  /*Rotating banner*/
-  /*============================================================
-          HOMEPAGE COLUMN FORMATTING
-  ============================================================*/
-  /*============================================================
-          RIGHT COLUMN TEXT FORMATTING
   ============================================================*/
   /*============================================================
           FOOTER
@@ -70,9 +25,6 @@ html.rqf-staff-page {
   ============================================================*/
   /*============================================================
           FOOTER LEGAL
-  ============================================================*/
-  /*============================================================
-          COMMON STYLES
   ============================================================*/
   /*============================================================
           STUDENT HOMEPAGE - LOGOUT
@@ -116,152 +68,34 @@ html.rqf-staff-page {
   /*============================================================
           EVENTS LISTING
   ============================================================*/
-  /*============================================================
-          CALL TO ACTION LINKS
-  ============================================================*/
 }
 /* line 11, sass/_staffstudents.scss */
-html.rqf-staff-page *, html.rqf-staff-page body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-/* line 16, sass/_staffstudents.scss */
-html.rqf-staff-page h1, html.rqf-staff-page h2, html.rqf-staff-page h3, html.rqf-staff-page h4, html.rqf-staff-page h5, html.rqf-staff-page h6, html.rqf-staff-page h1 a, html.rqf-staff-page h2 a, html.rqf-staff-page h3 a, html.rqf-staff-page h4 a, html.rqf-staff-page h5 a, html.rqf-staff-page h6 a {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-weight: normal !important;
-}
-/* line 21, sass/_staffstudents.scss */
-html.rqf-staff-page h2 {
-  font-size: 160%;
-}
-/* line 25, sass/_staffstudents.scss */
-html.rqf-staff-page h3 {
-  font-size: 130%;
-}
-/* line 29, sass/_staffstudents.scss */
-html.rqf-staff-page div#header, html.rqf-staff-page div#content-container {
-  font-size: 80%;
-}
-/* line 33, sass/_staffstudents.scss */
-html.rqf-staff-page div#lhcolumn {
-  font-size: 90%;
-}
-/* line 40, sass/_staffstudents.scss */
-html.rqf-staff-page body {
-  margin: 0;
-  padding: 15px;
-}
-/* line 45, sass/_staffstudents.scss */
-html.rqf-staff-page body {
-  background: #222 url("/media/css/staff/bg.png") repeat-x;
-}
-/* line 52, sass/_staffstudents.scss */
-html.rqf-staff-page div#container {
-  background-color: transparent;
-  border: none;
-  width: 970px;
-}
-/* line 58, sass/_staffstudents.scss */
-html.rqf-staff-page div#content-container {
-  border-radius: 0 0 5px 5px;
-}
-/* line 63, sass/_staffstudents.scss */
-html.rqf-staff-page div#content-container:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-/* line 75, sass/_staffstudents.scss */
-html.rqf-staff-page div#header {
-  background-color: transparent;
-  background-image: none;
-  color: #000;
-}
-/* line 81, sass/_staffstudents.scss */
-html.rqf-staff-page div#header h1 {
-  color: #fff;
-  font-size: 140%;
-  margin: 10px 15px;
-}
-/* line 87, sass/_staffstudents.scss */
 html.rqf-staff-page div#header a {
   color: #FFF;
   text-decoration: none;
 }
-/* line 92, sass/_staffstudents.scss */
-html.rqf-staff-page div#header #logo {
-  float: left;
-  width: 45%;
-}
-/* line 98, sass/_staffstudents.scss */
-html.rqf-staff-page #global {
-  padding: 10px 15px 0;
-}
-/* line 102, sass/_staffstudents.scss */
+/* line 16, sass/_staffstudents.scss */
 html.rqf-staff-page #global #staffstudent {
   display: none;
 }
-/* line 106, sass/_staffstudents.scss */
-html.rqf-staff-page #global #links {
-  float: right;
-}
-/* line 110, sass/_staffstudents.scss */
+/* line 20, sass/_staffstudents.scss */
 html.rqf-staff-page #global a:hover {
   text-decoration: underline;
 }
-/* line 114, sass/_staffstudents.scss */
-html.rqf-staff-page div#location {
-  float: left;
-  width: 60%;
-  margin-right: 15px;
-  margin-top: 0px;
-}
-/* line 122, sass/_staffstudents.scss */
-html.rqf-staff-page div#header div#location h1 {
-  color: #860000;
-  font-size: 180%;
-  margin: 10px 0 10px 15px;
-  text-shadow: 0 -1px 0 black;
-}
-/* line 129, sass/_staffstudents.scss */
-html.rqf-staff-page div#header form {
-  float: right;
-  width: 35%;
-  padding: 0px;
-  /* margin: 14px 9px 0 0; */
-}
-/* line 137, sass/_staffstudents.scss */
+/* line 25, sass/_staffstudents.scss */
 html.rqf-staff-page div#header form label {
   color: #000;
 }
-/* line 142, sass/_staffstudents.scss */
-html.rqf-staff-page div#header form input {
-  border: 1px solid #092E69;
-  color: #000000;
-  margin-bottom: 15px;
-  padding: 5px;
-}
-/* line 150, sass/_staffstudents.scss */
+/* line 30, sass/_staffstudents.scss */
 html.rqf-staff-page div#header form input.submit {
-  border: 1px solid #111;
-  color: #FFF;
   margin-right: 0;
   padding: 5px 10px;
 }
-/* line 167, sass/_staffstudents.scss */
-html.rqf-staff-page div#header form input.submit:hover {
-  border-color: #111;
-}
-/* line 171, sass/_staffstudents.scss */
-html.rqf-staff-page div#header form input.submit:active {
-  color: #eee;
-}
-/* line 201, sass/_staffstudents.scss */
+/* line 39, sass/_staffstudents.scss */
 html.rqf-staff-page #extra-links h1 {
   float: left;
 }
-/* line 205, sass/_staffstudents.scss */
+/* line 43, sass/_staffstudents.scss */
 html.rqf-staff-page #topmenu {
   display: block;
   float: right;
@@ -269,26 +103,26 @@ html.rqf-staff-page #topmenu {
   margin: 0 0 0 15px;
   padding: 0;
 }
-/* line 213, sass/_staffstudents.scss */
+/* line 51, sass/_staffstudents.scss */
 html.rqf-staff-page #topmenu a:link {
   text-decoration: none;
 }
-/* line 217, sass/_staffstudents.scss */
+/* line 55, sass/_staffstudents.scss */
 html.rqf-staff-page #topmenu a:hover {
   text-decoration: underline;
 }
-/* line 221, sass/_staffstudents.scss */
+/* line 59, sass/_staffstudents.scss */
 html.rqf-staff-page #topmenu li {
   float: left;
   padding: 10px 0;
   position: relative;
   z-index: 999;
 }
-/* line 228, sass/_staffstudents.scss */
+/* line 66, sass/_staffstudents.scss */
 html.rqf-staff-page #topmenu li a {
   padding: 10px;
 }
-/* line 232, sass/_staffstudents.scss */
+/* line 70, sass/_staffstudents.scss */
 html.rqf-staff-page #topmenu ul.submenu {
   background-color: #2C4B7E;
   display: none;
@@ -301,7 +135,7 @@ html.rqf-staff-page #topmenu ul.submenu {
   width: 100px;
   z-index: 999;
 }
-/* line 245, sass/_staffstudents.scss */
+/* line 83, sass/_staffstudents.scss */
 html.rqf-staff-page #topmenu ul.submenu li {
   display: block;
   list-style-type: none;
@@ -309,213 +143,28 @@ html.rqf-staff-page #topmenu ul.submenu li {
   border-bottom: 1px solid #234172;
   border-top: 1px solid #3a5a90;
 }
-/* line 253, sass/_staffstudents.scss */
+/* line 91, sass/_staffstudents.scss */
 html.rqf-staff-page #topmenu ul.submenu li a {
   display: block;
   width: 80px;
 }
-/* line 258, sass/_staffstudents.scss */
+/* line 96, sass/_staffstudents.scss */
 html.rqf-staff-page #topmenu ul.submenu li a:hover {
   background-color: #052A66;
   text-decoration: none;
 }
-/* line 267, sass/_staffstudents.scss */
-html.rqf-staff-page div#breadcrumb {
-  color: #000;
-  background-color: #eee;
-}
-/* line 272, sass/_staffstudents.scss */
-html.rqf-staff-page div#breadcrumb ul {
-  margin: 0 15px;
-}
-/* line 278, sass/_staffstudents.scss */
-html.rqf-staff-page div#breadcrumb a:link {
-  color: #000;
-}
-/* line 282, sass/_staffstudents.scss */
-html.rqf-staff-page div#breadcrumb a:visited {
-  color: #000;
-}
-/* line 286, sass/_staffstudents.scss */
-html.rqf-staff-page div#breadcrumb a:hover {
-  color: #000;
-}
-/* line 331, sass/_staffstudents.scss */
-html.rqf-staff-page .boxout, html.rqf-staff-page .leftBox, html.rqf-staff-page .rightBox, html.rqf-staff-page .boxoutAlt {
-  border-radius: 5px;
-}
-/* line 335, sass/_staffstudents.scss */
-html.rqf-staff-page .boxout, html.rqf-staff-page .leftBox, html.rqf-staff-page .rightBox {
-  background-color: #eee;
-  border-color: #eee;
-}
-/* line 340, sass/_staffstudents.scss */
-html.rqf-staff-page .boxout h1, html.rqf-staff-page .boxout h2, html.rqf-staff-page .boxout h3, html.rqf-staff-page .boxout h4, html.rqf-staff-page .boxout h5,
-html.rqf-staff-page .leftBox h1, html.rqf-staff-page .leftBox h2, html.rqf-staff-page .leftBox h3, html.rqf-staff-page .leftBox h4, html.rqf-staff-page .leftBox h5,
-html.rqf-staff-page .rightBox h1, html.rqf-staff-page .rightBox h2, html.rqf-staff-page .rightBox h3, html.rqf-staff-page .rightBox h4, html.rqf-staff-page .rightBox h5 {
-  text-shadow: 0 1px 0 white;
-}
-/* line 351, sass/_staffstudents.scss */
-html.rqf-staff-page .boxoutAlt h1, html.rqf-staff-page .boxoutAlt h2, html.rqf-staff-page .boxoutAlt h3, html.rqf-staff-page .boxoutAlt h4, html.rqf-staff-page .boxoutAlt h5 {
-  text-shadow: 0 -1px 0 #051C42;
-}
-/* line 355, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn .boxoutAlt,
-html.rqf-staff-page div#mdcolumn .boxoutAlt p,
-html.rqf-staff-page div#mdcolumn .boxoutAlt h2,
-html.rqf-staff-page div#mdcolumn .boxoutAlt h3,
-html.rqf-staff-page div#mdcolumn .boxoutAlt h4,
-html.rqf-staff-page div#mdcolumn .boxoutAlt h5,
-html.rqf-staff-page div#mdcolumn .boxoutAlt a:link,
-html.rqf-staff-page div#mdcolumn .boxoutAlt a:visited,
-html.rqf-staff-page div#mdcolumn .boxoutAlt a:hover,
-html.rqf-staff-page div#mdcolumn .boxoutAlt li,
-html.rqf-staff-page div#rhcolumn .boxoutAlt,
-html.rqf-staff-page div#rhcolumn .boxoutAlt p,
-html.rqf-staff-page div#rhcolumn .boxoutAlt h2,
-html.rqf-staff-page div#rhcolumn .boxoutAlt h3,
-html.rqf-staff-page div#rhcolumn .boxoutAlt h4,
-html.rqf-staff-page div#rhcolumn .boxoutAlt h5,
-html.rqf-staff-page div#rhcolumn .boxoutAlt a:link,
-html.rqf-staff-page div#rhcolumn .boxoutAlt a:visited,
-html.rqf-staff-page div#rhcolumn .boxoutAlt a:hover,
-html.rqf-staff-page div#rhcolumn .boxoutAlt li {
-  color: #FFF;
-}
-/* line 378, sass/_staffstudents.scss */
-html.rqf-staff-page div#rhcolumn .boxoutAlt li {
-  background: transparent url("/media/global/templateimages/bullet_white.gif") no-repeat scroll 0 4px;
-}
-/* line 382, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn .boxoutAlt li {
-  background: transparent url("/media/global/templateimages/bullet_white.gif") no-repeat scroll 0 4px;
-}
-/* line 398, sass/_staffstudents.scss */
-html.rqf-staff-page a:hover {
-  text-decoration: none;
-}
-/* line 402, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn {
-  line-height: 140%;
-}
-/* line 406, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn p {
-  line-height: 150%;
-}
-/* line 410, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn h1 {
-  font-size: 250%;
-}
-/* line 414, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn h1#userNiceName {
-  float: left;
-  font-size: 170%;
-}
-/* line 424, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn h3, html.rqf-staff-page div#rhcolumn h3 {
-  font-size: 150%;
-}
-/* line 428, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn h4, html.rqf-staff-page div#rhcolumn h4 {
-  font-size: 130%;
-  font-style: normal;
-}
-/* line 433, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn h5, html.rqf-staff-page div#rhcolumn h5 {
-  font-size: 120%;
-  font-style: italic;
-}
-/* line 440, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn h2, html.rqf-staff-page div#mdcolumn .col-half h2, html.rqf-staff-page div#mdcolumn .col-third h2, html.rqf-staff-page div#mdcolumn .col-half .boxoutAlt h2 {
-  background-color: transparent;
-  font-size: 170%;
-}
-/* line 447, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn .col-half .boxoutAlt h2 {
-  color: #fff;
-}
-/* line 457, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn .col-third h2 {
-  font-size: 150%;
-}
-/* line 461, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn li, html.rqf-staff-page div#mdcolumn ol ul li {
-  background: transparent url("/media/css/staff/bullet.gif") no-repeat 0px 4px;
-}
-/* line 466, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn hr {
-  color: #e6e5cf;
-  background-color: #e6e5cf;
-}
-/* line 472, sass/_staffstudents.scss */
-html.rqf-staff-page table tr th {
-  color: #FFFFFF;
-}
-/* line 485, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn ul.tabNavigation li a {
-  padding: 5px;
-}
-/* line 495, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn h3.q, html.rqf-staff-page div#mdcolumn h3.q a, html.rqf-staff-page div#mdcolumn .col-half h3.q {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-size: 100%;
-}
-/* line 500, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn h3.q:hover {
-  text-decoration: underline;
-}
-/* line 506, sass/_staffstudents.scss */
-html.rqf-staff-page #homepagebanner a {
-  color: #fff;
-}
-/* line 510, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn #homepagebanner .imagewithcaption .caption p {
-  padding: 5px 10px;
-}
-/* line 518, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn .col-half > h2, html.rqf-staff-page div#mdcolumn .col-third > h2 {
-  padding-left: 0;
-}
-/* line 522, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn .col-half h2, html.rqf-staff-page div#mdcolumn .col-half .boxoutAlt h2, html.rqf-staff-page div#mdcolumn .col-third h2, html.rqf-staff-page div#mdcolumn .col-third .boxoutAlt h2 {
-  font-size: 150%;
-}
-/* line 526, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn .col-half .boxout h2, html.rqf-staff-page div#mdcolumn .col-half .boxoutAlt h2, html.rqf-staff-page div#mdcolumn .col-third .boxout h2, html.rqf-staff-page div#mdcolumn .col-third .boxoutAlt h2 {
-  background-color: transparent;
-  margin-top: 5px;
-  padding-bottom: 0;
-}
-/* line 533, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn .col-third .boxoutAlt h2 a:link, html.rqf-staff-page div#mdcolumn .col-third .boxoutAlt h2 a:hover, html.rqf-staff-page div#mdcolumn .col-third .boxoutAlt h2 a:visited {
-  color: #fff;
-}
-/* line 537, sass/_staffstudents.scss */
-html.rqf-staff-page div#mdcolumn .col-half h3, html.rqf-staff-page div#mdcolumn .col-half .boxoutAlt h3, html.rqf-staff-page div#mdcolumn .col-third h3, html.rqf-staff-page div#mdcolumn .col-third .boxoutAlt h3 {
-  font-size: 130%;
-}
-/* line 545, sass/_staffstudents.scss */
-html.rqf-staff-page div#rhcolumn {
-  float: left;
-}
-/* line 549, sass/_staffstudents.scss */
-html.rqf-staff-page div#rhcolumn ul {
-  list-style: none outside none;
-  margin-left: 0;
-  padding-left: 0;
-}
-/* line 567, sass/_staffstudents.scss */
+/* line 104, sass/_staffstudents.scss */
 html.rqf-staff-page div#footer {
   border-top: none;
   color: #FFF;
   margin-top: 0;
   padding: 0;
 }
-/* line 574, sass/_staffstudents.scss */
+/* line 111, sass/_staffstudents.scss */
 html.rqf-staff-page div#footer a {
   color: #FFF;
 }
-/* line 578, sass/_staffstudents.scss */
+/* line 115, sass/_staffstudents.scss */
 html.rqf-staff-page #lastupdated {
   clear: both;
   color: #888;
@@ -523,7 +172,7 @@ html.rqf-staff-page #lastupdated {
   margin: 10px 20px 0 0;
   text-align: right;
 }
-/* line 586, sass/_staffstudents.scss */
+/* line 123, sass/_staffstudents.scss */
 html.rqf-staff-page #footer h2 {
   /* border-bottom:5px solid #eee;  */
   color: #eee;
@@ -531,93 +180,90 @@ html.rqf-staff-page #footer h2 {
   padding: 0 0 0px;
   text-shadow: 0 -1px 0 black;
 }
-/* line 594, sass/_staffstudents.scss */
+/* line 131, sass/_staffstudents.scss */
 html.rqf-staff-page div#footer a:hover, html.rqf-staff-page div#footer .edit a:hover {
   text-decoration: none;
 }
-/* line 602, sass/_staffstudents.scss */
+/* line 139, sass/_staffstudents.scss */
 html.rqf-staff-page #sitemap {
   float: left;
   padding: 20px;
 }
-/* line 607, sass/_staffstudents.scss */
+/* line 144, sass/_staffstudents.scss */
 html.rqf-staff-page #sitemap .col-third {
   float: left;
   margin-left: 15px;
   width: 200px;
 }
-/* line 613, sass/_staffstudents.scss */
+/* line 150, sass/_staffstudents.scss */
 html.rqf-staff-page #sitemap .col-third.first-col {
   margin-left: 0;
 }
-/* line 617, sass/_staffstudents.scss */
+/* line 154, sass/_staffstudents.scss */
 html.rqf-staff-page #sitemap h3 {
   margin-bottom: 5px;
   margin-top: 20px;
 }
-/* line 622, sass/_staffstudents.scss */
+/* line 159, sass/_staffstudents.scss */
 html.rqf-staff-page #sitemap ul {
   list-style: none;
   margin-left: 0;
   margin-top: 0;
   padding-left: 0;
 }
-/* line 629, sass/_staffstudents.scss */
+/* line 166, sass/_staffstudents.scss */
 html.rqf-staff-page #sitemap li {
   margin-bottom: 3px;
   background: transparent url("/media/css/staff/bullet.gif") no-repeat 0px 4px;
   padding-left: 12px;
 }
-/* line 639, sass/_staffstudents.scss */
+/* line 176, sass/_staffstudents.scss */
 html.rqf-staff-page #union-social {
   clear: both;
   float: left;
   padding: 20px;
   width: 600px;
 }
-/* line 646, sass/_staffstudents.scss */
+/* line 183, sass/_staffstudents.scss */
 html.rqf-staff-page #social {
   float: left;
   width: 215px;
 }
-/* line 651, sass/_staffstudents.scss */
+/* line 188, sass/_staffstudents.scss */
 html.rqf-staff-page #social a:first-child img {
   margin-bottom: 10px;
 }
-/* line 655, sass/_staffstudents.scss */
+/* line 192, sass/_staffstudents.scss */
 html.rqf-staff-page #union {
   float: left;
 }
-/* line 659, sass/_staffstudents.scss */
+/* line 196, sass/_staffstudents.scss */
 html.rqf-staff-page #union a:first-child img {
   margin-right: 15px;
 }
-/* line 666, sass/_staffstudents.scss */
+/* line 203, sass/_staffstudents.scss */
 html.rqf-staff-page #feedback {
   margin-left: 690px;
   padding: 20px;
   text-align: left;
 }
-/* line 673, sass/_staffstudents.scss */
+/* line 209, sass/_staffstudents.scss */
 html.rqf-staff-page #feedback label {
-  /* display:inline-block;
-  margin:15px 0 10px;  */
   color: #fff;
 }
-/* line 679, sass/_staffstudents.scss */
+/* line 213, sass/_staffstudents.scss */
 html.rqf-staff-page #feedback textarea {
   height: 150px;
-  /* margin-bottom:15px;  */
   width: 230px;
 }
-/* line 685, sass/_staffstudents.scss */
+/* line 218, sass/_staffstudents.scss */
 html.rqf-staff-page div#footer form ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
   width: 100%;
 }
-/* line 692, sass/_staffstudents.scss */
+/* line 225, sass/_staffstudents.scss */
 html.rqf-staff-page div#footer form li {
   background: none;
   display: block;
@@ -625,123 +271,107 @@ html.rqf-staff-page div#footer form li {
   padding: 6px 5px 9px 0px;
   width: 62%;
 }
-/* line 700, sass/_staffstudents.scss */
+/* line 233, sass/_staffstudents.scss */
 html.rqf-staff-page #footer form li:after, html.rqf-staff-page #footer form li div:after {
   clear: none;
 }
-/* line 704, sass/_staffstudents.scss */
+/* line 237, sass/_staffstudents.scss */
 html.rqf-staff-page #footer input.submit {
   padding: 5px 10px;
 }
-/* line 708, sass/_staffstudents.scss */
+/* line 241, sass/_staffstudents.scss */
 html.rqf-staff-page div#footer #feedback a:link {
   text-decoration: underline;
 }
-/* line 715, sass/_staffstudents.scss */
+/* line 248, sass/_staffstudents.scss */
 html.rqf-staff-page #footer #legal {
   clear: both;
   font-size: 85%;
   padding: 20px;
 }
-/* line 721, sass/_staffstudents.scss */
+/* line 254, sass/_staffstudents.scss */
 html.rqf-staff-page #footer #legal p {
   margin: 0;
 }
-/* line 729, sass/_staffstudents.scss */
-html.rqf-staff-page form input.submit, html.rqf-staff-page form input[type=submit] {
-  border: 1px solid #111;
-  color: #FFF;
-  text-shadow: 0px -1px 0px #051c42;
-}
-/* line 745, sass/_staffstudents.scss */
-html.rqf-staff-page input.submit:hover, html.rqf-staff-page input[type=submit]:hover {
-  border-color: #000;
-}
-/* line 749, sass/_staffstudents.scss */
-html.rqf-staff-page input.submit:active, html.rqf-staff-page input[type=submit]:active {
-  color: #eee;
-}
-/* line 765, sass/_staffstudents.scss */
+/* line 262, sass/_staffstudents.scss */
 html.rqf-staff-page a#logout {
   float: right;
 }
-/* line 770, sass/_staffstudents.scss */
+/* line 267, sass/_staffstudents.scss */
 html.rqf-staff-page #logout-text {
   display: none;
 }
-/* line 777, sass/_staffstudents.scss */
+/* line 274, sass/_staffstudents.scss */
 html.rqf-staff-page #newsinfo {
   float: right;
   font-size: 60%;
 }
-/* line 782, sass/_staffstudents.scss */
+/* line 279, sass/_staffstudents.scss */
 html.rqf-staff-page #latestnews.newsforyou .newsitem .headline {
   display: inline;
   font-weight: normal;
 }
-/* line 787, sass/_staffstudents.scss */
+/* line 284, sass/_staffstudents.scss */
 html.rqf-staff-page div#latestnews.noteaser .newsitem p.newsPosted {
   margin: 0 0 10px 0;
 }
-/* line 791, sass/_staffstudents.scss */
+/* line 288, sass/_staffstudents.scss */
 html.rqf-staff-page #latestnews.newsforyou .newsitem {
   margin-bottom: 15px;
 }
-/* line 795, sass/_staffstudents.scss */
+/* line 292, sass/_staffstudents.scss */
 html.rqf-staff-page #latestnews.newsforyou .newsitem span.newsposted {
   font-size: 85%;
   color: #777;
-  /* margin-top: 5px;
-  margin-bottom: 5px; */
 }
-/* line 802, sass/_staffstudents.scss */
+/* line 297, sass/_staffstudents.scss */
 html.rqf-staff-page #latestnews.newsforyou .newsitem span.newsposted:before {
   content: " - ";
 }
-/* line 806, sass/_staffstudents.scss */
+/* line 301, sass/_staffstudents.scss */
 html.rqf-staff-page #latestnews.newsforyou .newsitem a:hover span.newsposted {
   text-decoration: none;
 }
-/* line 810, sass/_staffstudents.scss */
+/* line 305, sass/_staffstudents.scss */
 html.rqf-staff-page #latestnews.newsforyou a[href$=".pdf"] {
   background: url("/media/global/icons/icon_pdf.gif") no-repeat left center;
   padding-left: 20px;
 }
-/* line 815, sass/_staffstudents.scss */
+/* line 310, sass/_staffstudents.scss */
 html.rqf-staff-page #latestnews.newsforyou a {
   background: url("/media/global/icons/icon_external.gif") no-repeat left center;
   padding-left: 20px;
 }
-/* line 820, sass/_staffstudents.scss */
+/* line 315, sass/_staffstudents.scss */
 html.rqf-staff-page #latestnews.newsforyou a[href*="yorkextra/articles"] {
   background: none;
   padding-left: 0;
 }
-/* line 826, sass/_staffstudents.scss */
+/* line 321, sass/_staffstudents.scss */
 html.rqf-staff-page .yex {
   background-color: #fff;
 }
-/* line 830, sass/_staffstudents.scss */
+/* line 325, sass/_staffstudents.scss */
 html.rqf-staff-page .yex .ui-tooltip-title {
   display: none;
 }
-/* line 835, sass/_staffstudents.scss */
+/* line 330, sass/_staffstudents.scss */
 html.rqf-staff-page .yex .ui-tooltip-content {
   background-color: #fff;
 }
-/* line 839, sass/_staffstudents.scss */
+/* line 334, sass/_staffstudents.scss */
 html.rqf-staff-page .yex h1:first-of-type {
   margin-top: 0;
 }
-/* line 844, sass/_staffstudents.scss */
+/* line 339, sass/_staffstudents.scss */
 html.rqf-staff-page .yex .ui-tooltip-content > img:first-child, html.rqf-staff-page img.yorkextra-banner {
   display: none;
 }
-/* line 848, sass/_staffstudents.scss */
+/* line 343, sass/_staffstudents.scss */
 html.rqf-staff-page .yex img {
   max-width: 100%;
 }
-/* line 867, sass/_staffstudents.scss */
+/* line 362, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip, html.rqf-staff-page .qtip {
   position: absolute;
   left: -28000px;
@@ -754,14 +384,14 @@ html.rqf-staff-page .ui-tooltip, html.rqf-staff-page .qtip {
   /* 	line-height: 12px; */
   z-index: 15000;
 }
-/* line 883, sass/_staffstudents.scss */
+/* line 378, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-fluid {
   display: block;
   visibility: hidden;
   position: static !important;
   float: left !important;
 }
-/* line 890, sass/_staffstudents.scss */
+/* line 385, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-content {
   position: relative;
   padding: 0 12px;
@@ -772,7 +402,7 @@ html.rqf-staff-page .ui-tooltip-content {
   word-wrap: break-word;
   overflow: hidden;
 }
-/* line 903, sass/_staffstudents.scss */
+/* line 398, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-titlebar {
   position: relative;
   min-height: 14px;
@@ -782,11 +412,11 @@ html.rqf-staff-page .ui-tooltip-titlebar {
   border-style: solid;
   font-weight: bold;
 }
-/* line 915, sass/_staffstudents.scss */
+/* line 410, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-titlebar + .ui-tooltip-content {
   border-top-width: 0px !important;
 }
-/* line 920, sass/_staffstudents.scss */
+/* line 415, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-titlebar .ui-state-default {
   position: absolute;
   right: 4px;
@@ -795,23 +425,23 @@ html.rqf-staff-page .ui-tooltip-titlebar .ui-state-default {
   cursor: pointer;
   outline: medium none;
 }
-/* line 931, sass/_staffstudents.scss */
+/* line 426, sass/_staffstudents.scss */
 html.rqf-staff-page * html .ui-tooltip-titlebar .ui-state-default {
   top: 16px;
 }
-/* line 936, sass/_staffstudents.scss */
+/* line 431, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-titlebar .ui-icon,
 html.rqf-staff-page .ui-tooltip-icon .ui-icon {
   display: block;
   text-indent: -1000em;
 }
-/* line 942, sass/_staffstudents.scss */
+/* line 437, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-icon, html.rqf-staff-page .ui-tooltip-icon .ui-icon {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 948, sass/_staffstudents.scss */
+/* line 443, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-icon .ui-icon {
   width: 18px;
   height: 14px;
@@ -821,21 +451,21 @@ html.rqf-staff-page .ui-tooltip-icon .ui-icon {
   color: inherit;
   background: transparent none no-repeat -100em -100em;
 }
-/* line 961, sass/_staffstudents.scss */
+/* line 456, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-light .ui-tooltip-titlebar,
 html.rqf-staff-page .ui-tooltip-light .ui-tooltip-content {
   border-color: #aaa;
   color: #111;
 }
-/* line 968, sass/_staffstudents.scss */
+/* line 463, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-light .ui-tooltip-content {
   background-color: #fafafa;
 }
-/* line 972, sass/_staffstudents.scss */
+/* line 467, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-light .ui-tooltip-titlebar {
   background-color: #fafafa;
 }
-/* line 977, sass/_staffstudents.scss */
+/* line 472, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip .ui-tooltip-tip {
   margin: 0 auto;
   overflow: hidden;
@@ -843,7 +473,7 @@ html.rqf-staff-page .ui-tooltip .ui-tooltip-tip {
   border: 0px dashed transparent !important;
   z-index: 10;
 }
-/* line 986, sass/_staffstudents.scss */
+/* line 481, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip .ui-tooltip-tip,
 html.rqf-staff-page .ui-tooltip .ui-tooltip-tip * {
   position: absolute;
@@ -853,18 +483,18 @@ html.rqf-staff-page .ui-tooltip .ui-tooltip-tip * {
   background: transparent;
   border: 0px dashed transparent;
 }
-/* line 998, sass/_staffstudents.scss */
+/* line 493, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip .ui-tooltip-tip canvas {
   top: 0;
   left: 0;
 }
-/* line 1004, sass/_staffstudents.scss */
+/* line 499, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-shadow {
   -webkit-box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.25);
   box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.25);
 }
-/* line 1010, sass/_staffstudents.scss */
+/* line 505, sass/_staffstudents.scss */
 html.rqf-staff-page .ui-tooltip-shadow .ui-tooltip-titlebar,
 html.rqf-staff-page .ui-tooltip-shadow .ui-tooltip-content {
   filter: progid:DXImageTransform.Microsoft.Shadow(Color='gray', Direction=135, Strength=3);
@@ -874,29 +504,29 @@ html.rqf-staff-page .ui-tooltip-shadow .ui-tooltip-content {
   .margin-bottom: -3 px;
   /* IE7 */
 }
-/* line 1021, sass/_staffstudents.scss */
+/* line 516, sass/_staffstudents.scss */
 html.rqf-staff-page #pressreleases .newsitem p.newsPosted {
   font-size: 85%;
   color: #7e7e7e;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-/* line 1029, sass/_staffstudents.scss */
+/* line 524, sass/_staffstudents.scss */
 html.rqf-staff-page div#pressreleases.noteaser .newsitem p.newsPosted {
   margin-bottom: 15px;
 }
-/* line 1033, sass/_staffstudents.scss */
+/* line 528, sass/_staffstudents.scss */
 html.rqf-staff-page #pressreleases .newsitem p {
   margin-bottom: 20px;
 }
-/* line 1038, sass/_staffstudents.scss */
+/* line 533, sass/_staffstudents.scss */
 html.rqf-staff-page #pressreleases .newsitem img {
   padding-right: 15px;
   border: none;
   margin-top: 5px;
   margin-bottom: 10px;
 }
-/* line 1045, sass/_staffstudents.scss */
+/* line 540, sass/_staffstudents.scss */
 html.rqf-staff-page #mdcolumn #pressreleases hr, html.rqf-staff-page #rhcolumn #pressreleases hr {
   color: transparent;
   background-color: transparent;
@@ -904,33 +534,33 @@ html.rqf-staff-page #mdcolumn #pressreleases hr, html.rqf-staff-page #rhcolumn #
   padding: 0;
   margin: 5px 0;
 }
-/* line 1053, sass/_staffstudents.scss */
+/* line 548, sass/_staffstudents.scss */
 html.rqf-staff-page #pressreleases .newsitem .headline {
   font-size: 100%;
   display: block;
   font-weight: bold;
 }
-/* line 1059, sass/_staffstudents.scss */
+/* line 554, sass/_staffstudents.scss */
 html.rqf-staff-page #pressreleases .newsitem .newsimage {
   float: left;
 }
-/* line 1066, sass/_staffstudents.scss */
+/* line 561, sass/_staffstudents.scss */
 html.rqf-staff-page h2#timetableHeading {
   float: left;
 }
-/* line 1070, sass/_staffstudents.scss */
+/* line 565, sass/_staffstudents.scss */
 html.rqf-staff-page #todaysTimetable {
   margin-bottom: 20px;
 }
-/* line 1074, sass/_staffstudents.scss */
+/* line 569, sass/_staffstudents.scss */
 html.rqf-staff-page div#mdcolumn #todaysTimetable p:first-child {
   margin-top: 0;
 }
-/* line 1078, sass/_staffstudents.scss */
+/* line 573, sass/_staffstudents.scss */
 html.rqf-staff-page div#mdcolumn #todaysTimetable p:last-child {
   padding-bottom: 0;
 }
-/* line 1082, sass/_staffstudents.scss */
+/* line 577, sass/_staffstudents.scss */
 html.rqf-staff-page .prevNext {
   float: right;
   margin-right: 12px;
@@ -938,7 +568,7 @@ html.rqf-staff-page .prevNext {
   top: 58px;
   z-index: 999;
 }
-/* line 1091, sass/_staffstudents.scss */
+/* line 586, sass/_staffstudents.scss */
 html.rqf-staff-page div#mdcolumn .prevNext a {
   background-color: #ddd;
   border: 1px solid #ccc;
@@ -951,62 +581,62 @@ html.rqf-staff-page div#mdcolumn .prevNext a {
   margin-right: 0;
   padding: 0 6px;
 }
-/* line 1104, sass/_staffstudents.scss */
+/* line 599, sass/_staffstudents.scss */
 html.rqf-staff-page div#mdcolumn .prevNext a:link, html.rqf-staff-page div#mdcolumn .prevNext a:visited {
   text-decoration: none;
   color: #444;
 }
-/* line 1109, sass/_staffstudents.scss */
+/* line 604, sass/_staffstudents.scss */
 html.rqf-staff-page div#mdcolumn .prevNext a:hover {
   border: 1px solid #aaa;
   background-color: #ccc;
   color: #000;
 }
-/* line 1115, sass/_staffstudents.scss */
+/* line 610, sass/_staffstudents.scss */
 html.rqf-staff-page div#mdcolumn .prevNext a.prev {
   margin-right: 3px;
 }
-/* line 1119, sass/_staffstudents.scss */
+/* line 614, sass/_staffstudents.scss */
 html.rqf-staff-page div#mdcolumn .prevNext a.disabled, html.rqf-staff-page div#mdcolumn .prevNext a.disabled:hover {
   background-color: #eee;
   border-color: #ddd;
   color: #999;
   cursor: default;
 }
-/* line 1126, sass/_staffstudents.scss */
+/* line 621, sass/_staffstudents.scss */
 html.rqf-staff-page div#mdcolumn #todaysTimetable h3:first-child {
   margin-bottom: 3px;
 }
-/* line 1130, sass/_staffstudents.scss */
+/* line 625, sass/_staffstudents.scss */
 html.rqf-staff-page div#mdcolumn p#weekOfTerm {
   color: #444;
   font-size: 90%;
   margin-bottom: 20px;
   padding-bottom: 0;
 }
-/* line 1137, sass/_staffstudents.scss */
+/* line 632, sass/_staffstudents.scss */
 html.rqf-staff-page div#mdcolumn #todaysTimetable p {
   font-size: 95%;
 }
-/* line 1147, sass/_staffstudents.scss */
+/* line 642, sass/_staffstudents.scss */
 html.rqf-staff-page #library-text {
   margin: 0 6px 20px 12px;
   width: 130px;
 }
-/* line 1154, sass/_staffstudents.scss */
+/* line 649, sass/_staffstudents.scss */
 html.rqf-staff-page div#mdcolumn ul#libraryItemsList {
   font-size: 90%;
   margin: 0 -12px;
   max-height: 300px;
   overflow: auto;
 }
-/* line 1161, sass/_staffstudents.scss */
+/* line 656, sass/_staffstudents.scss */
 html.rqf-staff-page div#mdcolumn ul#libraryItemsList li {
   background: none;
   margin: 10px 0;
   padding-left: 0;
 }
-/* line 1167, sass/_staffstudents.scss */
+/* line 662, sass/_staffstudents.scss */
 html.rqf-staff-page ul#libraryItemsList span {
   border-radius: 2px;
   font-size: 90%;
@@ -1014,36 +644,36 @@ html.rqf-staff-page ul#libraryItemsList span {
   padding: 1px 3px;
   text-shadow: none;
 }
-/* line 1175, sass/_staffstudents.scss */
+/* line 670, sass/_staffstudents.scss */
 html.rqf-staff-page ul#libraryItemsList .overdue {
   color: #fff;
   background-color: red;
 }
-/* line 1180, sass/_staffstudents.scss */
+/* line 675, sass/_staffstudents.scss */
 html.rqf-staff-page ul#libraryItemsList .today {
   color: #fff;
   background-color: black;
 }
-/* line 1185, sass/_staffstudents.scss */
+/* line 680, sass/_staffstudents.scss */
 html.rqf-staff-page ul#libraryItemsList .future {
   color: #000;
   background-color: #bbb;
 }
-/* line 1194, sass/_staffstudents.scss */
+/* line 689, sass/_staffstudents.scss */
 html.rqf-staff-page #university-magazine p.right img {
   height: 140px;
   width: 100px;
 }
-/* line 1203, sass/_staffstudents.scss */
+/* line 698, sass/_staffstudents.scss */
 html.rqf-staff-page #publiclectures .event {
   padding: 0;
   padding-top: 5px;
 }
-/* line 1208, sass/_staffstudents.scss */
+/* line 703, sass/_staffstudents.scss */
 html.rqf-staff-page mdcolumn#publiclectures .event {
   border-bottom: 1px solid #EEE;
 }
-/* line 1212, sass/_staffstudents.scss */
+/* line 707, sass/_staffstudents.scss */
 html.rqf-staff-page #publiclectures .event .eventdate {
   background-color: #fff;
   float: left;
@@ -1053,7 +683,7 @@ html.rqf-staff-page #publiclectures .event .eventdate {
   text-align: center;
   width: 35px;
 }
-/* line 1222, sass/_staffstudents.scss */
+/* line 717, sass/_staffstudents.scss */
 html.rqf-staff-page #publiclectures .event .eventdate .day {
   background-color: #860000;
   color: #FFF;
@@ -1062,7 +692,7 @@ html.rqf-staff-page #publiclectures .event .eventdate .day {
   line-height: 150%;
   padding: 1px;
 }
-/* line 1231, sass/_staffstudents.scss */
+/* line 726, sass/_staffstudents.scss */
 html.rqf-staff-page #publiclectures .event .eventdate .date {
   border: 1px solid #DDD;
   border-width: 0 1px;
@@ -1071,7 +701,7 @@ html.rqf-staff-page #publiclectures .event .eventdate .date {
   font-weight: bold;
   line-height: 120%;
 }
-/* line 1240, sass/_staffstudents.scss */
+/* line 735, sass/_staffstudents.scss */
 html.rqf-staff-page #publiclectures .event .eventdate .month {
   border: 1px solid #DDD;
   border-width: 0 1px 1px 1px;
@@ -1081,42 +711,42 @@ html.rqf-staff-page #publiclectures .event .eventdate .month {
   font-size: 80%;
   padding: 1px;
 }
-/* line 1250, sass/_staffstudents.scss */
+/* line 745, sass/_staffstudents.scss */
 html.rqf-staff-page #publiclectures .event .eventdetails {
   margin-bottom: 15px;
   margin-left: 45px;
   padding-left: 0;
 }
-/* line 1255, sass/_staffstudents.scss */
+/* line 750, sass/_staffstudents.scss */
 html.rqf-staff-page #publiclectures .event .eventtitle {
   font-weight: bold;
   margin-bottom: 3px;
 }
-/* line 1260, sass/_staffstudents.scss */
+/* line 755, sass/_staffstudents.scss */
 html.rqf-staff-page #publiclectures .event .venue {
   font-size: 85%;
   font-weight: bold;
   margin-bottom: 5px;
 }
-/* line 1266, sass/_staffstudents.scss */
+/* line 761, sass/_staffstudents.scss */
 html.rqf-staff-page #publiclectures .ampm {
   text-transform: lowercase;
 }
-/* line 1270, sass/_staffstudents.scss */
+/* line 765, sass/_staffstudents.scss */
 html.rqf-staff-page #publiclectures .event p.speaker {
   font-size: 85%;
   margin-bottom: 5px;
 }
-/* line 1275, sass/_staffstudents.scss */
+/* line 770, sass/_staffstudents.scss */
 html.rqf-staff-page #publiclectures .event p.eventteaser {
   font-size: 85%;
   margin-bottom: 5px;
 }
-/* line 1280, sass/_staffstudents.scss */
+/* line 775, sass/_staffstudents.scss */
 html.rqf-staff-page #rhcolumn #publiclectures .event .eventteaser {
   display: none;
 }
-/* line 1284, sass/_staffstudents.scss */
+/* line 779, sass/_staffstudents.scss */
 html.rqf-staff-page #rhcolumn #publiclectures .event .eventtitle {
   font-weight: bold;
   margin: 0;
