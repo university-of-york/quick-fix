@@ -139,20 +139,6 @@ html.rqf-page {
       width: 100% !important;
       max-width: 100%;
       overflow: hidden;
-      /*
-      .imagewithcaption {
-        max-width: 100% !important;
-        > p img {
-          min-height:0;
-          &[height="200"],
-          &[height="220"],
-          &[height="240"],
-          &[height="250"] {
-            min-height:0;
-          }
-        }
-      }
-      */
     }
     div#mdcolumn div.col-half,
     div#mdcolumn div.col-third {
@@ -300,6 +286,11 @@ html.rqf-page {
       width:100%;
       height:auto;
     }
+
+    img.icon {
+      width: auto !important;
+    }
+
     // Update for lightbox on <tablet
     #jquery-lightbox {
       position:fixed;
