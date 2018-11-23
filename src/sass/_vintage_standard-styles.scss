@@ -1574,8 +1574,7 @@ div#mdcolumn a.file:hover .filename, div#rhcolumn a.file:hover .filename{
 #mdcolumn a[href^="http://"],
 #mdcolumn a[href^="https://"],
 #rhcolumn a[href^="http://"],
-#rhcolumn a[href^="https://"],
-#rhcolumn a[href^="mailto:"] {
+#rhcolumn a[href^="https://"] {
   padding-right: 14px;
   background: url(/media/global/templateimages/externallinkicon.gif) right center no-repeat;
 }
