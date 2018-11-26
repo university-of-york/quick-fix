@@ -21,6 +21,9 @@
 @import "administrate";
 @import "formstack";
 
+// Accessibility / Consistency overrides
+@import "accessibilityoverrides";
+
 // Must have position to get relative offsets
 .col-half,
 .col-third {

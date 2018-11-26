@@ -1,0 +1,446 @@
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+  padding:0;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top:15px;
+}
+
+p+h1,
+p+h2,
+p+h3,
+p+h4,
+p+h5,
+p+h6,
+ul+h1,
+ul+h2,
+ul+h3,
+ul+h4,
+ul+h5,
+ul+h6,
+ol+h1,
+ol+h2,
+ol+h3,
+ol+h4,
+ol+h5,
+ol+h6,
+div.faq+h1,
+div.faq+h2,
+div.faq+h3,
+div.faq+h4,
+div.faq+h5,
+div.faq+h6,
+table+h1,
+table+h2,
+table+h3,
+table+h4,
+table+h5,
+table+h6 {
+  margin-top:25px;
+}
+
+html.rqf-page div#mdcolumn h1,
+html.rqf-page div#mdcolumn h2,
+html.rqf-page div#mdcolumn h3,
+html.rqf-page div#mdcolumn h4,
+html.rqf-page div#mdcolumn h5,
+html.rqf-page div#mdcolumn h6 {
+  margin-bottom:15px;
+}
+
+html.rqf-page div#mdcolumn h1.unpadded,
+html.rqf-page div#mdcolumn h2.unpadded,
+html.rqf-page div#mdcolumn h3.unpadded,
+html.rqf-page div#mdcolumn h4.unpadded,
+html.rqf-page div#mdcolumn h5.unpadded,
+html.rqf-page div#mdcolumn h6.unpadded {
+  margin-bottom:0;
+}
+
+
+
+/*Direct descendants only so that headings in columns don't change */
+html.rqf-page div#mdcolumn > .boxout h1,
+html.rqf-page div#mdcolumn > .boxoutAlt h1,
+html.rqf-page div#mdcolumn > .boxout h2,
+html.rqf-page div#mdcolumn > .boxoutAlt h2,
+html.rqf-page div#mdcolumn > .boxout h3,
+html.rqf-page div#mdcolumn > .boxoutAlt h3,
+html.rqf-page div#mdcolumn > .boxout h4,
+html.rqf-page div#mdcolumn > .boxoutAlt h4,
+html.rqf-page div#mdcolumn > .boxout h5,
+html.rqf-page div#mdcolumn > .boxoutAlt h5,
+html.rqf-page div#mdcolumn > .boxout h6,
+html.rqf-page div#mdcolumn > .boxoutAlt h6{
+  font-weight:600;
+}
+
+
+html.rqf-page div#mdcolumn .rightBox h1,
+html.rqf-page div#mdcolumn .leftBox h1,
+html.rqf-page div#mdcolumn .rightBox h2,
+html.rqf-page div#mdcolumn .leftBox h2,
+html.rqf-page div#mdcolumn .rightBox h3,
+html.rqf-page div#mdcolumn .leftBox h3,
+html.rqf-page div#mdcolumn .rightBox h4,
+html.rqf-page div#mdcolumn .leftBox h4,
+html.rqf-page div#mdcolumn .rightBox h5,
+html.rqf-page div#mdcolumn .leftBox h5,
+html.rqf-page div#mdcolumn .rightBox h6,
+html.rqf-page div#mdcolumn .leftBox h6 {
+  font-weight:600;
+}
+
+
+
+html.rqf-page div#mdcolumn h1,
+html.rqf-page div#mdcolumn h2,
+html.rqf-page div#mdcolumn h3,
+html.rqf-page div#mdcolumn h4,
+html.rqf-page div#mdcolumn h5,
+html.rqf-page div#mdcolumn h6,
+html.rqf-page div#mdcolumn h1 *,
+html.rqf-page div#mdcolumn h2 *,
+html.rqf-page div#mdcolumn h3 *,
+html.rqf-page div#mdcolumn h4 *,
+html.rqf-page div#mdcolumn h5 *,
+html.rqf-page div#mdcolumn h6 * {
+  font-weight:600;
+}
+
+html.rqf-page div#rhcolumn h1,
+html.rqf-page div#rhcolumn h2,
+html.rqf-page div#rhcolumn h3,
+html.rqf-page div#rhcolumn h4,
+html.rqf-page div#rhcolumn h5,
+html.rqf-page div#rhcolumn h6,
+html.rqf-page div#rhcolumn h1 *,
+html.rqf-page div#rhcolumn h2 *,
+html.rqf-page div#rhcolumn h3 *,
+html.rqf-page div#rhcolumn h4 *,
+html.rqf-page div#rhcolumn h5 *,
+html.rqf-page div#rhcolumn h6 * {
+  font-weight:600;
+}
+
+html.rqf-page div#mdcolumn div.col-half h2 a,
+html.rqf-page div#mdcolumn div.col-third h2 a {
+  font-weight:400;
+}
+
+html.rqf-page div#mdcolumn h1 {
+  font-size:45px;
+  line-height:1.05;
+}
+
+html.rqf-page div#mdcolumn h2,
+html.rqf-page div#mdcolumn > .boxout h2,
+html.rqf-page div#mdcolumn > .boxoutAlt h2 {
+  font-size:34px;
+  line-height:1.25;
+}
+
+
+/* Headings in left and right boxes use the text size used by headings one level lower*/
+html.rqf-page div#mdcolumn h3,
+html.rqf-page div#mdcolumn > .boxout h3,
+html.rqf-page div#mdcolumn > .boxoutAlt h3,
+html.rqf-page div#mdcolumn .rightBox h2,
+html.rqf-page div#mdcolumn .leftBox h2 {
+  font-size:26px;
+  line-height:1.25;
+}
+
+html.rqf-page div#mdcolumn h4,
+html.rqf-page div#mdcolumn > .boxout h4,
+html.rqf-page div#mdcolumn > .boxoutAlt h4,
+html.rqf-page div#mdcolumn .rightBox h3,
+html.rqf-page div#mdcolumn .leftBox h3  {
+  font-size:18px;
+  line-height:1.22222222;
+}
+
+html.rqf-page div#mdcolumn h5,
+html.rqf-page div#mdcolumn > .boxout h5,
+html.rqf-page div#mdcolumn > .boxoutAlt h5,
+html.rqf-page div#mdcolumn .rightBox h4,
+html.rqf-page div#mdcolumn .leftBox h4  {
+  font-size:15px;
+  line-height:1.5;
+  font-style:normal;
+}
+
+html.rqf-page div#mdcolumn h6,
+html.rqf-page div#mdcolumn > .boxout h6,
+html.rqf-page div#mdcolumn > .boxoutAlt h6,
+html.rqf-page div#mdcolumn .rightBox h5,
+html.rqf-page div#mdcolumn .leftBox h5  {
+  font-size:14px;
+  line-height:1.5;
+}
+
+
+@media only screen and (max-width: 750px) {
+  html.rqf-page div#mdcolumn h1 {
+    font-size:38px;
+    line-height:1.125;
+  }
+
+  html.rqf-page div#mdcolumn h2,
+  html.rqf-page div#mdcolumn > .boxout h2,
+  html.rqf-page div#mdcolumn > .boxoutAlt h2,
+  html.rqf-page div#rhcolumn h2,
+  html.rqf-page div#rhcolumn .boxout h2,
+  html.rqf-page div#rhcolumn .boxoutAlt h2 {
+    font-size:30px;
+    line-height:1.25;
+  }
+
+  html.rqf-page div#mdcolumn h3,
+  html.rqf-page div#mdcolumn > .boxout h3,
+  html.rqf-page div#mdcolumn > .boxoutAlt h3,
+  html.rqf-page div#rhcolumn h3,
+  html.rqf-page div#rhcolumn .boxout h3,
+  html.rqf-page div#rhcolumn .boxoutAlt h3,
+  html.rqf-page div#mdcolumn .rightBox h2,
+  html.rqf-page div#mdcolumn .leftBox h2 {
+    font-size:23px;
+    line-height:1.25;
+  }
+
+  html.rqf-page div#mdcolumn h4,
+  html.rqf-page div#mdcolumn > .boxout h4,
+  html.rqf-page div#mdcolumn > .boxoutAlt h4,
+  html.rqf-page div#rhcolumn h4,
+  html.rqf-page div#rhcolumn .boxout h4,
+  html.rqf-page div#rhcolumn .boxoutAlt h4,
+  html.rqf-page div#mdcolumn .rightBox h3,
+  html.rqf-page div#mdcolumn .leftBox h3 {
+    font-size:17px;
+    line-height:1.22222222;
+  }
+
+  html.rqf-page div#mdcolumn h5,
+  html.rqf-page div#mdcolumn > .boxout h5,
+  html.rqf-page div#mdcolumn > .boxoutAlt h5,
+  html.rqf-page div#rhcolumn h5,
+  html.rqf-page div#rhcolumn .boxout h5,
+  html.rqf-page div#rhcolumn .boxoutAlt h5,
+  html.rqf-page div#mdcolumn .rightBox h4,
+  html.rqf-page div#mdcolumn .leftBox h4 {
+    font-size:15px;
+    line-height:1.5;
+  }
+
+  html.rqf-page div#mdcolumn h6,
+  html.rqf-page div#mdcolumn > .boxout h6,
+  html.rqf-page div#mdcolumn > .boxoutAlt h6,
+  html.rqf-page div#rhcolumn h6,
+  html.rqf-page div#rhcolumn .boxout h6,
+  html.rqf-page div#rhcolumn .boxoutAlt h6,
+  html.rqf-page div#mdcolumn .rightBox h5,
+  html.rqf-page div#mdcolumn .leftBox h5 {
+    font-size:14px;
+    line-height:1.5;
+  }
+
+}
+
+@media only screen and (max-width: 588px) {
+  html.rqf-page div#mdcolumn h1 {
+    font-size:30px;
+    line-height:1.25;
+  }
+
+  html.rqf-page div#mdcolumn h2,
+  html.rqf-page div#mdcolumn > .boxout h2,
+  html.rqf-page div#mdcolumn > .boxoutAlt h2,
+  html.rqf-page div#rhcolumn h2,
+  html.rqf-page div#rhcolumn .boxout h2,
+  html.rqf-page div#rhcolumn .boxoutAlt h2 {
+    font-size:24px;
+    line-height:1.15384615;
+  }
+
+  html.rqf-page div#mdcolumn h3,
+  html.rqf-page div#mdcolumn > .boxout h3,
+  html.rqf-page div#mdcolumn > .boxoutAlt h3,
+  html.rqf-page div#rhcolumn h3,
+  html.rqf-page div#rhcolumn .boxout h3,
+  html.rqf-page div#rhcolumn .boxoutAlt h3,
+  html.rqf-page div#mdcolumn .rightBox h2,
+  html.rqf-page div#mdcolumn .leftBox h2 {
+    font-size:20px;
+    line-height:1.13636364;
+  }
+
+  html.rqf-page div#mdcolumn h4,
+  html.rqf-page div#mdcolumn > .boxout h4,
+  html.rqf-page div#mdcolumn > .boxoutAlt h4,
+  html.rqf-page div#rhcolumn h4,
+  html.rqf-page div#rhcolumn .boxout h4,
+  html.rqf-page div#rhcolumn .boxoutAlt h4,
+  html.rqf-page div#mdcolumn .rightBox h3,
+  html.rqf-page div#mdcolumn .leftBox h3 {
+    font-size:17px;
+    line-height:1.11111111;
+  }
+
+  html.rqf-page div#mdcolumn h5,
+  html.rqf-page div#mdcolumn > .boxout h5,
+  html.rqf-page div#mdcolumn > .boxoutAlt h5,
+  html.rqf-page div#rhcolumn h5,
+  html.rqf-page div#rhcolumn .boxout h5,
+  html.rqf-page div#rhcolumn .boxoutAlt h5,
+  html.rqf-page div#mdcolumn .rightBox h4,
+  html.rqf-page div#mdcolumn .leftBox h4 {
+    font-size:15px;
+    line-height:1.5;
+  }
+
+  html.rqf-page div#mdcolumn h6,
+  html.rqf-page div#mdcolumn > .boxout h6,
+  html.rqf-page div#mdcolumn > .boxoutAlt h6,
+  html.rqf-page div#rhcolumn h6,
+  html.rqf-page div#rhcolumn .boxout h6,
+  html.rqf-page div#rhcolumn .boxoutAlt h6,
+  html.rqf-page div#mdcolumn .rightBox h5,
+  html.rqf-page div#mdcolumn .leftBox h5 {
+    font-size:14px;
+    line-height:1.5;
+  }
+}
+
+/*Boxes */
+
+html.rqf-page div#mdcolumn .boxout h1,
+html.rqf-page div#mdcolumn .boxout h2,
+html.rqf-page div#mdcolumn .boxout h3,
+html.rqf-page div#mdcolumn .boxout h4,
+html.rqf-page div#mdcolumn .boxout h5,
+html.rqf-page div#mdcolumn .boxout h6,
+html.rqf-page div#mdcolumn .boxoutAlt h1,
+html.rqf-page div#mdcolumn .boxoutAlt h2,
+html.rqf-page div#mdcolumn .boxoutAlt h3,
+html.rqf-page div#mdcolumn .boxoutAlt h4,
+html.rqf-page div#mdcolumn .boxoutAlt h5,
+html.rqf-page div#mdcolumn .boxoutAlt h6,
+html.rqf-page div#mdcolumn .rightBox h1,
+html.rqf-page div#mdcolumn .rightBox h2,
+html.rqf-page div#mdcolumn .rightBox h3,
+html.rqf-page div#mdcolumn .rightBox h4,
+html.rqf-page div#mdcolumn .rightBox h5,
+html.rqf-page div#mdcolumn .rightBox h6,
+html.rqf-page div#mdcolumn .leftBox h1,
+html.rqf-page div#mdcolumn .leftBox h2,
+html.rqf-page div#mdcolumn .leftBox h3,
+html.rqf-page div#mdcolumn .leftBox h4,
+html.rqf-page div#mdcolumn .leftBox h5,
+html.rqf-page div#mdcolumn .leftBox h6,
+html.rqf-page div#rhcolumn .boxout h1,
+html.rqf-page div#rhcolumn .boxout h2,
+html.rqf-page div#rhcolumn .boxout h3,
+html.rqf-page div#rhcolumn .boxout h4,
+html.rqf-page div#rhcolumn .boxout h5,
+html.rqf-page div#rhcolumn .boxout h6,
+html.rqf-page div#rhcolumn .boxoutAlt h1,
+html.rqf-page div#rhcolumn .boxoutAlt h2,
+html.rqf-page div#rhcolumn .boxoutAlt h3,
+html.rqf-page div#rhcolumn .boxoutAlt h4,
+html.rqf-page div#rhcolumn .boxoutAlt h5,
+html.rqf-page div#rhcolumn .boxoutAlt h6,
+html.rqf-page div#rhcolumn .rightBox h1,
+html.rqf-page div#rhcolumn .rightBox h2,
+html.rqf-page div#rhcolumn .rightBox h3,
+html.rqf-page div#rhcolumn .rightBox h4,
+html.rqf-page div#rhcolumn .rightBox h5,
+html.rqf-page div#rhcolumn .rightBox h6,
+html.rqf-page div#rhcolumn .leftBox h1,
+html.rqf-page div#rhcolumn .leftBox h2,
+html.rqf-page div#rhcolumn .leftBox h3,
+html.rqf-page div#rhcolumn .leftBox h4,
+html.rqf-page div#rhcolumn .leftBox h5,
+html.rqf-page div#rhcolumn .leftBox h6 {
+
+  margin-bottom:10px;
+}
+
+html.rqf-page div#mdcolumn .faq h3.q {
+  margin-bottom:0;
+}
+
+/*Right hand column vcard*/
+
+div#rhcolumn .boxout .vcard {
+  font-size:14px;
+}
+
+/*Colour contrasts*/
+
+html.rqf-page div#mdcolumn a, html.rqf-page div#rhcolumn a {
+  color: #00779c;
+}
+
+#mdcolumn p.newsPosted, #latestnews .newsitem p.newsPosted {
+  color:#585858;
+}
+
+html.rqf-page div#footer a, .footer-updated a {
+  text-decoration:underline;
+}
+
+html.rqf-page div#footer #sitemap a {
+  text-decoration:none;
+}
+
+html.rqf-page div#footer .edit, html.rqf-page div#footer .edit a, .footer-updated a, .footer-updated p {
+  color: #e0e0e0;
+}
+
+html.rqf-page div#footer .edit a:hover{
+  color:#00b3eb;
+}
+
+html.rqf-page #upcomingevents .event .eventdate .day {
+  background-color:#00779c;
+}
+
+html.rqf-page div#mdcolumn .faq h3.q, html.rqf-page div#mdcolumn .faq h3.q a {
+  color: #00779c;
+}
+
+html.rqf-page div#mdcolumn ul.tabNavigation li a.selected{
+  color: #00779c;
+}
+
+.main-menu li a.current, .main-menu.level-one-about .about-menu-item, .main-menu.level-one-about.level-two-departments .departments-menu-item, .main-menu.level-one-global .international-menu-item, .main-menu.level-one-news.level-two-events .events-menu-item, .main-menu.level-one-news.level-two-news .news-menu-item, .main-menu.level-one-research .research-menu-item, .main-menu.level-one-study .study-menu-item, .main-menu.level-one-working .working-menu-item {
+  color: #00779c;
+}
+
+/*Image captions*/
+
+div#mdcolumn .captionedimage .caption {
+  font-size:13px;
+  padding:10px;
+  line-height:1.5;
+}
+
+div#mdcolumn .captionedimage.left .caption {
+  font-size:12px;
+  padding:5px;
+}
+
+/*News and event listings*/
+#upcomingevents .event .eventdate .date {
+  padding: 3px 0;
+}
+
+#upcomingevents .event p.eventteaser, #upcomingevents .event p.speaker, #latestnews .newsitem p.newsPosted {
+  font-size:12px;
+  line-height:1.5;
+}
+
+html.rqf-page #latestnews .newsitem .headline, html.rqf-page #upcomingevents .event .eventtitle a {
+  color: #007fa7;
+}
