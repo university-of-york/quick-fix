@@ -474,9 +474,9 @@ html.rqf-page {
     }
   }
 
-  div#mdcolumn input,
+  div#mdcolumn input:not(.fsField),
   div#mdcolumn textarea,
-  div#rhcolumn input,
+  div#rhcolumn input:not(.fsField),
   div#rhcolumn textarea  {
     border:1px solid #AAA;
     max-width:100%;
