@@ -45,3 +45,8 @@ div#mdcolumn #tickets {
   font-weight: bold;
   margin-top: 10px;
 }
+
+div#mdcolumn #performers p,
+div#mdcolumn #pieces p {
+  margin-bottom: 0;
+}
