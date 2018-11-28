@@ -1,0 +1,47 @@
+/*============================================================
+		CUSTOM THEME - York Concerts :: yorkconcerts.co.uk
+============================================================*/
+
+/*Upcoming concerts*/
+#upcoming-concerts .concert {
+  //font-size: 0.813em;
+  margin-bottom:12px;
+  padding:0 12px;
+}
+
+#upcoming-concerts .title {
+  font-weight:bold;
+}
+
+/*Upcoming concerts in right hand column*/
+div#rhcolumn #upcoming-concerts .concert {
+  margin-bottom:15px;
+  padding: 0;
+}
+
+div#rhcolumn #upcoming-concerts .title {
+  font-weight:bold;
+}
+
+div#rhcolumn #upcoming-concerts .date {
+  font-size:85%;
+}
+
+/*Concert section styles*/
+div#mdcolumn #timeandvenue {
+  font-weight: bold;
+}
+
+div#mdcolumn #timeandvenue,
+div#mdcolumn #performers,
+div#mdcolumn #pieces {
+  border-bottom: 2px dotted #777;
+  line-height: 150%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+div#mdcolumn #tickets {
+  font-weight: bold;
+  margin-top: 10px;
+}
