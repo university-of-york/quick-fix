@@ -642,7 +642,17 @@ html.rqf-page {
 
   // captioned images
   div#mdcolumn .captionedimage {
-    max-width:50%;
+    max-width: 100%;
+    margin-bottom: 15px;
+    display: block;
+
+    &.right,
+    &.left {
+      max-width:50%;
+      display: inline;
+      margin-bottom: initial;
+    }
+
     img {
       height:auto;
     }
