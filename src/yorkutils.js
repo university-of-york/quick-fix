@@ -287,9 +287,11 @@ $(document).ready(function(){
     });
 
     //Captioned images
-    $(".captionedimage.right, .captionedimage.left ").each(function(){
-        var imgWidth = $(this).children("img").attr("width");
-        $(this).css("width", imgWidth);
+    $(".captionedimage").each(function(){
+        var $this = $(this);
+        var imgWidth = $this.children("img").attr("width");
+        $this.css("maxWidth", imgWidth);
+        $this[0].style.maxWidth = imgWidth + 'px';
     }) ;
 
     //switch home icon in breadcrumb trail if background is dark
