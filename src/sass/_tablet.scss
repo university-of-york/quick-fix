@@ -54,7 +54,8 @@ html.rqf-page {
     div#lhcolumn {
       width: 96%;
       padding: 0 2%;
-      height: 32px;
+      //height: 32px;
+      height: auto;
       overflow: hidden;
       position:relative;
       cursor:pointer;
@@ -70,24 +71,28 @@ html.rqf-page {
         display: block;
         content: 'Show menu';
         width: 93%;
-        padding-left: 5%;
-        padding-right: 2%;
-        background: #eee;
-        color: #333;
+        padding: 5px 2% 5px 5%;
+        background-color: #0f3d4c;
+        color: #fff;
         line-height: 32px;
         height: 32px;
+
+        &:hover {
+          background-color: #00b3eb;
+        }
       }
       &:after {
         display: block;
         content: '+';
         position:absolute;
-        top:0;
-        left:2%;
+        top:5px;
+        right:4%;
         line-height: 32px;
         height: 32px;
         width: 5%;
         text-align:center;
         font-weight:bold;
+        color: #fff;
       }
       &.is-open {
         height: auto;
@@ -98,7 +103,7 @@ html.rqf-page {
           content: 'Hide menu';
         }
         &:after {
-          content:'-';
+          content:'x';
         }
       }
     }
