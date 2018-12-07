@@ -447,7 +447,7 @@ $(document).ready(function(){
     for(var i=0; i < colTypes.length; i++) {
         var selectorCol = colTypes[i][0];
         var numOfSelectors = colTypes[i][1];
-        var selectorStr = selectorCol;
+        var selectorStr = selectorCol + '.first-col';
 
         for(var j=1; j < numOfSelectors; j++) {
             selectorStr += ' + ' + selectorCol;
