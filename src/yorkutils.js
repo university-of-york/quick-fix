@@ -430,4 +430,44 @@ $(document).ready(function(){
 
         return false;
     }
+
+
+
+    // sort out clearing following floated columns
+    // on floated column types (e.g. '.col-half') there is no containing element that clears the float afterwards
+    // this leads to some floating oddities with elements following columns (esp. those that are floated themselves
+    // e.g. blockquotes with '.rightBox' class on them.
+    // here, we loop through the various column types and add a clearing div
+    var colTypes = [
+        [".col-1-4", 4],
+        [".col-half", 2],
+        [".col-third", 3],
+    ];
+
+    for(var i=0; i < colTypes.length; i++) {
+        var selectorCol = colTypes[i][0];
+        var numOfSelectors = colTypes[i][1];
+        var selectorStr = selectorCol;
+
+        for(var j=1; j < numOfSelectors; j++) {
+            selectorStr += ' + ' + selectorCol;
+        }
+
+        $('#mdcolumn ' + selectorStr).after('<div class="clear"></div>');
+    }
+
+    //$('.col-half + .col-half').after('<div class="clearing-tom"></div>')
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
