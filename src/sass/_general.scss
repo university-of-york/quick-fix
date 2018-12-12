@@ -442,6 +442,16 @@ html.rqf-page {
     a.cta[href^="https://"] {
       background: #a23479;
       color:#fff;
+
+      &.cta-large {
+        font-size: 2em;
+      }
+
+      &.cta-block {
+        display: block;
+        text-align: center;
+      }
+
       &:hover {
         background-color:#b53a87;
       }
