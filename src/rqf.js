@@ -86,6 +86,16 @@ function go() {
         that.checkContent();
       };
 
+      this.addViewportMeta = function() {
+        // Add meta viewport tag (if needed)
+        if ($('meta[name="viewport"]').length == 0) {
+          $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1">');
+        }
+
+        // Update status (sometimes html width stays wide until meta tag is added)
+        this.status = this.getStatus();
+      };
+
       this.checkContent = function() {
 
         this.isRQF = $html.hasClass(this.pageClass);
@@ -644,11 +654,14 @@ function go() {
         // Load the reordered sections for mobile
         this.mobileContent = this.getMobileContent();
 
+        // Add the meta viewport tag (must be done after getting mobile content)
+        this.addViewportMeta();
+
         // Fix feedback form on staff and students
         if (isStaffStudents === true) {
           this.fixFeedbackForm();
-          //this.loadStaffStudentStyles();
         }
+
         if(isFOI === true) {
           loadStyles('https://www.york.ac.uk/static/rqf/rqf-foi.css');
         }
