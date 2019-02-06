@@ -1545,13 +1545,26 @@ div#mdcolumn a.file:hover .filename, div#rhcolumn a.file:hover .filename{
   font-size:85%;
 }
 
-#mdcolumn a[href^="http://"],
-#mdcolumn a[href^="https://"],
-#rhcolumn a[href^="http://"],
-#rhcolumn a[href^="https://"] {
-  padding-right: 14px;
-  background: url(/media/global/templateimages/externallinkicon.gif) right center no-repeat;
+// #mdcolumn a[href^="http://"],
+// #mdcolumn a[href^="https://"],
+// #rhcolumn a[href^="http://"],
+// #rhcolumn a[href^="https://"] {
+//   padding-right: 14px;
+//   background: url(/media/global/templateimages/externallinkicon.gif) right center no-repeat;
+// }
+
+#mdcolumn a[href*="//"]:not([href*="york.ac.uk"])::after,
+#rhcolumn a[href*="//"]:not([href*="york.ac.uk"])::after{
+  padding-left: 5px;
+  content: url(https://www.york.ac.uk/media/global/templateimages/externallinkicon.gif);     
 }
+
+#mdcolumn .link-img::after,
+#rhcolumn .link-img::after
+ {
+  display: none;
+}
+
 /* Need to have trailing slash otherwise it includes mailto links */
 #mdcolumn a[href*="york.ac.uk/"],
 #rhcolumn a[href*="york.ac.uk/"],

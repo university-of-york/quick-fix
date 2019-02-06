@@ -651,6 +651,9 @@ function go() {
           this.twitterWidgetId = tt.attr('data-widget-id');
         }
 
+        //Exclude links with img from having external link icon
+        $("a[href*='//']:has(img)").addClass("link-img");
+
         // Load the reordered sections for mobile
         this.mobileContent = this.getMobileContent();
 
