@@ -477,18 +477,17 @@ function go() {
           $tabs.each(function(i, tabWrapper) {
 
             var $tabWrapper = $(tabWrapper);
-            // tabId is first 12 characters of e.g. tab-wrapper-12345
+            // tabId is first 12 characters removed from e.g. tab-wrapper-12345
             var tabId = $tabWrapper.attr('id').substring(12);
             var $tabList = $tabWrapper.children('ul');
+            // tabNavigation class has been added to regulaar tabs as of 01/03/19 - CM
+            if ($tabList.hasClass('tabNavigation') === false) $tabList.addClass('tabNavigation');
             var $tabLinks = $tabList.find('a');
             var $tabContainers = $tabWrapper.children('div');
-            var wrapperTop = $tabWrapper.offset().top;
             // Hide headers
             $tabContainers.children('.tab').hide();
 
-            $tabList.addClass('tabNavigation');
-
-            $(window).bind('hashchange', function(e) {
+            $(window).on('hashchange', function(e) {
 
               e.preventDefault();
 
@@ -509,7 +508,8 @@ function go() {
                 if ($tabContainers.filter(windowHash).length > 0) {
                   hash = windowHash;
                   // scroll to top of tabs if a tab is selected
-                  $(window).scrollTop(wrapperTop);
+                  var tabTop = $tabWrapper.offset().top;
+                  $(window).scrollTop(tabTop);
                 }
 
                 $tabContainers.hide().removeClass('currentTab');

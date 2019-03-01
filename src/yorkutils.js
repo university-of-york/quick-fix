@@ -14,7 +14,6 @@ var $ = $ || jQuery;
 
 $(document).ready(function(){
 
-
     //work out how far down the hierarchy we are:
     // - find all the ul elements with class that starts with "multilevel-linkul-" and put them in an array
     // - count the array size
@@ -48,22 +47,22 @@ $(document).ready(function(){
     //zebra stripes for upcoming events
     $("#mdcolumn #upcomingevents>div:nth-child(odd)").addClass("odd");
 
-    //Staff profiles
-    $("#profile-content, #research-content, #publications-content, #teaching-content, #external-content").wrapAll('<div id="tabs"></div>');
-    $('#profile-content').before('<ul class="tabNavigation"><li><a href="#profile">Profile</a> </li>\n</ul>');
+    // Add tabs to Staff profiles
+    $("#profile-content, #research-content, #publications-content, #teaching-content, #external-content").wrapAll('<div class="tabs" id="tab-wrapper-staff-profile"></div>');
+    $('#profile-content, #profile').before('<ul class="tabNavigation"><li><a href="#profile-content">Profile</a> </li>\n</ul>');
 
     var linkList = '';
     if ( $('#research-content').length > 0 ) {
-        linkList += '<li><a href="#research">Research</a> </li>\n ';
+        linkList += '<li><a href="#research-content">Research</a> </li>\n ';
     }
     if ( $('#publications-content').length > 0 ) {
-        linkList += '<li><a href="#publications">Publications</a> </li>\n ';
+        linkList += '<li><a href="#publications-content">Publications</a> </li>\n ';
     }
     if ( $('#teaching-content').length > 0 ) {
-        linkList += '<li><a href="#teaching">Teaching</a> </li>\n ';
+        linkList += '<li><a href="#teaching-content">Teaching</a> </li>\n ';
     }
     if ( $('#external-content').length > 0 ) {
-        linkList += '<li><a href="#external">External activity</a> </li>';
+        linkList += '<li><a href="#external-content">External activity</a> </li>';
     }
 
     $('ul.tabNavigation').append(linkList);
@@ -71,106 +70,6 @@ $(document).ready(function(){
     $('a#showfull').click(function(){
         $('#publications-full').show();
     });
-
-    //Tabbed content
-
-    //Moving to class-based tabs
-
-    //Check we're on a page containing tabs
-    var $tabs = $('#mdcolumn').find('.tabs');
-    if ($tabs.length > 0)  {
-
-        $tabs.each(function(i, tabWrapper) {
-
-            var $tabWrapper = $(tabWrapper);
-            // tabId is first 12 characters of e.g. tab-wrapper-12345
-            var tabId = $tabWrapper.attr('id').substring(12);
-            var $tabList = $tabWrapper.children('ul');
-            var $tabLinks = $tabList.find('a');
-            var $tabContainers = $tabWrapper.children('div');
-            // Hide headers
-            $tabContainers.children('.tab').hide();
-
-            $tabList.addClass('tabNavigation');
-
-            $(window).bind('hashchange', function(e, logAnalyticsEvent) {
-
-                //get the value of the hash
-                var windowHash = window.location.hash;
-
-                //check that there are no named anchors that match
-                //the hash on the current tab before switching
-                if ($tabWrapper.find('.currentTab a[name="'+(windowHash.substring(1))+'"]').length === 0) {
-
-                    var firstTab = $tabLinks.first().attr('href');
-
-                    //IE7 returns the full path for .attr('href'), so it needs trimming to get just the fragment
-                    firstTab = firstTab.substring(firstTab.indexOf('#'));
-
-                    var hash = firstTab;
-                    //If the hash matches the ID of a tab, use that. Otherwise use the first tab.
-                    if ($tabContainers.filter(windowHash).length > 0) {
-                        hash = windowHash;
-                    }
-                    // If there's already a selected tab, leave it at that
-                    else if ($tabContainers.filter('.currentTab').length > 0) {
-                        var selectedHash = $tabContainers.filter('.currentTab').attr('id');
-                        hash = '#'+selectedHash;
-                    }
-
-                    // Otherwise use the first tab.
-                    $tabContainers.hide().removeClass('currentTab');
-                    var selectedTabContainer = $tabContainers.filter(hash);
-                    selectedTabContainer.show().addClass('currentTab');
-                    $tabLinks.removeClass('selected');
-                    $tabLinks.filter('[href='+hash+']').addClass('selected');
-                }
-            });
-        });
-
-        $(window).trigger("hashchange", [false]);
-
-    }
-
-    // ID-based tabs
-    //Check we're on a page containing tabs
-    if ($('#tabs').length > 0)  {
-
-        $('div#tabs > ul').addClass('tabNavigation');
-        var tabContainers = $('div#tabs > div');
-        tabContainers.hide().filter(':first').show().addClass('currentTab');
-        $('#tabs h2.tab').hide();
-
-        $(window).bind('hashchange', function(e, logAnalyticsEvent) {
-
-            //get the value of the hash without the '#' prefix
-            var hashOnly = window.location.hash.substring(1);
-
-            //check that there are no named anchors that match the hash on the current tab before switching
-            if (!($('#tabs .currentTab a[name="'+hashOnly+'"]').length == 1)) {
-                var firstTab = $('div#tabs ul.tabNavigation a:first').attr('href');
-
-                //IE7 returns the full path for .attr('href'), so it needs trimming to get just the fragment
-                firstTab = firstTab.substring(firstTab.indexOf('#'));
-
-                //If the hash matches  the ID of a tab, use that. Otherwise use the first tab.
-                var hash = firstTab;
-                if ($('div#tabs > div'+window.location.hash +'-content').length > 0) {
-                    hash = window.location.hash;
-                }
-
-                tabContainers.hide().removeClass('currentTab');
-
-                //'-content' suffix added to match renamed tab IDs
-                var selectedTabContainer = tabContainers.filter(hash+'-content');
-                selectedTabContainer.show().addClass('currentTab');
-                $('div#tabs ul.tabNavigation a').removeClass('selected');
-                $('div#tabs a[hash=' + hash + ']').addClass('selected');
-            }
-        });
-
-        $(window).trigger("hashchange", [false]);
-    }
 
     //'Apply now' button on course pages
     $('#course-apply-now').click(function (e) {
@@ -289,13 +188,10 @@ $(document).ready(function(){
     }
 
     //Current section highlight based on breadcrumb train
-
     var branchLevelOne = $("ul.breadcrumbs li:nth-child(2)").text().toLowerCase().split(/\b/)[0];;
     var branchLevelTwo = $("ul.breadcrumbs li:nth-child(3)").text().toLowerCase().split(/\b/)[0];;
     $("#main-menu").addClass("level-one-"+branchLevelOne);
     $("#main-menu").addClass("level-two-"+branchLevelTwo);
-
-
 
     // Embed a YouTube player in place of links with a .youtube-video-embed
     $(".youtube-video-embed").each(function () {
@@ -361,7 +257,6 @@ $(document).ready(function(){
             $this.css({ 'background':'none', 'padding':0 });
         }
     });
-
 
     //Strip zero-width non-joiners
     var zwnjStrip = function (el) {
