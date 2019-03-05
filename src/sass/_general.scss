@@ -398,6 +398,7 @@ html.rqf-page {
     }
     .boxout, .boxoutAlt {
       max-width:100%;
+      box-sizing: border-box;
       h2 {
         font-size:24px;
       }
