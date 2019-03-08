@@ -1305,6 +1305,10 @@ div#rhcolumn ol  {
   padding-left:20px;
 }
 
+div#rhcolumn a {
+  word-break:break-all;
+}
+
 div#rhcolumn a:link, div#rhcolumn a:visited{
   text-decoration:underline;
 }
