@@ -1554,7 +1554,7 @@ div#mdcolumn a.file:hover .filename, div#rhcolumn a.file:hover .filename{
 #rhcolumn a[href^="http://"],
 #rhcolumn a[href^="https://"] {
   padding-right: 14px;
-  background: url(/media/global/templateimages/externallinkicon.gif) right center no-repeat;
+  background: url(https://www.york.ac.uk/media/global/templateimages/externallinkicon.gif) right center no-repeat;
 }
 /* Need to have trailing slash otherwise it includes mailto links */
 #mdcolumn a[href*="york.ac.uk/"],

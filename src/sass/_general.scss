@@ -392,8 +392,11 @@ html.rqf-page {
     }
   }
   div#mdcolumn {
-    .boxout, .boxoutAlt {
-      box-sizing: border-box;
+    .faq,
+    .tabs {
+      .boxout, .boxoutAlt {
+        box-sizing: border-box;
+      }
     }
   }
   div#mdcolumn,
