@@ -3060,7 +3060,14 @@ img.round {
   column-count:3;
   padding-left: 0 !important;
 }
-
+@media only screen and (max-width: 588px) {
+  .c-searchable__content ul {
+    -webkit-column-count:1;
+    -moz-column-count:1;
+    column-count:1;
+  }
+}
 .c-searchable__content ul li {
-  list-style-position: inside;
+  list-style-position: outside;
+  margin-left:24px;
 }
