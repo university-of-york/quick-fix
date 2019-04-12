@@ -1,14 +1,20 @@
 (function() {
 
     // Messaging - PLEASE EDIT THESE VALUES!
-    var message = '<p><span>We use cookies on our web site. Find out <a href="https://www.york.ac.uk/about/legal-statements/#tab-5">how to manage cookies from this site</a></span> <button id="btnCloseCookieNotice" class="button">Close</button></p>';
 
+    var cookiesPageURL = 'https://www.york.ac.uk/about/legal-statements/cookies/';
 
+    var message = "" +
+        "<div class=\"cookie-opt-in__content\">" +
+            "<p>By continuing to use the site we assume you're happy with <a href=\""+cookiesPageURL+"\">how we use cookies</a>.</p>" +
+        "</div>" +
+        "<div class=\"cookie-opt-in__dismiss\">" +
+            "<a title=\"Dismiss this notification\" href=\"#\" id=\"btnCloseCookieNotice\">&times;</a>" +
+        "</div>";
 
     // Alert toggle - SET THIS TO 'true' to show the alert
     var showCookieNotice = false,
-        cookiesAccepted = 'cookies-accepted';
-
+        cookiesAccepted = 'cookie-banner-dismissed';
 
     //-----------------------------------------------------------------------------
     //-----------HELPER FUNCTIONS-------------------------------------------------
@@ -110,11 +116,19 @@
             // inject the message html into the page
             $body.append(cookieContainer.replace('{0}', message));
 
+            // Add body class to bump up footer padding
+            $body.addClass( 'has-c-cookie-banner' );
+
             $('#btnCloseCookieNotice').bind('click', function(e) {
+
+                e.preventDefault();
+
                 // set the cookie to 'true' with a long expiry
                 setCookie(cookiesAccepted, 'true', 365);
                 // close the notice
                 $('#cookie-opt-in').hide();
+                // Remove body class to collapse footer padding
+                $body.removeClass( 'has-c-cookie-banner' );
             });
         }
     }

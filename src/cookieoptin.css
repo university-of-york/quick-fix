@@ -1,57 +1,54 @@
 #cookie-opt-in {
+
+    font-size: 16px;
     background-color: #175f77;
     color: #fff;
-    font-size: 12px;
-    text-align: center;
-    padding:20px 10px;
-    z-index: 999;
+
+    /* Stick to the bottom of the viewport */
+    z-index: 2147483001; /* To cover UniBuddy... :/ */
     position: fixed;
     bottom: 0;
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
+    left: 0;
+    right: 0;
+
+    /* Content positioning */
+    display:flex;
+    flex-flow:row nowrap;
+    align-items:flex-start;
+    justify-content:space-between;
+
+    /* Constrain content to container width */
+    padding:0 calc( 50% - 482px );
 }
+
+/* Padding & gutter between children */
+#cookie-opt-in > * {
+    padding:20px 10px;
+}
+
 #cookie-opt-in p {
-    font-size: 16px;
     margin: 0;
 }
+
 #cookie-opt-in a {
-    color: #fff;
     text-decoration: underline;
+    color: #fff;
 }
-#cookie-opt-in *:last-child {
-    margin-bottom:0;
+
+#cookie-opt-in .cookie-opt-in__dismiss a {
+    text-decoration: none;
 }
-#cookie-opt-in button {
-    background: #a23479;
-    font-weight: bold;
-    color: #FFF;
-    display: inline-block;
-    line-height: 1em;
-    padding: 5px 10px;
-    border-radius: 3px;
-    text-decoration: none !important;
-    border: none;
-    margin: 0 0 0 15px;
-    font-size: 85%;
+
+body.has-c-cookie-banner footer
+{
+    padding-bottom:5em;
 }
 
 @media only screen and (max-width: 49.9375em) and (min-width: 40em) {
-    #cookie-opt-in button {
-        margin-top: 10px;
-    }
 }
 @media only screen and (max-width: 39.9375em) {
-    #cookie-opt-in p {
-        font-size: 14px;
-    }
-    #cookie-opt-in p span {
-        display: block;
-    }
-    #cookie-opt-in button {
-        display: block;
-        font-size: 100%;
-        margin: 10px auto 0;
+    #cookie-opt-in > * {
+        padding:10px;
     }
 }
 @media only screen and (max-width: 29.9375em) {
