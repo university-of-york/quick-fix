@@ -1305,7 +1305,8 @@ div#rhcolumn ol  {
   padding-left:20px;
 }
 
-div#rhcolumn a {
+div#rhcolumn a.url,
+div#rhcolumn a[href^="mailto:"] {
   word-break:break-all;
 }
 
