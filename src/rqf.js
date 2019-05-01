@@ -689,7 +689,7 @@ function go() {
               var d = new Date();
               d.setTime(d.getTime() + (exdays*24*60*60*1000));
               var expires = "expires="+ d.toUTCString();
-              document.cookie = cname + "=" + cvalue + ";" + expires + ";domain=.york.ac.uk;path=/";
+              document.cookie = cname + "=" + cvalue + ";" + expires + ";" + getDomain() + "path=/";
           }
 
           function checkCookie(cname) {
@@ -705,6 +705,20 @@ function go() {
           function deleteCookie(cname) {
               document.cookie = cname + "=; expires=Thu, 01-Jan-1970 00:00:01 GMT";
           }
+
+          function getDomain() {
+
+              var hostname = document.location.hostname;
+
+              // Return all subdomains for york.ac.uk if on york.ac.uk...
+              if( hostname.indexOf( 'york.ac.uk' ) != -1 ) {
+                  return 'domain=.york.ac.uk;';
+              }
+
+              // ...else leave blank to apply to current domain only
+              return '';
+          };
+
 
           function strToBoolValue(str) {
               if(typeof str === 'string') {
