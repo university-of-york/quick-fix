@@ -18,7 +18,7 @@
     /* Content positioning */
     display:flex;
     flex-flow:row nowrap;
-    align-items:flex-start;
+    align-items:center;
     justify-content:space-between;
 
     /* Constrain content to container width */
@@ -40,6 +40,8 @@
 }
 
 #cookie-opt-in .cookie-opt-in__dismiss a {
+    padding:20px;
+    margin:0 -20px;
     text-decoration: none;
 }
 
