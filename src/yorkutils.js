@@ -209,17 +209,8 @@ $(document).ready(function(){
             vPos = youtubeURL.indexOf("v=");
             youtubeID = youtubeURL.substring(vPos+2, vPos+13);
         }
-        // set the height and width
-        var videoWidth;
-        // Special case for tabs and FAQs containing videos
-        if ($(this).parents("#tabs").length == 1) {
-            videoWidth = $(".currentTab").width();
-        } else if ($(this).parents(".a").length == 1) {
-            videoWidth = $(".q").width();
-        } else videoWidth = $(this).parent().width();
-        var videoHeight = (videoWidth/16)*9;
         // create the embed code
-        var embedCode = $('<iframe width="' + videoWidth + '" height="' + videoHeight + '" src="//www.youtube.com/embed/' + youtubeID + '?rel=0" frameborder="0" allowfullscreen></iframe>');
+        var embedCode = $('<p class="videoembed"><iframe src="//www.youtube.com/embed/' + youtubeID + '?rel=0" frameborder="0" allowfullscreen></iframe></p>');
         // replace the original link element with the embed code
         $(this).replaceWith(embedCode);
     });
