@@ -292,7 +292,19 @@ html.rqf-page {
     }
   }
 
-  div#lhcolumn {
+  // new separator for #breadcrumb (not part of above because afect on .l-site div#content-container ul.breadcrumbs unknown)
+  #breadcrumb { 
+    li:before {
+      content: "\00BB";
+      padding-right: 5px;
+    }
+    li:first-child:before {
+      content: "";
+      padding-right: 0;
+    }
+  }
+
+ div#lhcolumn {
     font-size:12px;
   }
   #nav {
