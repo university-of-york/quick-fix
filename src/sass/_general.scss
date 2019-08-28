@@ -507,7 +507,7 @@ html.rqf-page {
   div#mdcolumn input.submit,
   div#mdcolumn input.submit-account-details,
   div#rhcolumn input.submit {
-    height:2.2em;
+    // height:2.2em; // Was preventing wrapping
     background-color: #a23479;
     border-color:#a23479;
     color:#f9f9f9;
@@ -518,6 +518,7 @@ html.rqf-page {
     font-size:14px;
     padding:0.25em 8px;
     border-radius:3px;
+    white-space:inherit;
   }
 
   div#mdcolumn ul.tabNavigation {
