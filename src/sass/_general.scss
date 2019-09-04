@@ -815,6 +815,21 @@ html.rqf-page {
       margin-top: 0;
       text-decoration:none;
   }
+  #latestnews .newslink {
+	text-decoration: none!important;
+}
+
+#latestnews .newslink p {
+color: initial!important;
+}
+
+#latestnews .newslink h2 {
+	margin-bottom: 5px!important;
+}
+
+#latestnews .newslink:hover h2 {
+	text-decoration: underline!important;
+}
   #mdcolumn p.newsTeaserText {
     font-family: "museo-sans",Helvetica,Arial,sans-serif;
     font-size:1.12em !important;
