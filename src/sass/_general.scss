@@ -816,7 +816,8 @@ html.rqf-page {
       text-decoration:none;
   }
   #latestnews .newslink {
-	text-decoration: none!important;
+  text-decoration: none!important;
+  display: block;
 }
 
 #latestnews .newslink p {
