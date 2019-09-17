@@ -67,44 +67,39 @@ html.rqf-page {
       div#before {
         display: none;
       }
-      &:before {
-        display: block;
-        content: 'Show menu';
-        width: 93%;
-        padding: 5px 2% 5px 5%;
-        background-color: #0f3d4c;
-        color: #fff;
-        line-height: 32px;
-        height: 32px;
-
-        &:hover {
-          background-color: #00b3eb;
-        }
-      }
-      &:after {
-        display: block;
-        content: '+';
-        position:absolute;
-        top:5px;
-        right:4%;
-        line-height: 32px;
-        height: 32px;
-        width: 5%;
-        text-align:center;
-        font-weight:bold;
-        color: #fff;
-      }
       &.is-open {
         height: auto;
         ul#nav {
           display:block;
         }
-        &:before {
-          content: 'Hide menu';
+      }
+      
+      .lhcolumnToggle {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+        padding: 13px 5%;
+        background-color: #0f3d4c;
+        color: #fff;
+        border: none;
+        text-align: left;
+        -webkit-appearance:none;
+        
+        &:after { content:' +'; }
+
+        &:hover {
+          background-color: #00b3eb;
         }
-        &:after {
-          content:'x';
+
+        &:focus {
+          outline:3px solid #00b3eb;
+          outline-offset:-3px;
         }
+      }
+      
+      &.is-open .lhcolumnToggle {
+        &:after { content:' ×'; }
       }
     }
     #nav li {

@@ -612,13 +612,23 @@ function go() {
       };
 
       this.addSubnav = function() {
+          
         var $lhColumn = $('#lhcolumn');
+        
+        // Create a toggle button
+        var $subNavToggle = $( '<button hidden class="lhcolumnToggle" aria-controls="nav" aria-expanded="false">Show menu</button>' );
+        $lhColumn.prepend( $subNavToggle );
+          
         $lhColumn.click(function(e) {
           e.stopPropagation();
           $lhColumn.toggleClass('is-open');
+          $subNavToggle.attr( "aria-expanded" , ( $lhColumn.hasClass('is-open') ? "true" : "false" ) );
+          $subNavToggle.text( $lhColumn.hasClass('is-open') ? "Hide menu" : "Show menu" );
         });
         $window.click(function(e) {
           $lhColumn.removeClass('is-open');
+          $subNavToggle.attr( "aria-expanded" , "false" );
+          $subNavToggle.text( "Show menu" );
         });
       };
 
