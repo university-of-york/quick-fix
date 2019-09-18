@@ -38,21 +38,30 @@ body{
   overflow:hidden;
 }
 
-a[href="#mdcolumn"]:focus.hidden {
+body > a[href="#mdcolumn"] {
+
   display: block;
-  background-color: #175f77;
-  color: #f9f9f9;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  height: auto;
+  position: absolute;
   top: 0;
   left: 0;
-  height: 2em; 
-  width: 100%;
   z-index: 1;
+
   text-align: center;
-  text-decoration:  underline;
-  line-height: 2;
+  text-decoration: underline;
+  background-color: #175f77;
+  color: #f9f9f9;
+
   transition-property: all;
   transition-duration: .4s;
   transition-timing-function: ease-out;
+  transform:translatey( -100% );
+
+  &:focus {
+    transform:none;
+  }
 }
 
 /*** OVERALL CONTAINER ***/
