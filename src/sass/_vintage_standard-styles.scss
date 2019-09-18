@@ -38,6 +38,23 @@ body{
   overflow:hidden;
 }
 
+a[href="#mdcolumn"]:focus.hidden {
+  display: block;
+  background-color: #175f77;
+  color: #f9f9f9;
+  top: 0;
+  left: 0;
+  height: 2em; 
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  text-decoration:  underline;
+  line-height: 2;
+  transition-property: all;
+  transition-duration: .4s;
+  transition-timing-function: ease-out;
+}
+
 /*** OVERALL CONTAINER ***/
 div#container{
   text-align:left;
