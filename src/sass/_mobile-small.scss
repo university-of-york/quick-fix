@@ -200,4 +200,31 @@ html.rqf-page {
       }
     }
   }
+
+
+  @media (max-width: 480px) {
+    #header {
+          div#global {
+              form {
+                  top: auto;
+                  right: auto;
+                  position: static;
+                  float: none;
+              }
+              div#links {
+                  right: auto;
+                  position: static;
+                  padding: 0 10px;
+              }
+          }
+          div#location {
+              padding-bottom: 0!important;
+  
+              h1 {
+                  position: static!important;;
+                  top: auto!important;;
+              }
+          }
+    }
+  } 
 }
