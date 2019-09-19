@@ -210,6 +210,9 @@ html.rqf-page {
                   right: auto;
                   position: static;
                   float: none;
+                  &.has-radio-buttons {
+                    padding: 10px 10px 40px !important;
+                  }
               }
               div#links {
                   right: auto;
