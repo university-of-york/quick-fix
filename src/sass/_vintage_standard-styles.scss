@@ -1177,16 +1177,19 @@ div#mdcolumn ul.tabNavigation li a.selected:focus  {
   cursor:text;
 }
 
-div#mdcolumn ul.tabNavigation li a:hover {
-  background-color: #00b3eb;
-  border-color:#00b3eb;
-}
-
 div#mdcolumn ul.tabNavigation li a:focus {
+  color:#333333;
   background-color:#CCC;
+  border-color:#CCC;
   outline:1px dotted;
   outline-offset:-1px;
   -moz-outline-radius:5px 5px 0 0;
+}
+
+div#mdcolumn ul.tabNavigation li a:hover {
+    background-color: #00779c;
+    border-color:#00779c;
+    color:#FFFFFF;
 }
 
 #mdcolumn #tabs .boxout,  #mdcolumn #tabs .boxoutAlt {

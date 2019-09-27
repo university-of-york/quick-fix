@@ -342,7 +342,7 @@ html.rqf-page {
 
     li a:hover {
       color:#FFF !important;
-      background-color:#00b3eb !important;
+      background-color:#0C5A73 !important;
       background-image:none;
     }
   }
@@ -451,9 +451,9 @@ html.rqf-page {
       }
     }
     a {
-      color: #008cb8;
+      color: #087396;
       &:hover {
-        color: #00b3eb;
+        color: #0C5A73;
       }
     }
     .cta a,
@@ -543,7 +543,7 @@ html.rqf-page {
       }
     }
     li a.selected {
-      color: #008cb8;
+      color: #087396;
     }
   }
   div#mdcolumn .faq {
@@ -830,6 +830,11 @@ color: initial!important;
 
 #latestnews .newslink:hover .headline {
 	text-decoration: underline!important;
+}
+
+#latestnews .newslink .newsimage img {
+	max-width:80px;
+    height:auto;
 }
   #mdcolumn p.newsTeaserText {
     font-family: "museo-sans",Helvetica,Arial,sans-serif;
