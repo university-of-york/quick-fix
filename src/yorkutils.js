@@ -245,7 +245,7 @@ $(document).ready(function(){
     $("a[href^='http://']").add("a[href^='https://']").each(function(i, v) {
         var $this = $(this);
         if ($this.children('img').length > 0) {
-            $this.css({ 'background':'none', 'padding':0 });
+            $this.css({ 'background':'none', 'padding':0 , 'display':'block' });
         }
     });
 
