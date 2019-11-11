@@ -478,9 +478,12 @@ function go() {
         }
       };
 
+      var toggled = false
       this.clickAccordion = function(e) {
         $(this).next().slideToggle("fast");
         $(this).toggleClass('expanded');
+        toggled = !toggled;
+		    $(this).attr('aria-expanded', toggled ? true : false);
         return false;
       };
 
