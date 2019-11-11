@@ -428,10 +428,25 @@ function go() {
           var qs = $(".q");
           var as = $(".a");
 
+          qs.attr('aria-expanded', false);
+          qs.attr('tabindex', 0);
+          as.attr('tabindex', 0);
+      
+          qs.each(function(i, el) {
+            var t = 'acc-' + i;
+            $(this).attr('aria-controls',  t);
+          });
+          
+          as.each(function(i, el) {
+            var t = 'acc-' + i;
+            $(this).attr('id',  t);
+          });
+
           // Click events
           as.hide();
           qs.unbind('click');
           qs.click(this.clickAccordion);
+          qs.keypress(this.clickAccordion);
 
           var showLink = $("a.show");
           showLink.unbind('click');
@@ -442,7 +457,9 @@ function go() {
             var theseAs = theseFAQs.children('.a');
             var theseQs = theseFAQs.children('.q');
             theseAs.slideDown("fast");
+			    	theseQs.attr('tabindex', -1);
             theseQs.addClass('expanded');
+            theseQs.attr('aria-expanded', true);
             return false;
           });
           var hideLink = $("a.hide");
@@ -455,14 +472,18 @@ function go() {
             var theseQs = theseFAQs.children('.q');
             theseAs.slideUp("fast");
             theseQs.removeClass('expanded');
+            theseQs.attr('aria-expanded', false);
             return false;
           });
         }
       };
 
+      var toggled = false
       this.clickAccordion = function(e) {
         $(this).next().slideToggle("fast");
         $(this).toggleClass('expanded');
+        toggled = !toggled;
+		    $(this).attr('aria-expanded', toggled ? true : false);
         return false;
       };
 
