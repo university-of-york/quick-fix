@@ -51,5 +51,5 @@ div#mdcolumn .boxout p.left:first-child {
   margin-top:0.5em;
 }
 
-// Hide edit page links for now
-a.t4Edit-page { display:none; }
+// Hide direct edit link for now
+a.t4Edit-page + a.t4Edit-page { display:none; }
