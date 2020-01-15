@@ -164,6 +164,7 @@ function go() {
                   img.removeAttribute('height');
                   img.src = newLogoImg;
                   img.style.display = 'block';
+                  img.style.width = 'auto';
               });
           }
 
