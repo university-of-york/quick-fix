@@ -210,7 +210,7 @@ $(document).ready(function(){
             youtubeID = youtubeURL.substring(vPos+2, vPos+13);
         }
         // create the embed code
-        var embedCode = $('<p class="videoembed"><iframe src="//www.youtube.com/embed/' + youtubeID + '?rel=0" frameborder="0" allowfullscreen></iframe></p>');
+        var embedCode = $('<p class="videoembed"><iframe src="//www.youtube.com/embed/' + youtubeID + '?rel=0" allowfullscreen></iframe></p>');
         // replace the original link element with the embed code
         $(this).replaceWith(embedCode);
     });
