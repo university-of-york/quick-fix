@@ -854,12 +854,15 @@ color: initial!important;
     color: #e0e0e0;
     border-top: 2px solid #00b3eb;
     font-size:14px;
+
+    // No need for this now - flexbox, baby!
     // Clear the floats
-    &::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+    // &::after {
+    //   content: "";
+    //   display: table;
+    //   clear: both;
+    // }
+
     a {
       color:#e0e0e0;
       &:hover {

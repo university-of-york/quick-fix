@@ -1377,7 +1377,6 @@ div#footer{
   font-size:80%;
   color:#4D4D4D;
   border-top: 1px solid #D7E8C6;
-  padding-bottom:8px;
   clear: both;
   margin-top: 10px;
 }
@@ -1387,24 +1386,34 @@ div#footer p{
   line-height:150%;
 }
 
-/*--university address--*/
-div#footer p.left{
-  float:left;
-  margin:8px 14px 8px 10px;
+/*--flexbox layout--*/
+@media only screen and (min-width: 962px)
+{
+    div#footer
+    {
+        display:flex;
+        flex-flow:row nowrap;
+        align-items:stretch;
+        justify-content:space-between;
+    }
 }
 
+/*--university address--*/
+div#footer p.left{
+  margin:10px;
+}
+
+/*--footer logo--*/
 div#footer p.logo {
-  margin:10px 0 40px 8px;
-  text-align: center;
-  width:240px;
-  background: none;
+  margin:10px;
+  width:auto;
+  height:auto;
 }
 
 /*--links i.e legal, copyright--*/
 div#footer p.right{
-  float:right;
   text-align:right;
-  margin:8px 10px 8px 10px;
+  margin:10px;
 }
 
 /*--footer links--*/
