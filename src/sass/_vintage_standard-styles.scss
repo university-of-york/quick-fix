@@ -38,7 +38,8 @@ body{
   overflow:hidden;
 }
 
-body > a[href="#mdcolumn"] {
+body > a[href="#mdcolumn"],
+body > .skipToContent {
 
   display: block;
   padding: 0.5rem 1rem;
@@ -55,9 +56,6 @@ body > a[href="#mdcolumn"] {
   background-color: #175f77;
   color: #f9f9f9;
 
-  transition-property: all;
-  transition-duration: .4s;
-  transition-timing-function: ease-out;
   transform:translatey( -100% );
 
   &:focus {
