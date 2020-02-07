@@ -195,12 +195,22 @@ $(document).ready(function(){
 
     // Embed a YouTube player in place of links with a .youtube-video-embed
     $(".youtube-video-embed").each(function () {
+
         // remove wrapper paragraph, if any
         if (($(this).parent().is("p"))) {
             $(this).unwrap();
         }
+
         // figure out the Youtube ID
-        var youtubeURL = $(".youtube-video-embed").attr("href");
+
+        var youtubeURL = $(this).attr("href");
+
+        if( $(this).is("p") )
+        {
+            var link = $( $(this).find("a")[ 0 ] );
+            if( link ) youtubeURL = link.attr( "href" );
+        }
+        
         var youtubeID, vPos;
         if (youtubeURL.indexOf("//youtu.be")>0) {
             vPos = youtubeURL.indexOf(".be/");
