@@ -518,7 +518,7 @@ function go() {
 
               //check that there are no named anchors that match
               //the hash on the current tab before switching
-              if ($tabWrapper.find('.currentTab a[name="'+(windowHash.substring(1))+'"]').length === 0) {
+              if ($tabWrapper.find( '.currentTab a[name="'+(windowHash.substring(1))+'"] , .currentTab a[id="'+(windowHash.substring(1))+'"]' ).length === 0) {
 
                 var firstTab = $tabLinks.first().attr('href');
 
