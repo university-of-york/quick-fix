@@ -1765,6 +1765,14 @@ div#mdcolumn .col-half h2 a:hover, div#mdcolumn .col-third h2 a:hover{
   color:white;
 }
 
+/* Style for image box links */
+div#mdcolumn .col-half a, div#mdcolumn .col-half a:link,
+div#mdcolumn .col-half a:visited,div#mdcolumn .col-half a:active,
+div#mdcolumn .col-third a,div#mdcolumn .col-third a:link,
+div#mdcolumn .col-third a:visited,div#mdcolumn .col-third a:active {
+  color: #fff;
+}
+
 
 div#mdcolumn div.col-half .boxout iframe,
 div#mdcolumn div.col-half .boxoutAlt iframe,
