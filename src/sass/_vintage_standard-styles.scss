@@ -1766,10 +1766,10 @@ div#mdcolumn .col-half h2 a:hover, div#mdcolumn .col-third h2 a:hover{
 }
 
 /* Style for image box links */
-div#mdcolumn .col-half a, div#mdcolumn .col-half a:link,
-div#mdcolumn .col-half a:visited,div#mdcolumn .col-half a:active,
-div#mdcolumn .col-third a,div#mdcolumn .col-third a:link,
-div#mdcolumn .col-third a:visited,div#mdcolumn .col-third a:active {
+div#mdcolumn .col-half a.image-box-link, div#mdcolumn .col-half a.image-box-link:link,
+div#mdcolumn .col-half a.image-box-link:visited,div#mdcolumn .col-half a.image-box-link:active,
+div#mdcolumn .col-third a.image-box-link,div#mdcolumn .col-third a.image-box-link:link,
+div#mdcolumn .col-third a.image-box-link:visited,div#mdcolumn .col-third a.image-box-link:active {
   color: #fff;
 }
 
