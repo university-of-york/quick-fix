@@ -228,16 +228,52 @@ $(document).ready(function(){
     //Replace YouTube videos embedded in narrow containers with thumbnails that link to videos
     $("iframe[src*='youtube.com']").each(function(){
         var video = $(this);
-        var containerWidth = video.parent().width();
+        var containerWidth = video.parent().width(); 
         if (containerWidth<320) {
             var src = video.attr("src");
             var embedPos = src.indexOf("/embed/");
             var videoID = src.substring(embedPos+7,embedPos+18);
             var ytURL = "https://www.youtube.com/watch?v="+videoID;
             var imgURL = "https://img.youtube.com/vi/"+videoID+"/mqdefault.jpg";
-            $(this).replaceWith("<a class='videothumb' href="+ytURL+"><img width='"+containerWidth+"' src='"+imgURL+"' /><span class='playbutton'></span></a>");
+            var hash = videoID + Math.random();
+            $(this).replaceWith("<a class='videothumb' href="+ytURL+"><img id='"+hash+"' width='"+containerWidth+"' src='"+imgURL+"' alt=''/><span class='playbutton'></span></a>");
+
+            // Access the YouTube API and get our video title
+            getYoutubeVideoTitle( videoID , function( videoTitle )
+            {
+                // Add the alt atribute containing the video title to the img 
+                var $img = document.getElementById( hash );
+                $img.setAttribute( "alt" , videoTitle );
+            } );
         }
     });
+
+    // Retrieve a Youtube video title from its ID
+    function getYoutubeVideoTitle( videoID , callback ){
+
+        // Authenticate access to API and retreive our video data
+        getURL( 'https://www.googleapis.com/youtube/v3/videos/?part=snippet&id='+videoID+'&key=AIzaSyAlfdQM8PF6qLxiEycc44I2eMdBoVIyyGA' , function( data )
+        {
+            data = JSON.parse( data );
+
+            //Return the video title from the API
+            callback( data.items[0].snippet.title );
+        });
+    }
+
+
+    // Get the URL
+    function getURL(url, success) {
+            var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+            xhr.open('GET', url);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState>3 && xhr.status==200) success(xhr.responseText);
+            };
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            xhr.send();
+            return xhr;
+        }
+
 
     // Embed a SoundCloud player in place of links with a .soundcloud-embed
     $('a.soundcloud-embed').each(function(){
