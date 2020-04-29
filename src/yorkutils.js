@@ -252,7 +252,7 @@ $(document).ready(function(){
     function getYoutubeVideoTitle( videoID , callback ){
 
         // Authenticate access to API and retreive our video data
-        getURL( 'https://www.googleapis.com/youtube/v3/videos/?part=snippet&id='+videoID+'&key=AIzaSyAlfdQM8PF6qLxiEycc44I2eMdBoVIyyGA' , function( data )
+        getURL( 'https://www.googleapis.com/youtube/v3/videos/?part=snippet&id='+videoID+'&key=xxxx' , function( data )
         {
             data = JSON.parse( data );
 
