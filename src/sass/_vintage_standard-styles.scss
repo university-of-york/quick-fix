@@ -1039,7 +1039,7 @@ p.showhide, p.showhide a {
 /*Latest news listing*/
 #latestnews  .newsitem  p.newsPosted {
   font-size:85%;
-  color:#7e7e7e;
+  color:#404040; /* changed from #7e7e7e */
   margin-top:5px;
   margin-bottom:5px;
 }
@@ -1093,7 +1093,7 @@ div#latestnews.noteaser .newsitem  p.newsPosted {
 }
 
 #mdcolumn  p.newsPosted {
-  color:#7e7e7e;
+  color:#404040; /* changed from #7e7e7e */
 }
 
 div#mdcolumn div.col-half .boxout p.newsPosted {
