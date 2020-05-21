@@ -1587,22 +1587,6 @@ div#mdcolumn a.file:hover .filename, div#rhcolumn a.file:hover .filename{
   font-size:85%;
 }
 
-#mdcolumn a[href^="http://"],
-#mdcolumn a[href^="https://"],
-#rhcolumn a[href^="http://"],
-#rhcolumn a[href^="https://"] {
-  padding-right: 14px;
-  background: url(https://www.york.ac.uk/media/global/templateimages/externallinkicon.gif) right center no-repeat;
-}
-/* Need to have trailing slash otherwise it includes mailto links */
-#mdcolumn a[href*="york.ac.uk/"],
-#rhcolumn a[href*="york.ac.uk/"],
-#mdcolumn a[href*="yorkconcerts.co.uk/"],
-#rhcolumn a[href*="yorkconcerts.co.uk/"] {
-  padding-right: 0;
-  background: none;
-}
-
 #mdcolumn .cta a[href^="http://"],
 #mdcolumn .cta a[href^="https://"],
 #mdcolumn .end-cta a[href^="http://"],
