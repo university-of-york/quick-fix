@@ -287,14 +287,6 @@ $(document).ready(function(){
         });
     });
 
-    //Remove external link icon from links containing images
-    $("a[href^='http://']").add("a[href^='https://']").each(function(i, v) {
-        var $this = $(this);
-        if ($this.children('img').length > 0) {
-            $this.css({ 'background':'none', 'padding':0 , 'display':'inline-block' });
-        }
-    });
-
     //Strip zero-width non-joiners
     var zwnjStrip = function (el) {
         if (el.nodeType==3) {

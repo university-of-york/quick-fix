@@ -509,7 +509,7 @@ html.rqf-staff-page .ui-tooltip-shadow .ui-tooltip-content {
 /* line 523, sass/_staffstudents.scss */
 html.rqf-staff-page #pressreleases .newsitem p.newsPosted {
   font-size: 85%;
-  color: #7e7e7e;
+  color: #404040; /* changed from #7e7e7e */
   margin-top: 5px;
   margin-bottom: 5px;
 }
