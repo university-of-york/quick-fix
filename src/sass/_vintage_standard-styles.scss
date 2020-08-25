@@ -1812,7 +1812,8 @@ div#mdcolumn #homepagebanner .imagewithcaption >p img {
 }
 
 div#mdcolumn #homepagebanner .imagewithcaption >p:nth-of-type(2){
-  background:transparent url(/media/global/templateimages/transblack.png) repeat scroll 0 0;
+  // background:transparent url(/media/global/templateimages/transblack.png) repeat scroll 0 0;
+  background-color: black;
   bottom:0;
   display:block;
   position:absolute;
