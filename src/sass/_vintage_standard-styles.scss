@@ -1784,7 +1784,8 @@ div#mdcolumn #homepagebanner .imagewithcaption  {
 
 div#mdcolumn #homepagebanner .imagewithcaption .caption {
   bottom:0;
-  background:transparent url(/media/global/templateimages/transblack.png) repeat scroll 0 0;
+  // background:transparent url(/media/global/templateimages/transblack.png) repeat scroll 0 0;
+  background-color: black;
   color:#FFF;
   display:block;
   position:absolute;
