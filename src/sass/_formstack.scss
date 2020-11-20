@@ -3,6 +3,17 @@
     color: #fff !important;  
 }
 
+div#feedback > .fsBody {
+    padding: 0 !important;
+    .fsForm {
+        margin: 0 auto !important; 
+        padding: 0 !important;
+        .fsSubmit {
+            margin-top: 0 !important;
+        }
+    }
+}
+
 // remove colour from the error highlight
 div.fsValidationError {
     background-color: inherit !important; // should get #333 from the footer background
