@@ -219,10 +219,21 @@ $(document).ready(function(){
             vPos = youtubeURL.indexOf("v=");
             youtubeID = youtubeURL.substring(vPos+2, vPos+13);
         }
+        //Give the iframe an ID
+        var iframeID = youtubeID + Math.random();
         // create the embed code
-        var embedCode = $('<p class="videoembed"><iframe src="//www.youtube.com/embed/' + youtubeID + '?rel=0" allowfullscreen></iframe></p>');
+        var embedCode = $('<p class="videoembed"><iframe id="'+iframeID+'" src="//www.youtube.com/embed/' + youtubeID + '?rel=0" title="" allowfullscreen></iframe></p>');
+
         // replace the original link element with the embed code
         $(this).replaceWith(embedCode);
+
+        // Access the YouTube API and get our video title
+        getYoutubeVideoTitle( youtubeID , function( videoTitle )
+        {
+            // Add the title atribute containing the video title to the ifame
+            var $iframe = document.getElementById( iframeID  );
+            $iframe.setAttribute( "title" , videoTitle );
+        } );
     });
 
     //Replace YouTube videos embedded in narrow containers with thumbnails that link to videos
