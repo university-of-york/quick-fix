@@ -893,7 +893,7 @@ function go() {
           // Replace with reordered content
           $tabContent.empty().append(sectionContent);
           $tabContent.show().addClass('faq');
-          var $tabQuestion = $tabContent.find('h2.tab');
+          var $tabQuestion = $tabContent.children('h2:first-child, h3:first-child, h4:first-child');
           $tabQuestion.replaceWith(function() {
             var thisHTML = $(this).html();
             return $('<h3>').addClass('q').html(thisHTML).click(that.clickAccordion);
