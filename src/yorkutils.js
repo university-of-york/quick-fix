@@ -312,14 +312,13 @@ $(document).ready(function(){
     };
     zwnjStrip(document.body);
 
-    //
+	//
     // Filter a list/table based on search input
     //
 
     var $searchable = $('.c-searchable');
 
     if ($searchable.length) {
-
         // Is it a table or a list?
         var $searchableContent = $searchable.children('.c-searchable__content');
         var hasTable = !!$searchableContent.find('table').length;
@@ -339,10 +338,11 @@ $(document).ready(function(){
 
         var inputContent = filterInput.val().toLowerCase();
 
+
         filterValues.each(function(i, v) {
             var $v = $(v);
             var $f = $v.closest(filterContainer);
-            var filterText = $v.text().toLowerCase();
+            var filterText = $f.text().toLowerCase();
             var searchIndex = filterText.indexOf(inputContent);
             if (searchIndex > -1 || inputContent === '') {
                 $f.show();
@@ -353,8 +353,6 @@ $(document).ready(function(){
 
         return false;
     }
-
-
 
     // sort out clearing following floated columns
     // on floated column types (e.g. '.col-half') there is no containing element that clears the float afterwards
