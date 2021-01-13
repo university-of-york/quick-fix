@@ -12,6 +12,10 @@ div#feedback > .fsBody {
             margin-top: 0 !important;
         }
     }
+    .fsLabel, 
+    .fsBody label {
+        font-size: inherit!important;
+    }
 }
 
 // remove colour from the error highlight
