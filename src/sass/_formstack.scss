@@ -28,3 +28,6 @@ div.fsError {
     background-color: #f4d4d4 !important;
     border: 0 !important;
 }
+
+// Override the inline checked mark on radio buttons
+.fsRow .fsRowBody input[type="radio"]:checked::before { border-color: #00B3EB; }
