@@ -17,7 +17,7 @@ html.rqf-page {
         > a {
           padding:10px 0 0 2%!important;
         }
-        > h1 {
+        > h1, p {
           top:150px;
         }
       }
@@ -28,7 +28,7 @@ html.rqf-page {
       // students/staff location
       div#global + div#location {
         padding-bottom:77px;
-        h1 {
+        h1, p {
           top:41px;
         }
       }
@@ -223,7 +223,7 @@ html.rqf-page {
           div#location {
               padding-bottom: 0!important;
   
-              h1 {
+              h1, p {
                   position: static!important;;
                   top: auto!important;;
               }

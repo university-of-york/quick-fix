@@ -110,11 +110,6 @@ html.rqf-page {
       // page title
       h1, // h1 left here to prevent breaking styles
       p {
-
-        // add font-family so that it behave like a heading
-        font-family: "chaparral-pro",Georgia,"Times New Roman",Times,serif;
-        font-weight: normal;
-        font-style: normal;
         background-color:#404040;
         color:#fff;
         font-size:24px;
@@ -128,6 +123,7 @@ html.rqf-page {
         font-weight:normal;
         text-shadow:none;
       }
+      
     }
     // Students page
     div#global {
@@ -362,6 +358,16 @@ html.rqf-page {
       font-weight: normal;
     }
   }
+
+  div#header div#location p {
+    // add font-family so that it behave like a heading
+    font-family: "chaparral-pro",Georgia,"Times New Roman",Times,serif;
+    font-style: normal;
+    * {
+      font-family: "chaparral-pro",Georgia,"Times New Roman",Times,serif;
+      font-weight: normal;
+    }
+}
 
   .leftLabel,
   .rightLabel {

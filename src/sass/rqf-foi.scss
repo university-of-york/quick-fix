@@ -12,7 +12,7 @@ html.rqf-page.rqf-page {
       }
     }
     div#location {
-      > h1 {
+      > h1, p {
         padding-bottom:8px;
       }
       a {
@@ -26,7 +26,7 @@ html.rqf-page.rqf-page {
       }
       @media only screen and (max-width: 480px) {
         padding-bottom:67px;
-        > h1 {
+        > h1, p {
           top: 151px;
         }
         a {
