@@ -3087,9 +3087,7 @@ img.round {
 ============================================================*/
 
 .c-searchable__content ul {
-  -webkit-column-count:3;
-  -moz-column-count:3;
-  column-count:3;
+  // Removed column properties
   padding-left: 0 !important;
 }
 @media only screen and (max-width: 588px) {
