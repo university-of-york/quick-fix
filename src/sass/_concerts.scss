@@ -1,11 +1,34 @@
 /*
  * CONCERTS STYLES
  */
- $concerts-primary-colour: #d6001c;
- $concerts-secondary-colour: #d6152f;
+ $concerts-primary-colour: #D0006F;
+ $concerts-secondary-colour: #AF005D;
   .rqf-page {
    body.york-concerts-page {
      div#header {
+       div#logo {
+         padding: 1.4em 0;
+         a {
+           width: auto;
+           height: auto;
+           // Adjust logo width at various breakpoints
+           @media only screen and ( min-width: 512px ) and ( max-width: 630px ) {
+             max-width: 200px;
+           }
+           @media only screen and ( min-width: 630px ) and ( max-width: 730px ) {
+             max-width: 300px;
+           }
+           @media only screen and ( min-width: 730px ) and ( max-width: 800px ) {
+             max-width: 400px;
+           }
+         }
+         img {
+           display: block;
+           max-width: 100%;
+           width: auto;
+           height: auto;
+         }
+       }
        div#location {
          @media only screen and (max-width: 512px) {
            padding-bottom:32px;
@@ -64,13 +87,26 @@
      div#mdcolumn,
      div#rhcolumn {
        a {
-         color:$concerts-primary-colour;
+         color:$concerts-secondary-colour;
+         &:hover
+         {
+           color:$concerts-primary-colour;
+         }
        }
        ul.tabNavigation li a {
          color: #000;
+         &:hover {
+             color:white;
+             background:$concerts-primary-colour;
+             border-color:$concerts-primary-colour;
+         }
        }
        ul.tabNavigation li a.selected {
         color:$concerts-primary-colour;
+        &:hover {
+          color:white;
+          background:$concerts-primary-colour;
+        }
        }
        .cta a,
        .cta a[href^="http://"],
@@ -89,10 +125,14 @@
        .boxoutAlt {
          background-color:$concerts-primary-colour;
          border-color:$concerts-primary-colour;
+         a {
+           color:white;
+           &:hover { color:white; }
+         }
        }
      }
      div#lhcolumn #nav li a:hover {
-      background-color:$concerts-secondary-colour !important;
+      background-color:$concerts-primary-colour !important;
      }
      div#lhcolumn #nav li span.parent,
      div#lhcolumn #nav li span.parent a.parent {

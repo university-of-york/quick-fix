@@ -148,7 +148,11 @@ function go() {
             swapImage = true;
           }
           if (isConcerts === true) {
-            newLogoImg = hasSVG ? images.logoConcertsSVG : images.logoConcertsPNG;
+            
+            // NP 28/05/2021 - Not used for the current logo version, we only have a PNG
+            // newLogoImg = hasSVG ? images.logoConcertsSVG : images.logoConcertsPNG;
+            newLogoImg = images.logoConcertsPNG;
+            
             locationEl.attr('href', urls.concerts);
             // Remove additional logo
             $('#location > img').remove();
